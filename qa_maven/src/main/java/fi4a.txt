@@ -1,0 +1,2 @@
+JavascriptExecutor jsx = (JavascriptExecutor)driver;
+        jsx.executeScript("window.scrollBy(0,100)", "");

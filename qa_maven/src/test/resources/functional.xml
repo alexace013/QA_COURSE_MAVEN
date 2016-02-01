@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FunctionalSuite" verbose="1" >
+    <test name="Functional">
+        <classes>
+            <class name="testng_tests.login.NGTestsSelenium"/>
+            <class name="testng_tests.registration.RegTestsSelenium"/>
+        </classes>
+    </test>
+</suite>
