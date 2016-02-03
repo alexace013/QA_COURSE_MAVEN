@@ -1,6 +1,7 @@
 package pages;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
 
@@ -22,22 +23,29 @@ public class RegistrationPage {
         web.input("registrationEmailMain", email);
     }
 
-    public void clickAndInputEmailRepeat(String email) {
+    public void clickAndInputEmailRepeatAndClickTAB(String email) {
         web.click("registrationEmailRepeat");
         web.clear("registrationEmailRepeat");
         web.input("registrationEmailRepeat", email);
+        web.clickTAB("registrationEmailRepeat");
     }
 
-    public void clickAndInputPassMain(String pass) {
+    public void clickAndInputPassMainAndClickTAB(String pass) {
         web.click("registrationPassMain");
         web.clear("registrationPassMain");
         web.input("registrationPassMain", pass);
+        web.clickTAB("registrationPassMain");
     }
 
     public void clickAndInputPassRepeat(String pass) {
         web.click("registrationPassRepeat");
         web.clear("registrationPassRepeat");
         web.input("registrationPassRepeat", pass);
+    }
+
+    public void windowScroll() {
+        JavascriptExecutor jsx = (JavascriptExecutor)driver;
+        jsx.executeScript("window.scrollBy(0,100)", "");
     }
 
     public void clickCheckBox() {
@@ -56,9 +64,9 @@ public class RegistrationPage {
         web.click("logOutLink");
     }
 
-    public boolean isRegSuccessful() {
+    public boolean isRegistrationSuccessful() {
 
-        if (web.isElementPresent("regActionButton")) {
+        if (web.isElementPresent("correctRegistration")) {
             return true;
         } else if (web.isElementPresent("buttonRegistration")) {
             return false;
@@ -70,7 +78,27 @@ public class RegistrationPage {
 
     public boolean isErrorPassPresent() {
 
-        if (web.isElementPresent("errorRegPassOne")) {
+        if (web.isElementPresent("errorRegPassFieldOne")) {
+            return true;
+        }
+
+        return false;
+
+    }
+
+    public boolean isErrorJustOneField() {
+
+        if (web.isElementPresent("errorRegJustFirstEmail")) {
+            return true;
+        }
+
+        return false;
+
+    }
+
+    public boolean isErrorMessagePresent() {
+
+        if (web.isElementPresent("errorRegMessage")) {
             return true;
         }
 

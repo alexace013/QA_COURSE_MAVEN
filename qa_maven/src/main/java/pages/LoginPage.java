@@ -37,27 +37,22 @@ public class LoginPage {
     }
 
     public void clickAndInputPassFieldOne(String pass) {
-        web.click("passFieldInput2");
+        web.click("passFieldInputSecond");
         clearPassField();
-        web.input("passFieldInput2", pass);
+        web.input("passFieldInputSecond", pass);
     }
 
     public void clickAndInputPassFieldAll(String pass) {
-        web.click("passFieldInput1");
+        web.click("passFieldInputFirst");
         clearPassField();
-        web.input("passFieldInput2", pass);
-    }
-
-    public void inputPassField(String pass) {
-        clearPassField();
-        web.input("passFieldInput2", pass);
+        web.input("passFieldInputSecond", pass);
     }
 
     private void clickTAB_onLoginField() {
         web.clickTAB("loginFieldInput");
     }
 
-    public void clickButtonLogIn() {
+    public void clickLoginButton() {
         web.click("loginButton");
     }
 
@@ -69,16 +64,16 @@ public class LoginPage {
         web.click("closeHelpBox");
     }
 
-    public boolean isErrorMessageNotEmptyFields() {
+    public boolean isErrorMessagePresentOnPage() {
         return web.isElementPresent("errorMessage");
-    }
-
-    public boolean isErrorMessageEmptyFields() {
-        return web.isElementPresent("errorMessageEmptyFields");
     }
 
     public boolean isErrorMessageOneFieldEmpty() {
         return web.isElementPresent("errorMessageOneFieldEmpty");
+    }
+
+    public boolean isErrorMessageFieldsEmpty() {
+        return web.isElementPresent("errorMessageEmptyFields");
     }
 
     public boolean isHelpBoxActive() {
@@ -96,7 +91,7 @@ public class LoginPage {
     }
 
     private void clearPassField() {
-        web.clear("passFieldInput2");
+        web.clear("passFieldInputSecond");
     }
 
 }

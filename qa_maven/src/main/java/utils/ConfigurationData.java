@@ -15,7 +15,7 @@ import java.util.Properties;
 public class ConfigurationData {
 
     private static final Logger log = Logger.getLogger("log4j.rootLogger");
-    private static final String UI_MAPPING_PATH = "UIMapping.properties";
+    private static final String UI_MAPPING_PATH = "src/main/resources/UIMapping.properties";
     private static ConfigurationData config;
     private final Properties PROPERTIES;
     private Map<String, String> propertiesMap;
@@ -23,12 +23,12 @@ public class ConfigurationData {
     private ConfigurationData() {
 
         this.PROPERTIES = new Properties();
-        log.info(String.format("created %s", PROPERTIES.getClass().getSimpleName()));
+        log.info(String.format("created properties"));
 
         try {
 
             this.propertiesMap = loadPropertiesToMap();
-            log.info(String.format("created %s", propertiesMap.getClass().getSimpleName()));
+            log.info(String.format("created map properties"));
 
         } catch (IOException e) {
 
@@ -47,45 +47,6 @@ public class ConfigurationData {
         }
 
         return config;
-
-    }
-
-    public By getLocator(String key) throws IOException {
-
-        String[] partsOfLocators = getPropertyValue(key).split("\"");
-        String findMethod = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
-        String target = partsOfLocators[1];
-
-        switch (findMethod) {
-
-            case "id":
-                return By.id(target);
-
-            case "name":
-                return By.name(target);
-
-            case "class":
-                return By.className(target);
-
-            case "cssSelector":
-                return By.cssSelector(target);
-
-            case "xpath":
-                return By.xpath(target);
-
-            case "tagName":
-                return By.tagName(target);
-
-            case "linkText":
-                return By.linkText(target);
-
-            case "partialLinkText":
-                return By.partialLinkText(target);
-
-            default:
-                throw new IOException(
-                        String.format("Locator '%s'  not defined!", target));
-        }
 
     }
 
@@ -120,6 +81,45 @@ public class ConfigurationData {
 
     private String getPropertyValue(String key) {
         return propertiesMap.get(key);
+    }
+
+    public By getLocator(String key) throws IOException {
+
+        String[] partsOfLocators = getPropertyValue(key).split("\"");
+        String findMethod = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
+        String locator = partsOfLocators[1];
+
+        switch (findMethod) {
+
+            case "id":
+                return By.id(locator);
+
+            case "name":
+                return By.name(locator);
+
+            case "class":
+                return By.className(locator);
+
+            case "cssSelector":
+                return By.cssSelector(locator);
+
+            case "xpath":
+                return By.xpath(locator);
+
+            case "tagName":
+                return By.tagName(locator);
+
+            case "linkText":
+                return By.linkText(locator);
+
+            case "partialLinkText":
+                return By.partialLinkText(locator);
+
+            default:
+                throw new IOException(
+                        String.format("Locator '%s'  not defined!", locator));
+        }
+
     }
 
 }

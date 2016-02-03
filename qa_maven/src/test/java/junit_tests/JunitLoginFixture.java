@@ -5,7 +5,7 @@ import org.junit.BeforeClass;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class LoginFixture extends BrowserFixture {
+public class JunitLoginFixture extends JunitBrowserFixture {
 
     protected static HomePage homePage;
     protected static LoginPage loginPage;

@@ -36,11 +36,11 @@ public class HomePage {
         web.clickButton("buttonBlurb");
     }
 
-    public void clickLogOut() {
+    public void clickLogoutLink() {
         web.clickLink("logOutLink");
     }
 
-    public void clickLogIn() {
+    public void clickLoginLink() {
         web.clickLink("logInLink");
     }
 

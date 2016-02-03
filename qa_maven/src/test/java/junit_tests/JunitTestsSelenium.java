@@ -1,10 +1,9 @@
-package testng_tests.login;
+package junit_tests;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-@Test
-public class NGTestsSelenium extends NGLoginFixture {
+public class JunitTestsSelenium extends JunitLoginFixture {
 
     // all input correct
     @Test
@@ -21,9 +20,9 @@ public class NGTestsSelenium extends NGLoginFixture {
         log.info("input " + EMAIL + " in login field.");
         loginPage.clickAndInputPassFieldAll(PASS);
         log.info("input " + PASS + " in password field.");
-        loginPage.clickButtonLogIn();
+        loginPage.clickLoginButton();
         log.info("click login button.");
-        homePage.clickLogOut();
+        homePage.clickLogoutLink();
         log.info("click log Out.");
 
 
@@ -34,7 +33,7 @@ public class NGTestsSelenium extends NGLoginFixture {
     public void test1() {
 
 //        homePage.clickLogo();
-        homePage.clickLogIn();
+        homePage.clickLoginLink();
         log.info(String.format("\ntest1 (negative)\n"));
 //        homePage.switchToRegistrationPage();
 //        log.info("switch to registration page.");
@@ -43,13 +42,13 @@ public class NGTestsSelenium extends NGLoginFixture {
         log.info("input " + failedEMAIL + " in login field and click TAB.");
         loginPage.clickAndInputPassFieldOne(PASS);
         log.info("input " + PASS + " in password field.");
-        loginPage.clickButtonLogIn();
+        loginPage.clickLoginButton();
         log.info("click login button");
 
-        if (loginPage.isErrorMessageNotEmptyFields()) {
+        if (loginPage.isErrorMessagePresentOnPage()) {
             log.info("not logged in.");
         } else {
-            Assert.assertFalse(loginPage.isErrorMessageNotEmptyFields(), "ERROR is not present");
+            Assert.assertFalse("ERROR is not present", loginPage.isErrorMessagePresentOnPage());
         }
 
     }
@@ -68,12 +67,12 @@ public class NGTestsSelenium extends NGLoginFixture {
             String failedPASS = PASS.substring(0, 3);
             loginPage.clickAndInputPassFieldOne(failedPASS);
             log.info("input " + failedPASS + " in password field.");
-            loginPage.clickButtonLogIn();
+            loginPage.clickLoginButton();
 
-            if (loginPage.isErrorMessageNotEmptyFields()) {
+            if (loginPage.isErrorMessagePresentOnPage()) {
                 log.info("not logged in.");
             } else {
-                Assert.assertFalse(loginPage.isErrorMessageNotEmptyFields(), "ERROR is not present");
+                Assert.assertFalse("ERROR is not present", loginPage.isErrorMessagePresentOnPage());
             }
 
         } else {
@@ -85,12 +84,12 @@ public class NGTestsSelenium extends NGLoginFixture {
             String failedPASS = PASS.substring(0, 3);
             loginPage.clickAndInputPassFieldOne(failedPASS);
             log.info("input " + failedPASS + " in password field.");
-            loginPage.clickButtonLogIn();
+            loginPage.clickLoginButton();
 
-            if (loginPage.isErrorMessageNotEmptyFields()) {
+            if (loginPage.isErrorMessagePresentOnPage()) {
                 log.info("not logged in.");
             } else {
-                Assert.assertFalse(loginPage.isErrorMessageNotEmptyFields(), "ERROR is not present");
+                Assert.assertFalse("ERROR is not present", loginPage.isErrorMessagePresentOnPage());
             }
         }
 
@@ -110,12 +109,12 @@ public class NGTestsSelenium extends NGLoginFixture {
         log.info("input empty in login field and click TAB.");
         loginPage.clickAndInputPassFieldOne("");
         log.info("input empty in password field.");
-        loginPage.clickButtonLogIn();
+        loginPage.clickLoginButton();
 
-        if (loginPage.isErrorMessageEmptyFields()) {
+        if (loginPage.isErrorMessageOneFieldEmpty()) {
             log.info("not logged in.");
         } else {
-            Assert.assertFalse(loginPage.isErrorMessageNotEmptyFields(), "ERROR is not present");
+            Assert.assertFalse("ERROR is not present", loginPage.isErrorMessageOneFieldEmpty());
         }
 
     }
@@ -138,7 +137,7 @@ public class NGTestsSelenium extends NGLoginFixture {
         if (loginPage.isErrorMessageOneFieldEmpty()) {
             log.info("not logged in.");
         } else {
-            Assert.assertFalse(loginPage.isErrorMessageNotEmptyFields(), "ERROR is not present");
+            Assert.assertFalse("ERROR is not present", loginPage.isErrorMessageOneFieldEmpty());
         }
 
     }
@@ -161,7 +160,7 @@ public class NGTestsSelenium extends NGLoginFixture {
         if (loginPage.isErrorMessageOneFieldEmpty()) {
             log.info("not logged in.");
         } else {
-            Assert.assertFalse(loginPage.isErrorMessageNotEmptyFields(), "ERROR is not present");
+            Assert.assertFalse("ERROR is not present", loginPage.isErrorMessageOneFieldEmpty());
         }
 
     }

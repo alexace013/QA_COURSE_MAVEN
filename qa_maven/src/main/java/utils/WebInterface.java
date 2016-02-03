@@ -16,6 +16,8 @@ public interface WebInterface {
 
     void clickTAB(String clickLocator);
 
+    void clickSpace();
+
     void clickButton(String buttonLocator);
 
     void clickLink(String linkLocator);

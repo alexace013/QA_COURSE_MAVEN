@@ -127,6 +127,11 @@ public class WebElementsActions implements WebInterface {
 
     }
 
+    @Override
+    public void clickSpace() {
+        driver.findElement(null).sendKeys(Keys.SPACE);
+    }
+
     /**
      * Click a button
      */
