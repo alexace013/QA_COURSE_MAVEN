@@ -21,14 +21,20 @@ public class RegistrationTests extends RegistrationFixture {
         getHomePage().closeBlurb();
         getHomePage().clickLoginLink();
         getRegistrationPage().clickAndInputEmailMain(EMAIL);
+
         log.info(String.format("click and input %s in email field", EMAIL));
+
         getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(EMAIL);
+
         log.info(String.format("click and input %s in email field repeat and click TAB", EMAIL));
         getRegistrationPage().clickAndInputPassMainAndClickTAB(PASS);
+
         log.info(String.format("click and input %s in password field and click TAB", PASS));
-        getRegistrationPage().clickAndInputPassRepeat(PASS);
+        //getRegistrationPage().clickAndInputPassRepeat(PASS);
+        getRegistrationPage().clickAndInputPassRepeatVVVVV(PASS);
+
         log.info(String.format("click and input %s password field repeat", PASS));
-        getRegistrationPage().windowScroll();
+        //getRegistrationPage().windowScroll();
         log.info(String.format("click space"));
         getRegistrationPage().clickButtonRegistration();
         log.info(String.format("click on registration button"));

@@ -20,7 +20,11 @@ public class StartBrowserFixture {
     @BeforeSuite
     public void startBrowser() {
 
+//        driver = new ChromeDriver();
         driver = new FirefoxDriver();
+//        driver = new PhantomJSDriver();
+//        System.setProperty("webdriver.ie.driver", "/home/alexander/ies4linux-2.99.0.1/ies4linux");
+//        driver = new InternetExplorerDriver();
         log.info(String.format("browser %s open successful",
                 driver.getClass().getSimpleName().substring(0, 7)));
         driver.manage().window().maximize();

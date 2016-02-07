@@ -1,34 +1,36 @@
 package utils;
 
+import org.openqa.selenium.WebElement;
+
+import java.io.IOException;
+import java.util.List;
+
 public interface WebInterface {
 
     void openPage(String url);
 
-    void input(String inputLocator, String inputData);
+    void input(String inputLocator, String inputData) throws IOException;
 
-    void clear(String locator);
+    void clear(String locator) throws IOException;
 
-    void clearAndInput(String inputLocator, String inputData);
+    void clearAndInput(String inputLocator, String inputData) throws IOException;
 
-    void clearAndInputAndClickEnter(String inputLocator, String inputData);
+    void clearAndInputAndClickEnter(String inputLocator, String inputData) throws IOException;
 
-    void click(String link);
+    void clickElement(String elementLocator) throws IOException;
 
-    void clickTAB(String clickLocator);
+    void clickButton(String buttonLocator) throws IOException;
 
-    void clickSpace();
+    void clickLink(String linkLocator) throws IOException;
+    void moveToElement(String moveToLocator) throws IOException;
 
-    void clickButton(String buttonLocator);
+    void moveToElementAndClick(String movToLocator, String clickToElement) throws IOException;
 
-    void clickLink(String linkLocator);
+    void selectCheckBox(String checkBoxLocator) throws IOException;
 
-    void moveToElementAndClick(String movToLocator, String clickToElement);
+    void selectCheckBox(String checkBoxLocator, boolean isCheckBoxSelect) throws IOException;
 
-    void selectCheckBox(String checkBoxLocator);
-
-    void selectCheckBox(String checkBoxLocator, String isCheckBoxSelect);
-
-    boolean isElementPresent(String elementLocator);
+    boolean isElementPresent(String elementLocator) throws IOException;
 
     boolean isAlertPresentAndAccept();
 
@@ -36,8 +38,23 @@ public interface WebInterface {
 
     void refreshPage();
 
-    void waitElementNotVisible(String elementLocator, int timeoutInS);
+    void waitElementNotVisible(String elementLocator, int timeoutSeconds) throws IOException;
 
     boolean waitForElementPresent(String elementLocator);
+
+    boolean waitElementToBeClickable(String elementLocator);
+
+    boolean waitForAjaxResponse(int timeoutSeconds);
+
+    WebElement getElement(String elementLocator);
+
+    List<WebElement> getElements(String elementLocator);
+
+    void pressTAB(String locator) throws IOException;
+
+    void pressSpace(String locator) throws IOException;
+
+    void windowScroll();
+
 
 }

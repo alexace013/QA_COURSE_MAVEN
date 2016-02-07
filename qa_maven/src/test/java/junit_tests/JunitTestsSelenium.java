@@ -18,7 +18,7 @@ public class JunitTestsSelenium extends JunitLoginFixture {
         log.info("switch to registration page.");
         loginPage.clickAndInputLoginField(EMAIL);
         log.info("input " + EMAIL + " in login field.");
-        loginPage.clickAndInputPassFieldAll(PASS);
+        loginPage.clickAndInputPassFieldWithTwoLocators(PASS);
         log.info("input " + PASS + " in password field.");
         loginPage.clickLoginButton();
         log.info("click login button.");
@@ -40,7 +40,7 @@ public class JunitTestsSelenium extends JunitLoginFixture {
         String failedEMAIL = EMAIL + ".";
         loginPage.clickAndInputLoginFieldAndClickTAB(failedEMAIL);
         log.info("input " + failedEMAIL + " in login field and click TAB.");
-        loginPage.clickAndInputPassFieldOne(PASS);
+        loginPage.clickAndInputPassFieldWithOneLocator(PASS);
         log.info("input " + PASS + " in password field.");
         loginPage.clickLoginButton();
         log.info("click login button");
@@ -65,7 +65,7 @@ public class JunitTestsSelenium extends JunitLoginFixture {
             loginPage.clickAndInputLoginFieldAndClickTAB(EMAIL);
             log.info("input " + EMAIL + " in login field and click TAB.");
             String failedPASS = PASS.substring(0, 3);
-            loginPage.clickAndInputPassFieldOne(failedPASS);
+            loginPage.clickAndInputPassFieldWithOneLocator(failedPASS);
             log.info("input " + failedPASS + " in password field.");
             loginPage.clickLoginButton();
 
@@ -82,7 +82,7 @@ public class JunitTestsSelenium extends JunitLoginFixture {
             loginPage.clickAndInputLoginFieldAndClickTAB(EMAIL);
             log.info("input " + EMAIL + " in login field and click TAB.");
             String failedPASS = PASS.substring(0, 3);
-            loginPage.clickAndInputPassFieldOne(failedPASS);
+            loginPage.clickAndInputPassFieldWithOneLocator(failedPASS);
             log.info("input " + failedPASS + " in password field.");
             loginPage.clickLoginButton();
 
@@ -107,7 +107,7 @@ public class JunitTestsSelenium extends JunitLoginFixture {
 
         loginPage.clickAndInputLoginFieldAndClickTAB("");
         log.info("input empty in login field and click TAB.");
-        loginPage.clickAndInputPassFieldOne("");
+        loginPage.clickAndInputPassFieldWithOneLocator("");
         log.info("input empty in password field.");
         loginPage.clickLoginButton();
 
@@ -131,7 +131,7 @@ public class JunitTestsSelenium extends JunitLoginFixture {
 
         loginPage.clickAndInputLoginFieldAndClickTAB("");
         log.info("input empty in login field and click TAB.");
-        loginPage.clickAndInputPassFieldOne(PASS);
+        loginPage.clickAndInputPassFieldWithOneLocator(PASS);
         log.info("input " + PASS + " in password field.");
 
         if (loginPage.isErrorMessageOneFieldEmpty()) {
@@ -154,7 +154,7 @@ public class JunitTestsSelenium extends JunitLoginFixture {
 
         loginPage.clickAndInputLoginFieldAndClickTAB(EMAIL);
         log.info("input " + EMAIL + " in login field.");
-        loginPage.clickAndInputPassFieldOne("");
+        loginPage.clickAndInputPassFieldWithOneLocator("");
         log.info("input empty in password field.");
 
         if (loginPage.isErrorMessageOneFieldEmpty()) {

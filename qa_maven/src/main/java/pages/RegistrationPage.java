@@ -1,9 +1,10 @@
 package pages;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
+
+import java.io.IOException;
 
 public class RegistrationPage {
 
@@ -18,58 +19,177 @@ public class RegistrationPage {
     }
 
     public void clickAndInputEmailMain(String email) {
-        web.click("registrationEmailMain");
-        web.clear("registrationEmailMain");
-        web.input("registrationEmailMain", email);
+
+        try {
+
+            web.clickElement("registrationEmailMain");
+            web.clear("registrationEmailMain");
+            web.input("registrationEmailMain", email);
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
     }
 
     public void clickAndInputEmailRepeatAndClickTAB(String email) {
-        web.click("registrationEmailRepeat");
-        web.clear("registrationEmailRepeat");
-        web.input("registrationEmailRepeat", email);
-        web.clickTAB("registrationEmailRepeat");
+
+        try {
+
+            web.clickElement("registrationEmailRepeat");
+            web.clear("registrationEmailRepeat");
+            web.input("registrationEmailRepeat", email);
+            web.pressTAB("registrationEmailRepeat");
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
     }
 
     public void clickAndInputPassMainAndClickTAB(String pass) {
-        web.click("registrationPassMain");
-        web.clear("registrationPassMain");
-        web.input("registrationPassMain", pass);
-        web.clickTAB("registrationPassMain");
+
+        try {
+
+            web.clickElement("registrationPassMain");
+            web.clear("registrationPassMain");
+            web.input("registrationPassMain", pass);
+            web.pressTAB("registrationPassMain");
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
     }
 
     public void clickAndInputPassRepeat(String pass) {
-        web.click("registrationPassRepeat");
-        web.clear("registrationPassRepeat");
-        web.input("registrationPassRepeat", pass);
+
+        try {
+
+            web.clickElement("registrationPassRepeat");
+            web.clear("registrationPassRepeat");
+            web.input("registrationPassRepeat", pass);
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+    }
+
+    public void clickAndInputPassRepeatVVVVV(String pass) {
+
+        try {
+
+            web.clickElement("registrationPassRepeat");
+            web.clear("registrationPassRepeat");
+            web.clearAndInputAndClickEnter("registrationPassRepeat", pass);
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
     }
 
     public void windowScroll() {
-        JavascriptExecutor jsx = (JavascriptExecutor)driver;
-        jsx.executeScript("window.scrollBy(0,100)", "");
+
+        web.windowScroll();
+
     }
 
     public void clickCheckBox() {
-        web.click("checkBoxAccept");
+
+        try {
+
+            web.clickElement("checkBoxAccept");
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
     }
 
     public void clickButtonRegistration() {
-        web.click("buttonRegistration");
+
+        try {
+
+            web.clickElement("buttonRegistration");
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
     }
 
     public void clickLogin() {
-        web.click("logInLink");
+
+        try {
+
+            web.clickLink("loginLink");
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
     }
 
     public void clickLogOut() {
-        web.click("logOutLink");
+
+        try {
+
+            web.clickLink("logoutLink");
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
     }
 
     public boolean isRegistrationSuccessful() {
 
-        if (web.isElementPresent("correctRegistration")) {
-            return true;
-        } else if (web.isElementPresent("buttonRegistration")) {
-            return false;
+        try {
+
+            if (web.isElementPresent("correctRegistration")) {
+
+                return true;
+
+            } else if (web.isElementPresent("buttonRegistration")) {
+
+                return false;
+
+            }
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
         }
 
         return false;
@@ -78,8 +198,19 @@ public class RegistrationPage {
 
     public boolean isErrorPassPresent() {
 
-        if (web.isElementPresent("errorRegPassFieldOne")) {
-            return true;
+        try {
+
+            if (web.isElementPresent("errorRegPassFieldOne")) {
+
+                return true;
+
+            }
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
         }
 
         return false;
@@ -88,8 +219,19 @@ public class RegistrationPage {
 
     public boolean isErrorJustOneField() {
 
-        if (web.isElementPresent("errorRegJustFirstEmail")) {
-            return true;
+        try {
+
+            if (web.isElementPresent("errorRegJustFirstEmail")) {
+
+                return true;
+
+            }
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
         }
 
         return false;
@@ -98,16 +240,23 @@ public class RegistrationPage {
 
     public boolean isErrorMessagePresent() {
 
-        if (web.isElementPresent("errorRegMessage")) {
-            return true;
+        try {
+
+            if (web.isElementPresent("errorRegMessage")) {
+
+                return true;
+
+            }
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
         }
 
         return false;
 
-    }
-
-    public void clickTAB(String filed) {
-        web.clickTAB(filed);
     }
 
 }

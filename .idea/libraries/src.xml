@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="src">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium/documentation/selenium-master-2.50.1.zip!/selenium-master/java/client/src" />
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium/documentation/selenium-master-2.50.1.zip!/selenium-master/java/client/test" />
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium/documentation/selenium-master-2.50.1.zip!/selenium-master/java/server/src" />
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium/documentation/selenium-master-2.50.1.zip!/selenium-master/java/server/test" />
+    </SOURCES>
+  </library>
+</component>

@@ -7,6 +7,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.LinkOption;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +17,7 @@ import java.util.Properties;
 public class ConfigurationData {
 
     private static final Logger log = Logger.getLogger("log4j.rootLogger");
+    @FileProperties(properties = true)
     private static final String UI_MAPPING_PATH = "src/main/resources/UIMapping.properties";
     private static ConfigurationData config;
     private final Properties PROPERTIES;
@@ -33,12 +36,17 @@ public class ConfigurationData {
         } catch (IOException e) {
 
             e.printStackTrace();
-            log.info(e.getMessage());
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
     }
 
+    /**
+     * Static method for return configuration data
+     *
+     * @return {@link ConfigurationData#ConfigurationData()}
+     */
     public static ConfigurationData getConfigurationData() {
 
         if (config == null) {
@@ -50,6 +58,17 @@ public class ConfigurationData {
 
     }
 
+    /**
+     * Private method for loaded properties to the map {@link ConfigurationData#propertiesMap}
+     *
+     * @return {@link HashMap<String, String> with {@value PROPERTIES}} If file is not exists and
+     * path correct, otherwise {@link FileNotFoundException}
+     * @throws IOException           If {@link FileInputStream not opening a connection to an actual
+     *                               file {@value UI_MAPPING_PATH}}
+     * @throws FileNotFoundException If false {@link Files#exists(Path, LinkOption...) and
+     *                               {@link Paths#get(String, String...)}, where
+     *                               String => {@value UI_MAPPING_PATH}}
+     */
     private Map<String, String> loadPropertiesToMap() throws IOException {
 
         if (Files.exists(Paths.get(UI_MAPPING_PATH))) {
@@ -71,7 +90,7 @@ public class ConfigurationData {
         } else {
 
             throw new FileNotFoundException(
-                    String.format("%s not found exception", UI_MAPPING_PATH.substring(13)));
+                    String.format("< %s > not found exception", UI_MAPPING_PATH.substring(13)));
 
         }
 
@@ -79,10 +98,22 @@ public class ConfigurationData {
 
     }
 
+    /**
+     * Private method for return value property
+     *
+     * @param key some string parameter from {@fileProperties UIMapping.properties}
+     * @return string locator with parameters from {@fileProperties UIMapping.properties}
+     */
     private String getPropertyValue(String key) {
         return propertiesMap.get(key);
     }
 
+    /**
+     * Method get locator
+     *
+     * @param key some locator from {@fileProperties UIMapping.properties}
+     * @return {@link By without parameter}
+     */
     public By getLocator(String key) throws IOException {
 
         String[] partsOfLocators = getPropertyValue(key).split("\"");
@@ -117,7 +148,7 @@ public class ConfigurationData {
 
             default:
                 throw new IOException(
-                        String.format("Locator '%s'  not defined!", locator));
+                        String.format("Locator < %s >  not defined!", locator));
         }
 
     }

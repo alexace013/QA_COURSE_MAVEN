@@ -21,7 +21,7 @@ public class LoginTests extends LoginFixture {
         log.info(String.format("switch to registration page"));
         getLoginPage().clickAndInputLoginField(EMAIL);
         log.info(String.format("click and input %s in login filed", EMAIL));
-        getLoginPage().clickAndInputPassFieldAll(PASS);
+        getLoginPage().clickAndInputPassFieldWithTwoLocators(PASS);
         log.info(String.format("click and input %s in password field", PASS));
         getLoginPage().clickLoginButton();
         log.info(String.format("click on login button"));
@@ -40,7 +40,7 @@ public class LoginTests extends LoginFixture {
         String failedEMAIL = "qwerty" + EMAIL;
         getLoginPage().clickAndInputLoginFieldAndClickTAB(failedEMAIL);
         log.info(String.format("click and input %s in login field and click TAB", failedEMAIL));
-        getLoginPage().clickAndInputPassFieldOne(PASS);
+        getLoginPage().clickAndInputPassFieldWithOneLocator(PASS);
         log.info(String.format("click and input %s in password filed", PASS));
         getLoginPage().clickLoginButton();
         log.info(String.format("click on login button"));
@@ -58,7 +58,7 @@ public class LoginTests extends LoginFixture {
         log.info(String.format("click and input %s in login field and click TAB",
                 EMAIL));
         String failedPass = PASS.substring(0, 3);
-        getLoginPage().clickAndInputPassFieldOne(failedPass);
+        getLoginPage().clickAndInputPassFieldWithOneLocator(failedPass);
         log.info(String.format("click and input %s in password field", failedPass));
         getLoginPage().clickLoginButton();
         log.info(String.format("click on login button"));
@@ -74,7 +74,7 @@ public class LoginTests extends LoginFixture {
         log.info(String.format("test4_emptyEmailAndPassFields"));
         getLoginPage().clickAndInputLoginFieldAndClickTAB("");
         log.info(String.format("click and input empty in login field and click TAB"));
-        getLoginPage().clickAndInputPassFieldOne("");
+        getLoginPage().clickAndInputPassFieldWithOneLocator("");
         log.info(String.format("click and input empty in password field"));
         getLoginPage().clickLoginButton();
         log.info(String.format("click on login button"));
@@ -90,7 +90,7 @@ public class LoginTests extends LoginFixture {
         log.info(String.format("test5_emptyEmailField"));
         getLoginPage().clickAndInputLoginFieldAndClickTAB("");
         log.info(String.format("click and input empty in login field and click TAB"));
-        getLoginPage().clickAndInputPassFieldOne(PASS);
+        getLoginPage().clickAndInputPassFieldWithOneLocator(PASS);
         log.info(String.format("click and input %s in password field", PASS));
         getLoginPage().clickLoginButton();
         log.info(String.format("click on login button"));
@@ -106,7 +106,7 @@ public class LoginTests extends LoginFixture {
         log.info(String.format("test6_emptyPassField"));
         getLoginPage().clickAndInputLoginFieldAndClickTAB(EMAIL);
         log.info(String.format("click and input %s in login field and click TAB", EMAIL));
-        getLoginPage().clickAndInputPassFieldOne("");
+        getLoginPage().clickAndInputPassFieldWithOneLocator("");
         log.info(String.format("click and input empty in password field and click TAB"));
         getLoginPage().clickLoginButton();
         log.info(String.format("click on login button"));
