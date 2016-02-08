@@ -1,12 +1,15 @@
 package utils;
 
-import exception.ElementNoFound;
+import exception.ElementNoSuch;
+import exception.FileException;
+import exception.PropertiesNoLoad;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
@@ -64,13 +67,16 @@ public class ConfigurationData {
      *
      * @return {@link HashMap<String, String> with {@value PROPERTIES}} If file is not exists and
      * path correct, otherwise {@link FileNotFoundException}
-     * @throws IOException           If {@link FileInputStream not opening a connection to an actual
-     *                               file {@value UI_MAPPING_PATH}}
-     * @throws FileNotFoundException If false {@link Files#exists(Path, LinkOption...) and
-     *                               {@link Paths#get(String, String...)}, where
-     *                               String => {@value UI_MAPPING_PATH}}
+     * @throws ElementNoSuch    If {@link FileInputStream not opening a connection to an actual
+     *                          file {@value UI_MAPPING_PATH}}
+     * @throws FileException    If false {@link Files#exists(Path, LinkOption...) and
+     *                          {@link Paths#get(String, String...)}, where
+     *                          String => {@value UI_MAPPING_PATH}}
+     * @throws PropertiesNoLoad if {@link #PROPERTIES} not
+     *                          {@link Properties#load(InputStream)}
+     * @throws IOException      this exception throw method {@link Properties#load(InputStream)}
      */
-    private Map<String, String> loadPropertiesToMap() throws ElementNoFound {
+    private Map<String, String> loadPropertiesToMap() throws ElementNoSuch, FileException, PropertiesNoLoad {
 
         if (Files.exists(Paths.get(UI_MAPPING_PATH))) {
 
@@ -81,6 +87,9 @@ public class ConfigurationData {
                 fileInputStream = new FileInputStream(UI_MAPPING_PATH);
                 PROPERTIES.load(fileInputStream);
 
+            } catch (FileException e) {
+
+                e.printStackTrace();
 
             } catch (IOException e) {
 
@@ -90,7 +99,7 @@ public class ConfigurationData {
 
         } else {
 
-            throw new ElementNoFound(
+            throw new ElementNoSuch(
                     String.format("< %s > not found exception", UI_MAPPING_PATH.substring(13)));
 
         }
@@ -114,9 +123,9 @@ public class ConfigurationData {
      *
      * @param key some locator from {@fileProperties UIMapping.properties}
      * @return {@link By without parameter}
-     * @throws {@link exception.ElementNoFound}
+     * @throws {@link ElementNoSuch}
      */
-    public By getLocator(String key) throws ElementNoFound {
+    public By getLocator(String key) throws ElementNoSuch {
 
         String[] partsOfLocators = getPropertyValue(key).split("\"");
         String findMethod = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
@@ -149,7 +158,7 @@ public class ConfigurationData {
                 return By.partialLinkText(locator);
 
             default:
-                throw new ElementNoFound(
+                throw new ElementNoSuch(
                         String.format("Locator < %s >  not defined!", locator));
         }
 

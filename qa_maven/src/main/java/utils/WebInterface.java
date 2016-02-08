@@ -1,6 +1,6 @@
 package utils;
 
-import exception.ElementNoFound;
+import exception.ElementNoSuch;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -9,36 +9,36 @@ import java.util.List;
  * @author alexander bakhin
  * @version 1.02
  * @info This interface describes the behavior of use of Web pages. Some
- * methods throw exception {@link exception.ElementNoFound}
+ * methods throw exception {@link ElementNoSuch}
  */
 
 public interface WebInterface {
 
     void openPage(String url);
 
-    void input(String inputLocator, String inputData) throws ElementNoFound;
+    void input(String inputLocator, String inputData) throws ElementNoSuch;
 
-    void clear(String locator) throws ElementNoFound;
+    void clear(String locator) throws ElementNoSuch;
 
-    void clearAndInput(String inputLocator, String inputData) throws ElementNoFound;
+    void clearAndInput(String inputLocator, String inputData) throws ElementNoSuch;
 
-    void clearAndInputAndClickEnter(String inputLocator, String inputData) throws ElementNoFound;
+    void clearAndInputAndClickEnter(String inputLocator, String inputData) throws ElementNoSuch;
 
-    void clickElement(String elementLocator) throws ElementNoFound;
+    void clickElement(String elementLocator) throws ElementNoSuch;
 
-    void clickButton(String buttonLocator) throws ElementNoFound;
+    void clickButton(String buttonLocator) throws ElementNoSuch;
 
-    void clickLink(String linkLocator) throws ElementNoFound;
+    void clickLink(String linkLocator) throws ElementNoSuch;
 
-    void moveToElement(String moveToLocator) throws ElementNoFound;
+    void moveToElement(String moveToLocator) throws ElementNoSuch;
 
-    void moveToElementAndClick(String movToLocator, String clickToElement) throws ElementNoFound;
+    void moveToElementAndClick(String movToLocator, String clickToElement) throws ElementNoSuch;
 
-    void selectCheckBox(String checkBoxLocator) throws ElementNoFound;
+    void selectCheckBox(String checkBoxLocator) throws ElementNoSuch;
 
-    void selectCheckBox(String checkBoxLocator, boolean isCheckBoxSelect) throws ElementNoFound;
+    void selectCheckBox(String checkBoxLocator, boolean isCheckBoxSelect) throws ElementNoSuch;
 
-    boolean isElementPresent(String elementLocator) throws ElementNoFound;
+    boolean isElementPresent(String elementLocator) throws ElementNoSuch;
 
     boolean isAlertPresentAndAccept();
 
@@ -46,21 +46,21 @@ public interface WebInterface {
 
     void refreshPage();
 
-    void waitElementNotVisible(String elementLocator, int timeoutSeconds) throws ElementNoFound;
+    void waitElementNotVisible(String elementLocator, int timeoutSeconds) throws ElementNoSuch;
 
-    boolean waitForElementPresent(String elementLocator) throws ElementNoFound;
+    boolean waitForElementPresent(String elementLocator) throws ElementNoSuch;
 
-    boolean waitElementToBeClickable(String elementLocator) throws ElementNoFound;
+    boolean waitElementToBeClickable(String elementLocator) throws ElementNoSuch;
 
     boolean waitForAjaxResponse(int timeoutSeconds);
 
-    WebElement getElement(String elementLocator) throws ElementNoFound;
+    WebElement getElement(String elementLocator) throws ElementNoSuch;
 
-    List<WebElement> getElements(String elementLocator) throws ElementNoFound;
+    List<WebElement> getElements(String elementLocator) throws ElementNoSuch;
 
-    void pressTAB(String locator) throws ElementNoFound;
+    void pressTAB(String locator) throws ElementNoSuch;
 
-    void pressSpace(String locator) throws ElementNoFound;
+    void pressSpace(String locator) throws ElementNoSuch;
 
     void windowScroll();
 

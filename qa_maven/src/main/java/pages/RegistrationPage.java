@@ -1,10 +1,9 @@
 package pages;
 
+import exception.ElementNoSuch;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
-
-import java.io.IOException;
 
 public class RegistrationPage {
 
@@ -26,7 +25,7 @@ public class RegistrationPage {
             web.clear("registrationEmailMain");
             web.input("registrationEmailMain", email);
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -44,7 +43,7 @@ public class RegistrationPage {
             web.input("registrationEmailRepeat", email);
             web.pressTAB("registrationEmailRepeat");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -62,7 +61,7 @@ public class RegistrationPage {
             web.input("registrationPassMain", pass);
             web.pressTAB("registrationPassMain");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -79,7 +78,7 @@ public class RegistrationPage {
             web.clear("registrationPassRepeat");
             web.input("registrationPassRepeat", pass);
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -96,7 +95,7 @@ public class RegistrationPage {
             web.clear("registrationPassRepeat");
             web.clearAndInputAndClickEnter("registrationPassRepeat", pass);
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -117,7 +116,7 @@ public class RegistrationPage {
 
             web.clickElement("checkBoxAccept");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -132,7 +131,7 @@ public class RegistrationPage {
 
             web.clickElement("buttonRegistration");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -147,7 +146,7 @@ public class RegistrationPage {
 
             web.clickLink("loginLink");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -162,7 +161,7 @@ public class RegistrationPage {
 
             web.clickLink("logoutLink");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -185,7 +184,7 @@ public class RegistrationPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -206,7 +205,7 @@ public class RegistrationPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -227,7 +226,7 @@ public class RegistrationPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -248,7 +247,7 @@ public class RegistrationPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));

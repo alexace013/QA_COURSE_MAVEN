@@ -1,9 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="FunctionalSuite" verbose="1" >
+<suite name="FunctionalSuite" verbose="1">
     <test name="Functional">
         <classes>
-            <class name="tests.login.NGTestsSelenium"/>
-            <class name="tests.registration.RegTestsSelenium"/>
+            <class name="tests.login.LoginTests"/>
+            <class name="tests.registration.RegistrationTests"/>
+            <class name="tests.product_page.ProductPageTests"/>
         </classes>
     </test>
 </suite>

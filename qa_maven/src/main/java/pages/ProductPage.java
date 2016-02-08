@@ -1,10 +1,9 @@
 package pages;
 
+import exception.ElementNoSuch;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
-
-import java.io.IOException;
 
 public class ProductPage {
 
@@ -25,10 +24,12 @@ public class ProductPage {
         try {
 
             web.moveToElementAndClick("logoCenterLink", "logoCenterLink");
-        } catch (IOException e) {
+
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
-            log.error(String.format("Excepion < %s >", e.getStackTrace()));
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
         }
 
     }
@@ -40,7 +41,7 @@ public class ProductPage {
             web.moveToElement("logoLeftLink");
             web.moveToElementAndClick("productOuterwearLink", "productOuterwearText");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -56,7 +57,7 @@ public class ProductPage {
             web.moveToElement("logoLeftLink");
             web.moveToElementAndClick("productOuterwearLink", "productOuterwearText");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -71,22 +72,23 @@ public class ProductPage {
 
             web.moveToElementAndClick("productFirstPositionImage", "productFirstPositionLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("productName")) {
+
+                log.info(String.format("switch to woman product was correct"));
+
+            } else {
+
+                log.info(String.format("switch to woman product was failed"));
+
+            }
+
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
-        if (web.waitForElementPresent("productName")) {
-
-            log.info(String.format("switch to woman product was correct"));
-
-        } else {
-
-            log.error(String.format("switch to woman product was failed"));
-
-        }
 
     }
 
@@ -101,12 +103,12 @@ public class ProductPage {
 
             } else {
 
-                log.error(String.format("switch to product page was failed"));
+                log.info(String.format("switch to product page was failed"));
                 return false;
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));

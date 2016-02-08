@@ -1,7 +1,7 @@
 package utils;
 
 import exception.AlertException;
-import exception.ElementNoFound;
+import exception.ElementNoSuch;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -47,10 +47,10 @@ public class WebElementsActions implements WebInterface {
      *
      * @param inputLocator search a locator for input
      * @param data         data input
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void input(String inputLocator, String data) throws ElementNoFound {
+    public void input(String inputLocator, String data) throws ElementNoSuch {
 
         driver.findElement(CONFIGURATION.getLocator(inputLocator)).sendKeys(data);
         log.info(String.format("input < %s > and send < %s >", inputLocator, data));
@@ -61,10 +61,10 @@ public class WebElementsActions implements WebInterface {
      * Clear text field or some field
      *
      * @param clearLocator search a locator
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void clear(String clearLocator) throws ElementNoFound {
+    public void clear(String clearLocator) throws ElementNoSuch {
 
         driver.findElement(CONFIGURATION.getLocator(clearLocator)).clear();
         log.info(String.format("clear element < %s >", clearLocator));
@@ -76,10 +76,10 @@ public class WebElementsActions implements WebInterface {
      *
      * @param inputLocator search a locator for input
      * @param inputData    search a locator for data input
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void clearAndInput(String inputLocator, String inputData) throws ElementNoFound {
+    public void clearAndInput(String inputLocator, String inputData) throws ElementNoSuch {
 
         driver.findElement(CONFIGURATION.getLocator(inputLocator)).clear();
         driver.findElement(CONFIGURATION.getLocator(inputLocator)).sendKeys(inputData);
@@ -93,10 +93,10 @@ public class WebElementsActions implements WebInterface {
      *
      * @param inputLocator search a locator for input
      * @param inputData    search a locator for data input
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void clearAndInputAndClickEnter(String inputLocator, String inputData) throws ElementNoFound {
+    public void clearAndInputAndClickEnter(String inputLocator, String inputData) throws ElementNoSuch {
 
         driver.findElement(CONFIGURATION.getLocator(inputLocator)).clear();
         driver.findElement(CONFIGURATION.getLocator(inputLocator)).sendKeys(inputData);
@@ -109,10 +109,10 @@ public class WebElementsActions implements WebInterface {
      * Click on element
      *
      * @param elementLocator search element locator for click
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void clickElement(String elementLocator) throws ElementNoFound {
+    public void clickElement(String elementLocator) throws ElementNoSuch {
 
         driver.findElement(CONFIGURATION.getLocator(elementLocator)).click();
         log.info(String.format("click element < %s >", elementLocator));
@@ -123,10 +123,10 @@ public class WebElementsActions implements WebInterface {
      * Click a button
      *
      * @param buttonLocator search button locator for click
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void clickButton(String buttonLocator) throws ElementNoFound {
+    public void clickButton(String buttonLocator) throws ElementNoSuch {
 
         driver.findElement(CONFIGURATION.getLocator(buttonLocator)).click();
         log.info(String.format("click on button < %s >", buttonLocator));
@@ -137,10 +137,10 @@ public class WebElementsActions implements WebInterface {
      * Click a link
      *
      * @param linkLocator search link locator for click
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void clickLink(String linkLocator) throws ElementNoFound {
+    public void clickLink(String linkLocator) throws ElementNoSuch {
 
         driver.findElement(CONFIGURATION.getLocator(linkLocator)).click();
         log.info(String.format("click on link < %s >", linkLocator));
@@ -151,10 +151,10 @@ public class WebElementsActions implements WebInterface {
      * Move to element and click on this element
      *
      * @param moveToLocator search move locator
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void moveToElement(String moveToLocator) throws ElementNoFound {
+    public void moveToElement(String moveToLocator) throws ElementNoSuch {
 
         WebElement webElement = driver.findElement(CONFIGURATION.getLocator(moveToLocator));
         Actions actions = new Actions(driver);
@@ -170,10 +170,10 @@ public class WebElementsActions implements WebInterface {
      *
      * @param moveToLocator  search move locator
      * @param clickToElement search element for click
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void moveToElementAndClick(String moveToLocator, String clickToElement) throws ElementNoFound {
+    public void moveToElementAndClick(String moveToLocator, String clickToElement) throws ElementNoSuch {
 
         WebElement webElement = driver.findElement(CONFIGURATION.getLocator(moveToLocator));
         Actions actions = new Actions(driver);
@@ -189,10 +189,10 @@ public class WebElementsActions implements WebInterface {
      * Select/deselect the checkbox
      *
      * @param checkBoxLocator search check box locator
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void selectCheckBox(String checkBoxLocator) throws ElementNoFound {
+    public void selectCheckBox(String checkBoxLocator) throws ElementNoSuch {
 
         if (driver.findElement(CONFIGURATION.getLocator(checkBoxLocator)).isSelected()) {
             driver.findElement(CONFIGURATION.getLocator(checkBoxLocator)).click();
@@ -206,10 +206,10 @@ public class WebElementsActions implements WebInterface {
      *
      * @param checkBoxLocator  search check box locator
      * @param isCheckBoxSelect true if check box is select, otherwise false
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void selectCheckBox(String checkBoxLocator, boolean isCheckBoxSelect) throws ElementNoFound {
+    public void selectCheckBox(String checkBoxLocator, boolean isCheckBoxSelect) throws ElementNoSuch {
 
         if (driver.findElement(CONFIGURATION.getLocator(checkBoxLocator)).isSelected() &
                 isCheckBoxSelect == false) {
@@ -230,10 +230,10 @@ public class WebElementsActions implements WebInterface {
      *
      * @param elementLocator search element locator
      * @return true if element is present on page, otherwise false
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public boolean isElementPresent(String elementLocator) throws ElementNoFound {
+    public boolean isElementPresent(String elementLocator) throws ElementNoSuch {
 
         if (!driver.findElement(CONFIGURATION.getLocator(elementLocator)).isDisplayed()) {
 
@@ -323,10 +323,10 @@ public class WebElementsActions implements WebInterface {
      *
      * @param elementLocator search element locator which is not visible
      * @param timeoutSeconds the timeout in seconds when an expectation is called
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void waitElementNotVisible(String elementLocator, int timeoutSeconds) throws ElementNoFound {
+    public void waitElementNotVisible(String elementLocator, int timeoutSeconds) throws ElementNoSuch {
 
         WebDriverWait webDriverWait = new WebDriverWait(driver, timeoutSeconds);
         webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(CONFIGURATION.getLocator(elementLocator)));
@@ -342,10 +342,10 @@ public class WebElementsActions implements WebInterface {
      *
      * @param elementLocator search element locator
      * @return true If element is present,otherwise false
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public boolean waitForElementPresent(String elementLocator) throws ElementNoFound {
+    public boolean waitForElementPresent(String elementLocator) throws ElementNoSuch {
 
         if (driverWait.until(ExpectedConditions.
                 elementToBeSelected(CONFIGURATION.getLocator(elementLocator)))) {
@@ -377,7 +377,7 @@ public class WebElementsActions implements WebInterface {
      * @throws IOException If the locator cannot found
      */
     @Override
-    public boolean waitElementToBeClickable(String elementLocator) throws ElementNoFound {
+    public boolean waitElementToBeClickable(String elementLocator) throws ElementNoSuch {
 
         if (driverWait.until(ExpectedConditions.
                 elementToBeSelected(CONFIGURATION.getLocator(elementLocator)))) {
@@ -441,10 +441,10 @@ public class WebElementsActions implements WebInterface {
      * @param elementLocator search element locator
      * @return element {@link WebElement} driver from
      * configuration {@link WebElementsActions#CONFIGURATION}
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public WebElement getElement(String elementLocator) throws ElementNoFound {
+    public WebElement getElement(String elementLocator) throws ElementNoSuch {
 
         log.info(String.format("get element < %s >", elementLocator));
         return driver.findElement(CONFIGURATION.getLocator(elementLocator));
@@ -457,10 +457,10 @@ public class WebElementsActions implements WebInterface {
      * @param elementLocator search element locator
      * @return elements {@link List<WebElement>} driver find elements from
      * configuration {@link WebElementsActions#CONFIGURATION}
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public List<WebElement> getElements(String elementLocator) throws ElementNoFound {
+    public List<WebElement> getElements(String elementLocator) throws ElementNoSuch {
 
         log.info(String.format("get elements < %s >", elementLocator));
         return driver.findElements(CONFIGURATION.getLocator(elementLocator));
@@ -472,10 +472,10 @@ public class WebElementsActions implements WebInterface {
      * {@link WebElementsActions#pressTAB(String)}
      *
      * @param locator search locator for press button {@link Keys#TAB}
-     * @throws ElementNoFound If the locator cannot found
+     * @throws ElementNoSuch If the locator cannot found
      */
     @Override
-    public void pressTAB(String locator) throws ElementNoFound {
+    public void pressTAB(String locator) throws ElementNoSuch {
 
         WebElement webElement = driver.findElement(CONFIGURATION.getLocator(String.valueOf(locator)));
         webElement.sendKeys(Keys.TAB);
@@ -490,7 +490,7 @@ public class WebElementsActions implements WebInterface {
      * @see {@link Keys#SPACE}
      */
     @Override
-    public void pressSpace(String locator) throws ElementNoFound {
+    public void pressSpace(String locator) throws ElementNoSuch {
 
         WebElement webElement = driver.findElement(CONFIGURATION.getLocator(locator));
         webElement.sendKeys(Keys.SPACE);

@@ -1,6 +1,6 @@
 package pages;
 
-import exception.ElementNoFound;
+import exception.ElementNoSuch;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
@@ -23,7 +23,7 @@ public class HomePage {
 
             web.clickLink("logoCenterLink");
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -48,7 +48,7 @@ public class HomePage {
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -73,7 +73,7 @@ public class HomePage {
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -94,14 +94,15 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to man page was incorrect"));
+                log.info(String.format("switch to man page was incorrect"));
 
             }
 
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
@@ -119,13 +120,14 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to barn page was incorrect"));
+                log.info(String.format("switch to barn page was incorrect"));
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
@@ -144,11 +146,11 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to sport page was incorrect"));
+                log.info(String.format("switch to sport page was incorrect"));
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -170,11 +172,11 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to underklader and badpage page was incorrect"));
+                log.info(String.format("switch to underklader and badpage page was incorrect"));
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -196,12 +198,13 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to skor page was incorrect"));
+                log.info(String.format("switch to skor page was incorrect"));
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
@@ -221,13 +224,14 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to hem page was incorrect"));
+                log.info(String.format("switch to hem page was incorrect"));
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
@@ -247,13 +251,14 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to electronic page was incorrect"));
+                log.info(String.format("switch to electronic page was incorrect"));
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
@@ -273,13 +278,14 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to skonhet page was incorrect"));
+                log.info(String.format("switch to skonhet page was incorrect"));
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
@@ -299,11 +305,11 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to plus page was incorrect"));
+                log.info(String.format("switch to plus page was incorrect"));
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -326,10 +332,10 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to rea page was incorrect"));
+                log.info(String.format("switch to rea page was incorrect"));
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -352,11 +358,11 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to inspiration page was incorrect"));
+                log.info(String.format("switch to inspiration page was incorrect"));
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -379,11 +385,11 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("switch to resor page was incorrect"));
+                log.info(String.format("switch to resor page was incorrect"));
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -399,7 +405,7 @@ public class HomePage {
 
             web.clickButton("buttonBlurb");
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -413,7 +419,7 @@ public class HomePage {
 
             web.clickLink("logoutLink");
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -428,7 +434,7 @@ public class HomePage {
 
             web.clickLink("loginLink");
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -453,7 +459,7 @@ public class HomePage {
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -480,7 +486,7 @@ public class HomePage {
 
             }
 
-        } catch (ElementNoFound e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));

@@ -1,10 +1,9 @@
 package pages;
 
+import exception.ElementNoSuch;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
-
-import java.io.IOException;
 
 public class LoginPage {
 
@@ -22,7 +21,7 @@ public class LoginPage {
      * {@param loginData} in login field
      *
      * @param loginData login data for search locator
-     * @throws IOException
+     * @throws ElementNoSuch
      */
     public void clickAndInputLoginField(String loginData) {
 
@@ -32,7 +31,7 @@ public class LoginPage {
             isBeCleaned("loginFieldInput");
             web.input("loginFieldInput", loginData);
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 
@@ -44,7 +43,7 @@ public class LoginPage {
      * User checking under their account
      *
      * @return true if user login success, otherwise false
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isUserLogin() {
 
@@ -56,7 +55,7 @@ public class LoginPage {
                 return false;
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 
@@ -70,7 +69,7 @@ public class LoginPage {
      * User checkout under their account
      *
      * @return true if user logout success, otherwise false
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isUserLogout() {
 
@@ -82,7 +81,7 @@ public class LoginPage {
                 return false;
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
             e.printStackTrace();
         }
 
@@ -94,7 +93,7 @@ public class LoginPage {
      * Click on element and input {@param loginData} in login field and after this click key TAB
      *
      * @param loginData data login for search locator {@info example: e-mail}
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void clickAndInputLoginFieldAndClickTAB(String loginData) {
 
@@ -105,7 +104,7 @@ public class LoginPage {
             web.input("loginFieldInput", loginData);
             web.pressTAB("loginFieldInput");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 
@@ -117,7 +116,7 @@ public class LoginPage {
      * Click on search element locator and input {@param passwordData} in password field
      *
      * @param passwordData data password for search locator {@info example: 12345}
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void clickAndInputPassFieldWithOneLocator(String passwordData) {
 
@@ -127,7 +126,7 @@ public class LoginPage {
             isBeCleaned("passFieldInputSecond");
             web.input("passFieldInputSecond", passwordData);
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 
@@ -139,7 +138,7 @@ public class LoginPage {
      * Click on search element locators and input {@param passwordData} in password field
      *
      * @param passwordData data password for search locator {@info example: 12345}
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void clickAndInputPassFieldWithTwoLocators(String passwordData) {
 
@@ -149,7 +148,7 @@ public class LoginPage {
             isBeCleaned("passFieldInputSecond");
             web.input("passFieldInputSecond", passwordData);
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 
@@ -160,7 +159,7 @@ public class LoginPage {
     /**
      * Click on login button
      *
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void clickLoginButton() {
 
@@ -168,7 +167,7 @@ public class LoginPage {
 
             web.clickElement("loginButton");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -180,7 +179,7 @@ public class LoginPage {
     /**
      * Click on text which is on the login page
      *
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void clickToLoginPageText() {
 
@@ -188,7 +187,7 @@ public class LoginPage {
 
             web.clickElement("loginPageText");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -200,7 +199,7 @@ public class LoginPage {
     /**
      * Click to close the popup help window
      *
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public void closeHelpBox() {
 
@@ -208,7 +207,7 @@ public class LoginPage {
 
             web.clickElement("closeHelpBox");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -221,7 +220,7 @@ public class LoginPage {
      * Check whether there error message on a page
      *
      * @return true If message active, otherwise false
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isErrorMessagePresentOnPage() {
 
@@ -237,7 +236,7 @@ public class LoginPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -252,7 +251,7 @@ public class LoginPage {
      * Check active there error message on a page for one field
      *
      * @return false If one field is empty or failed data, otherwise true
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isErrorMessageOneFieldEmpty() {
 
@@ -268,7 +267,7 @@ public class LoginPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -283,7 +282,7 @@ public class LoginPage {
      * Check active there error message on a page for fields
      *
      * @return false If fields is empty or failed data, otherwise true
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isErrorMessageFieldsEmpty() {
 
@@ -299,7 +298,7 @@ public class LoginPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -314,7 +313,7 @@ public class LoginPage {
      * Check there on the page pop-up help window
      *
      * @return true If pop-up help window is present, otherwise false
-     * @throws IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions}
      */
     public boolean isHelpBoxActive() {
 
@@ -330,7 +329,7 @@ public class LoginPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -357,7 +356,7 @@ public class LoginPage {
      * Private method for the purification of the input field , if text present in the field
      *
      * @param clearLocator search locator for clear
-     * @throws IOException IOException {@link utils.WebElementsActions}
+     * @throws ElementNoSuch IOException {@link utils.WebElementsActions}
      */
     private void isBeCleaned(String clearLocator) {
 
@@ -369,7 +368,7 @@ public class LoginPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 

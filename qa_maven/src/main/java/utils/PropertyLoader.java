@@ -7,6 +7,7 @@ import java.util.Properties;
 
 public class PropertyLoader {
 
+    @FileProperties(properties = true)
     private static final String PROPERTY_FILE = "src/main/resources/application.properties";
 
     public static String loadProperty(String name) {
