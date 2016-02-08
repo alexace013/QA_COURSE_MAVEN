@@ -1,10 +1,9 @@
 package pages;
 
+import exception.ElementNoFound;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
-
-import java.io.IOException;
 
 public class HomePage {
 
@@ -24,7 +23,7 @@ public class HomePage {
 
             web.clickLink("logoCenterLink");
 
-        } catch (IOException e) {
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -49,7 +48,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -64,19 +63,20 @@ public class HomePage {
 
             web.moveToElementAndClick("womanMenu", "womanMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("productOuterwearLink")) {
+
+                log.info(String.format("switch to woman page was correct"));
+
+            } else {
+
+                log.info(String.format("switch to woman page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
-
-        }
-
-        if (web.waitForElementPresent("productOuterwearLink")) {
-
-            log.info(String.format("switch to woman page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to woman page was incorrect"));
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
@@ -88,19 +88,20 @@ public class HomePage {
 
             web.moveToElementAndClick("manMenu", "manMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("manNavigationLink")) {
+
+                log.info(String.format("switch to man page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to man page was incorrect"));
+
+            }
+
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
-
-        }
-
-        if (web.waitForElementPresent("manNavigationLink")) {
-
-            log.info(String.format("switch to man page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to man page was incorrect"));
 
         }
 
@@ -112,21 +113,22 @@ public class HomePage {
 
             web.moveToElementAndClick("barnMenu", "barnMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("barnNavigationLink")) {
+
+                log.info(String.format("switch to barn page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to barn page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
 
         }
 
-        if (web.waitForElementPresent("barnNavigationLink")) {
-
-            log.info(String.format("switch to barn page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to barn page was incorrect"));
-
-        }
 
     }
 
@@ -136,22 +138,23 @@ public class HomePage {
 
             web.moveToElementAndClick("sportMenu", "sportMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("sportNavigationLink")) {
+
+                log.info(String.format("switch to sport page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to sport page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
-        if (web.waitForElementPresent("sportNavigationLink")) {
-
-            log.info(String.format("switch to sport page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to sport page was incorrect"));
-
-        }
 
     }
 
@@ -161,22 +164,23 @@ public class HomePage {
 
             web.moveToElementAndClick("underklader-badMenu", "underklader-badMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("underkladerAndBadNavigationLink")) {
+
+                log.info(String.format("switch to underklader and badpage was correct"));
+
+            } else {
+
+                log.error(String.format("switch to underklader and badpage page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
-        if (web.waitForElementPresent("underkladerAndBadNavigationLink")) {
-
-            log.info(String.format("switch to underklader and badpage was correct"));
-
-        } else {
-
-            log.error(String.format("switch to underklader and badpage page was incorrect"));
-
-        }
 
     }
 
@@ -186,20 +190,22 @@ public class HomePage {
 
             web.moveToElementAndClick("skorMenu", "skorMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("skorNavigationLink")) {
+
+                log.info(String.format("switch to skor page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to skor page was incorrect"));
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
 
         }
 
-        if (web.waitForElementPresent("skorNavigationLink")) {
 
-            log.info(String.format("switch to skor page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to skor page was incorrect"));
-        }
 
     }
 
@@ -209,21 +215,23 @@ public class HomePage {
 
             web.moveToElementAndClick("hemMenu", "hemMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("hemNavigationLink")) {
+
+                log.info(String.format("switch to hem page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to hem page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
 
         }
 
-        if (web.waitForElementPresent("hemNavigationLink")) {
 
-            log.info(String.format("switch to hem page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to hem page was incorrect"));
-
-        }
 
     }
 
@@ -233,21 +241,23 @@ public class HomePage {
 
             web.moveToElementAndClick("electronicMenu", "electronicMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("electronicNavigationLink")) {
+
+                log.info(String.format("switch to electronic page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to electronic page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
 
         }
 
-        if (web.waitForElementPresent("electronicNavigationLink")) {
 
-            log.info(String.format("switch to electronic page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to electronic page was incorrect"));
-
-        }
 
     }
 
@@ -257,21 +267,23 @@ public class HomePage {
 
             web.moveToElementAndClick("skonhetMenu", "skonhetMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("skonhetNavigationLink")) {
+
+                log.info(String.format("switch to skonhet page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to skonhet page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
 
         }
 
-        if (web.waitForElementPresent("skonhetNavigationLink")) {
 
-            log.info(String.format("switch to skonhet page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to skonhet page was incorrect"));
-
-        }
 
     }
 
@@ -281,22 +293,24 @@ public class HomePage {
 
             web.moveToElementAndClick("plusMenu", "plusMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("plusNavigationLink")) {
+
+                log.info(String.format("switch to plus page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to plus page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
-        if (web.waitForElementPresent("plusNavigationLink")) {
 
-            log.info(String.format("switch to plus page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to plus page was incorrect"));
-
-        }
 
     }
 
@@ -306,21 +320,23 @@ public class HomePage {
 
             web.moveToElementAndClick("reaMenu", "reaMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("reaNavigationLink")) {
+
+                log.info(String.format("switch to rea page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to rea page was incorrect"));
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
-        if (web.waitForElementPresent("reaNavigationLink")) {
 
-            log.info(String.format("switch to rea page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to rea page was incorrect"));
-        }
 
     }
 
@@ -330,22 +346,24 @@ public class HomePage {
 
             web.moveToElementAndClick("inspirationMenu", "inspirationMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("inspirationNavigationLink")) {
+
+                log.info(String.format("switch to inspiration page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to inspiration page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
-        if (web.waitForElementPresent("inspirationNavigationLink")) {
 
-            log.info(String.format("switch to inspiration page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to inspiration page was incorrect"));
-
-        }
 
     }
 
@@ -355,21 +373,23 @@ public class HomePage {
 
             web.moveToElementAndClick("resorMenu", "resorMenuLink");
 
-        } catch (IOException e) {
+            if (web.waitForElementPresent("resorNavigationLink")) {
+
+                log.info(String.format("switch to resor page was correct"));
+
+            } else {
+
+                log.error(String.format("switch to resor page was incorrect"));
+
+            }
+
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
         }
 
-        if (web.waitForElementPresent("resorNavigationLink")) {
 
-            log.info(String.format("switch to resor page was correct"));
-
-        } else {
-
-            log.error(String.format("switch to resor page was incorrect"));
-
-        }
 
     }
 
@@ -379,7 +399,7 @@ public class HomePage {
 
             web.clickButton("buttonBlurb");
 
-        } catch (IOException e) {
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -393,7 +413,7 @@ public class HomePage {
 
             web.clickLink("logoutLink");
 
-        } catch (IOException e) {
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -408,7 +428,7 @@ public class HomePage {
 
             web.clickLink("loginLink");
 
-        } catch (IOException e) {
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -428,12 +448,12 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("login was failed"));
+                log.info(String.format("login was failed"));
                 return false;
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -455,12 +475,12 @@ public class HomePage {
 
             } else {
 
-                log.error(String.format("logout was faliled"));
+                log.info(String.format("logout was faliled"));
                 return false;
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoFound e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));

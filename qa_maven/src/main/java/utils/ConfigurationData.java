@@ -1,5 +1,6 @@
 package utils;
 
+import exception.ElementNoFound;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -69,7 +70,7 @@ public class ConfigurationData {
      *                               {@link Paths#get(String, String...)}, where
      *                               String => {@value UI_MAPPING_PATH}}
      */
-    private Map<String, String> loadPropertiesToMap() throws IOException {
+    private Map<String, String> loadPropertiesToMap() throws ElementNoFound {
 
         if (Files.exists(Paths.get(UI_MAPPING_PATH))) {
 
@@ -89,7 +90,7 @@ public class ConfigurationData {
 
         } else {
 
-            throw new FileNotFoundException(
+            throw new ElementNoFound(
                     String.format("< %s > not found exception", UI_MAPPING_PATH.substring(13)));
 
         }
@@ -113,8 +114,9 @@ public class ConfigurationData {
      *
      * @param key some locator from {@fileProperties UIMapping.properties}
      * @return {@link By without parameter}
+     * @throws {@link exception.ElementNoFound}
      */
-    public By getLocator(String key) throws IOException {
+    public By getLocator(String key) throws ElementNoFound {
 
         String[] partsOfLocators = getPropertyValue(key).split("\"");
         String findMethod = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
@@ -147,7 +149,7 @@ public class ConfigurationData {
                 return By.partialLinkText(locator);
 
             default:
-                throw new IOException(
+                throw new ElementNoFound(
                         String.format("Locator < %s >  not defined!", locator));
         }
 

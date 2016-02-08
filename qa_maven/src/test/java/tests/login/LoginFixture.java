@@ -5,9 +5,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pages.HomePage;
 import pages.LoginPage;
-import tests.browser.StartBrowserFixture;
+import tests.browser.BrowserFixture;
 
-public class LoginFixture extends StartBrowserFixture {
+public class LoginFixture extends BrowserFixture {
 
     private static final Logger log = Logger.getLogger(LoginFixture.class);
     private final static String URL = "http://www.ellos.se/";
