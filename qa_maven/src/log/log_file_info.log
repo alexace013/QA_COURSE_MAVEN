@@ -655,3 +655,108 @@
 16:49:11,622  INFO main ProductPageFixture:tearDown:33 - end product page tests
 16:49:11,703  INFO main BrowserFixture:quitBrowser:65 - browser close successful
 16:49:11,703  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+17:03:21,085  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+17:03:28,447  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+17:03:28,455  INFO main rootLogger:<init>:33 - created properties
+17:03:28,466  INFO main rootLogger:<init>:38 - created map properties
+17:03:28,467  INFO main ProductPageFixture:setUp:27 - start product page tests
+17:03:28,568  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+17:03:28,600  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+17:03:28,731  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+17:03:30,033  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < inThePage > present
+17:03:30,033  INFO main HomePage:switchToWomanPage:68 - switch to woman page was correct
+17:03:30,064  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:03:30,114  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+17:03:32,021  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+17:03:32,055  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:03:32,116  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+17:03:35,522  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+17:03:35,574  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+17:03:35,575  INFO main ProductPage:inTheProductPage:75 - switch to woman product was correct
+17:03:35,615  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+17:03:35,616  INFO main ProductPage:checkCorrectSwitchToProductPage:99 - switch to product page was correct
+17:03:35,652  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+17:03:36,752  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+17:03:36,787  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+17:03:37,997  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+17:03:38,056  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+17:03:38,056  INFO main HomePage:switchToManPage:93 - switch to man page was correct
+17:03:38,093  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:03:38,139  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+17:03:39,837  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+17:03:39,878  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:03:39,931  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+17:03:41,861  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+17:03:41,911  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+17:03:41,911  INFO main ProductPage:inTheProductPage:75 - switch to woman product was correct
+17:03:41,956  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+17:03:41,957  INFO main ProductPage:checkCorrectSwitchToProductPage:99 - switch to product page was correct
+17:03:41,981  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+17:03:43,023  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+17:03:43,056  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < barnMenu >
+17:03:44,507  INFO main WebElementsActions:clickElement:118 - click element < barnMenuLink >
+17:03:44,590  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < barnNavigationLink > present
+17:03:44,611  INFO main HomePage:switchToChildPage:121 - switch to barn page was correct
+17:03:44,628  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:03:44,681  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+17:03:46,808  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+17:03:46,844  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:03:46,923  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+17:03:49,129  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+17:03:49,179  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+17:03:49,180  INFO main ProductPage:inTheProductPage:75 - switch to woman product was correct
+17:03:49,214  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+17:03:49,214  INFO main ProductPage:checkCorrectSwitchToProductPage:99 - switch to product page was correct
+17:03:49,236  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+17:03:50,310  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+17:03:50,343  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < sportMenu >
+17:03:50,442  INFO main WebElementsActions:clickElement:118 - click element < sportMenuLink >
+17:03:51,519  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < sportNavigationLink > present
+17:03:51,545  INFO main HomePage:switchToSportPage:149 - switch to sport page was correct
+17:03:51,596  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:03:51,645  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+17:03:53,377  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+17:03:53,424  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:03:53,499  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+17:03:55,315  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+17:03:55,357  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+17:03:55,357  INFO main ProductPage:inTheProductPage:75 - switch to woman product was correct
+17:03:55,402  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+17:03:55,402  INFO main ProductPage:checkCorrectSwitchToProductPage:99 - switch to product page was correct
+17:03:55,426  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+17:03:56,466  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+17:03:56,492  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < linen&bathMenu >
+17:03:57,826  INFO main WebElementsActions:clickElement:118 - click element < linen&bathMenuLink >
+17:03:57,886  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < linen&bathNavigationLink > present
+17:03:57,903  INFO main HomePage:switchToLinenAndBathPage:177 - switch to linen and bath page was correct
+17:03:57,925  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:03:57,978  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+17:04:00,290  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+17:04:00,322  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:04:00,381  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+17:04:00,543  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+17:04:03,118  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+17:04:03,119  INFO main ProductPage:inTheProductPage:75 - switch to woman product was correct
+17:04:03,167  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+17:04:03,167  INFO main ProductPage:checkCorrectSwitchToProductPage:99 - switch to product page was correct
+17:04:03,189  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+17:04:04,271  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+17:04:04,306  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < footwearMenu >
+17:04:05,634  INFO main WebElementsActions:clickElement:118 - click element < footwearMenuLink >
+17:04:05,707  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < footwearNavigationLink > present
+17:04:05,707  INFO main HomePage:switchToFootwearPage:204 - switch to footwear page was correct
+17:04:05,728  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:04:05,767  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+17:04:07,728  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+17:04:07,759  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+17:04:07,865  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+17:04:09,805  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+17:04:09,850  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+17:04:09,850  INFO main ProductPage:inTheProductPage:75 - switch to woman product was correct
+17:04:09,876  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+17:04:09,876  INFO main ProductPage:checkCorrectSwitchToProductPage:99 - switch to product page was correct
+17:04:09,893  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+17:04:10,879  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+17:04:10,880  INFO main ProductPageFixture:tearDown:33 - end product page tests
+17:04:10,964  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+17:04:10,964  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed

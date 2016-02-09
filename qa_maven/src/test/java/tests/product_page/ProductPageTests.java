@@ -40,7 +40,7 @@ public class ProductPageTests extends ProductPageFixture {
     @Test(priority = 3)
     public void test3_barnProductPage() {
 
-        getHomePage().switchToBarnPage();
+        getHomePage().switchToChildPage();
         getProductPage().switchToProductCategory();
         getProductPage().switchToFirstProductPage();
         getProductPage().inTheProductPage();
@@ -55,6 +55,34 @@ public class ProductPageTests extends ProductPageFixture {
     public void test4_sportProductPage() {
 
         getHomePage().switchToSportPage();
+        getProductPage().switchToProductCategory();
+        getProductPage().switchToFirstProductPage();
+        getProductPage().inTheProductPage();
+
+        Assert.assertTrue(getProductPage().checkCorrectSwitchToProductPage(), "correct switch to product page");
+
+        getProductPage().switchToHomePage();
+
+    }
+
+    @Test(priority = 5)
+    public void test5_linenAndBathPage() {
+
+        getHomePage().switchToLinenAndBathPage();
+        getProductPage().switchToProductCategory();
+        getProductPage().switchToFirstProductPage();
+        getProductPage().inTheProductPage();
+
+        Assert.assertTrue(getProductPage().checkCorrectSwitchToProductPage(), "correct switch to product page");
+
+        getProductPage().switchToHomePage();
+
+    }
+
+    @Test(priority = 6)
+    public void test6_footwearPage() {
+
+        getHomePage().switchToFootwearPage();
         getProductPage().switchToProductCategory();
         getProductPage().switchToFirstProductPage();
         getProductPage().inTheProductPage();

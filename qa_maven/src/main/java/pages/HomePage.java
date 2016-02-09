@@ -108,7 +108,8 @@ public class HomePage {
 
     }
 
-    public void switchToBarnPage() {
+    // switch to barn page
+    public void switchToChildPage() {
 
         try {
 
@@ -135,6 +136,7 @@ public class HomePage {
 
     }
 
+    // switch to sport page
     public void switchToSportPage() {
 
         try {
@@ -162,19 +164,21 @@ public class HomePage {
 
     }
 
-    public void switchToUnderkladerAndBadPage() {
+    // switch to underkläder & bad page
+    public void switchToLinenAndBathPage() {
 
         try {
 
-            web.moveToElementAndClick("underklader-badMenu", "underklader-badMenuLink");
+            web.moveToElementAndClick("linen&bathMenu", "linen&bathMenuLink");
 
-            if (web.waitForElementPresent("underkladerAndBadNavigationLink")) {
+            if (web.waitForElementPresent("linen&bathNavigationLink")) {
 
-                log.info(String.format("switch to underklader and badpage was correct"));
+                web.windowScroll();
+                log.info(String.format("switch to linen and bath page was correct"));
 
             } else {
 
-                log.info(String.format("switch to underklader and badpage page was incorrect"));
+                log.info(String.format("switch to linen and bath page page was incorrect"));
 
             }
 
@@ -188,19 +192,20 @@ public class HomePage {
 
     }
 
-    public void switchToSkorPage() {
+    // switch to skor page
+    public void switchToFootwearPage() {
 
         try {
 
-            web.moveToElementAndClick("skorMenu", "skorMenuLink");
+            web.moveToElementAndClick("footwearMenu", "footwearMenuLink");
 
-            if (web.waitForElementPresent("skorNavigationLink")) {
+            if (web.waitForElementPresent("footwearNavigationLink")) {
 
-                log.info(String.format("switch to skor page was correct"));
+                log.info(String.format("switch to footwear page was correct"));
 
             } else {
 
-                log.info(String.format("switch to skor page was incorrect"));
+                log.info(String.format("switch to footwear page was incorrect"));
             }
 
         } catch (ElementNoSuch e) {
