@@ -18,7 +18,7 @@ public class LoginFixture extends BrowserFixture {
     public void setUp() {
 
         getDriver().get(URL);
-        log.info(String.format("browser open page: %s", URL));
+        log.info(String.format("browser open page: < %s >", URL));
         homePage = new HomePage(getDriver());
         loginPage = new LoginPage(getDriver());
         log.info(String.format("start login tests"));

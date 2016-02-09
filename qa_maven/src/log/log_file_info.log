@@ -2174,3 +2174,87 @@
 20:29:21,799  INFO main ProductPageFixture:tearDown:33 - end product page tests
 20:29:21,882  INFO main BrowserFixture:quitBrowser:65 - browser close successful
 20:29:21,883  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+00:08:23,818  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+00:08:28,562  INFO main BasketFixture:setUp:23 - browser open: < http://www.ellos.se/ >
+00:08:28,569  INFO main rootLogger:<init>:33 - created properties
+00:08:28,575  INFO main rootLogger:<init>:38 - created map properties
+00:08:28,575  INFO main BasketFixture:setUp:27 - start login tests
+00:08:28,660  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+00:08:28,690  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < electronicMenu >
+00:08:29,938  INFO main WebElementsActions:clickElement:118 - click element < electronicMenuLink >
+00:08:30,005  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < electronicNavigationLink > present
+00:08:30,006  INFO main HomePage:switchToElectronicPage:316 - switch to electronic page was correct
+00:08:30,035  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+00:08:30,088  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+00:08:31,636  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+00:08:31,674  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < mobile >
+00:08:32,972  INFO main WebElementsActions:clickElement:118 - click element < mobile >
+00:08:33,016  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+00:08:33,102  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+00:08:35,462  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+00:08:35,563  INFO main WebElementsActions:clickElement:118 - click element < addProductToPage >
+00:08:35,565  INFO main BasketFixture:tearDown:34 - end login tests
+00:08:35,693  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+00:08:35,693  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+00:09:17,126  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+00:09:22,478  INFO main BasketFixture:setUp:23 - browser open: < http://www.ellos.se/ >
+00:09:22,484  INFO main rootLogger:<init>:33 - created properties
+00:09:22,495  INFO main rootLogger:<init>:38 - created map properties
+00:09:22,496  INFO main BasketFixture:setUp:27 - start login tests
+00:09:22,631  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+00:09:22,667  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < electronicMenu >
+00:09:23,984  INFO main WebElementsActions:clickElement:118 - click element < electronicMenuLink >
+00:09:24,034  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < electronicNavigationLink > present
+00:09:24,034  INFO main HomePage:switchToElectronicPage:316 - switch to electronic page was correct
+00:09:24,053  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+00:09:24,099  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+00:09:25,612  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+00:09:25,644  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < mobile >
+00:09:26,977  INFO main WebElementsActions:clickElement:118 - click element < mobile >
+00:09:27,021  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+00:09:27,076  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+00:09:29,145  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+00:09:29,263  INFO main WebElementsActions:clickElement:118 - click element < addProductToPage >
+00:09:29,265  INFO main BasketFixture:tearDown:34 - end login tests
+00:09:29,357  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+00:09:29,357  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+00:10:04,073  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+00:10:09,730  INFO main BasketFixture:setUp:23 - browser open: < http://www.ellos.se/ >
+00:10:09,741  INFO main rootLogger:<init>:33 - created properties
+00:10:09,747  INFO main rootLogger:<init>:38 - created map properties
+00:10:09,749  INFO main BasketFixture:setUp:27 - start login tests
+00:10:09,842  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+00:10:09,874  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < electronicMenu >
+00:10:10,983  INFO main WebElementsActions:clickElement:118 - click element < electronicMenuLink >
+00:10:11,041  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < electronicNavigationLink > present
+00:10:11,041  INFO main HomePage:switchToElectronicPage:316 - switch to electronic page was correct
+00:10:11,064  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < mobile >
+00:10:12,646  INFO main WebElementsActions:clickElement:118 - click element < mobile >
+00:10:12,677  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+00:10:12,734  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+00:10:14,950  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+00:10:15,080  INFO main WebElementsActions:clickElement:118 - click element < addProductToPage >
+00:10:15,082  INFO main BasketFixture:tearDown:34 - end login tests
+00:10:15,179  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+00:10:15,180  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+00:16:57,999  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+00:17:05,070  INFO main BasketFixture:setUp:23 - browser open: < http://www.ellos.se/ >
+00:17:05,076  INFO main rootLogger:<init>:33 - created properties
+00:17:05,083  INFO main rootLogger:<init>:38 - created map properties
+00:17:05,084  INFO main BasketFixture:setUp:27 - start login tests
+00:17:05,222  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+00:17:05,258  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < electronicMenu >
+00:17:06,777  INFO main WebElementsActions:clickElement:118 - click element < electronicMenuLink >
+00:17:06,826  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < electronicNavigationLink > present
+00:17:06,827  INFO main HomePage:switchToElectronicPage:316 - switch to electronic page was correct
+00:17:06,856  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < mobile >
+00:17:08,507  INFO main WebElementsActions:clickElement:118 - click element < mobile >
+00:17:08,544  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+00:17:08,594  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+00:17:10,816  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+00:17:10,944  INFO main WebElementsActions:clickElement:118 - click element < addProductToPage >
+00:17:11,000  INFO main WebElementsActions:isElementPresent:245 - < textIphone > is present on page.
+00:17:11,001  INFO main BasketPage:textPresent:44 - correct page
+00:17:11,005  INFO main BasketFixture:tearDown:34 - end login tests
+00:17:11,198  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+00:17:11,198  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
