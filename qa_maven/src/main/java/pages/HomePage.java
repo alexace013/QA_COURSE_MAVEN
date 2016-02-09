@@ -116,6 +116,7 @@ public class HomePage {
 
             if (web.waitForElementPresent("barnNavigationLink")) {
 
+                web.windowScroll();
                 log.info(String.format("switch to barn page was correct"));
 
             } else {
@@ -142,6 +143,7 @@ public class HomePage {
 
             if (web.waitForElementPresent("sportNavigationLink")) {
 
+                web.windowScroll();
                 log.info(String.format("switch to sport page was correct"));
 
             } else {

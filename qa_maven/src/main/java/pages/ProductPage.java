@@ -39,7 +39,7 @@ public class ProductPage {
         try {
 
             web.moveToElement("logoLeftLink");
-            web.moveToElementAndClick("productCategoryOuterwear", "productCategoryLinkOuterwear");
+            web.moveToElementAndClick("productCategoryOuterwear", "productCategoryOuterwearLink");
 
         } catch (ElementNoSuch e) {
 
@@ -54,8 +54,8 @@ public class ProductPage {
 
         try {
 
-//            web.moveToElement("logoLeftLink");
-            web.moveToElementAndClick("productFirstPositionImage", "productFirstPositionLink");
+            web.moveToElement("logoLeftLink");
+            web.moveToElementAndClick("productFirstPositionLink", "productFirstPositionLink");
 
         } catch (ElementNoSuch e) {
 
