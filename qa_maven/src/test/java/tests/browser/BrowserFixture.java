@@ -19,7 +19,7 @@ public class BrowserFixture {
     private static final String CHROME = "chrome";
     private static final String FIREFOX = "firefox";
     private static final String PHANTOMJS = "phantomjs";
-//    private static final String INTERNET_EXPLORER = "ie";
+    //    private static final String INTERNET_EXPLORER = "ie";
     /**/
     private static final String BROWSER_NAME = PropertyLoader.loadProperty("browser.name");
     private static WebDriver driver;
