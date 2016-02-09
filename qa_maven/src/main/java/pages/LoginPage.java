@@ -21,7 +21,7 @@ public class LoginPage {
      * {@param loginData} in login field
      *
      * @param loginData login data for search locator
-     * @throws ElementNoSuch
+     * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)}
      */
     public void clickAndInputLoginField(String loginData) {
 
@@ -43,7 +43,7 @@ public class LoginPage {
      * User checking under their account
      *
      * @return true if user login success, otherwise false
-     * @throws ElementNoSuch {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions#isElementPresent(String)}
      */
     public boolean isUserLogin() {
 
@@ -69,7 +69,7 @@ public class LoginPage {
      * User checkout under their account
      *
      * @return true if user logout success, otherwise false
-     * @throws ElementNoSuch {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions#isElementPresent(String)}
      */
     public boolean isUserLogout() {
 
@@ -93,7 +93,10 @@ public class LoginPage {
      * Click on element and input {@param loginData} in login field and after this click key TAB
      *
      * @param loginData data login for search locator {@info example: e-mail}
-     * @throws ElementNoSuch {@link utils.WebElementsActions}
+     * @throws ElementNoSuch {@link utils.WebElementsActions#clickElement(String)} and
+     *                       {@link WebElementsActions#clear(String)} and
+     *                       {@link WebElementsActions#input(String, String)} and
+     *                       {@link WebElementsActions#pressTAB(String)}
      */
     public void clickAndInputLoginFieldAndClickTAB(String loginData) {
 

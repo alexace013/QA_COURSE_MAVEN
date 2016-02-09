@@ -17,6 +17,11 @@ public class HomePage {
         web = new WebElementsActions(driver);
     }
 
+    /**
+     * Click logo link
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
+     */
     public void clickLogo() {
 
         try {
@@ -32,6 +37,12 @@ public class HomePage {
 
     }
 
+    /**
+     * Switch to registration page {@see https://www.ellos.se/LoginAndRegistration/Login?returnUrl=%2finspiration}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)} and
+     *                       {@link WebElementsActions#isElementPresent(String)}
+     */
     public void switchToRegistrationPage() {
 
         try {
@@ -57,6 +68,12 @@ public class HomePage {
 
     }
 
+    /**
+     * Switch to woman page {@see http://www.ellos.se/dam}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToWomanPage() {
 
         try {
@@ -82,6 +99,12 @@ public class HomePage {
 
     }
 
+    /**
+     * Switch to man page {@see http://www.ellos.se/herr}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToManPage() {
 
         try {
@@ -108,7 +131,12 @@ public class HomePage {
 
     }
 
-    // switch to barn page
+    /**
+     * Switch to barn page {@see http://www.ellos.se/barn}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToChildPage() {
 
         try {
@@ -117,7 +145,9 @@ public class HomePage {
 
             if (web.waitForElementPresent("barnNavigationLink")) {
 
+                // this method is used because it is not visible element on next page
                 web.windowScroll();
+
                 log.info(String.format("switch to barn page was correct"));
 
             } else {
@@ -136,7 +166,12 @@ public class HomePage {
 
     }
 
-    // switch to sport page
+    /**
+     * Switch to sport page {@see http://www.ellos.se/sport}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToSportPage() {
 
         try {
@@ -145,7 +180,9 @@ public class HomePage {
 
             if (web.waitForElementPresent("sportNavigationLink")) {
 
+                // this method is used because it is not visible element on next page
                 web.windowScroll();
+
                 log.info(String.format("switch to sport page was correct"));
 
             } else {
@@ -164,7 +201,12 @@ public class HomePage {
 
     }
 
-    // switch to underkläder & bad page
+    /**
+     * Switch to underkläder & bad page {@see http://www.ellos.se/underklader-bad}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToLinenAndBathPage() {
 
         try {
@@ -173,7 +215,9 @@ public class HomePage {
 
             if (web.waitForElementPresent("linen&bathNavigationLink")) {
 
+                // this method is used because it is not visible element on next page
                 web.windowScroll();
+
                 log.info(String.format("switch to linen and bath page was correct"));
 
             } else {
@@ -192,7 +236,12 @@ public class HomePage {
 
     }
 
-    // switch to skor page
+    /**
+     * Switch to skor page {@see http://www.ellos.se/skor}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToFootwearPage() {
 
         try {
@@ -216,9 +265,14 @@ public class HomePage {
         }
 
 
-
     }
 
+    /**
+     * Switch to hem page {@see http://www.ellos.se/hem}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToHemPage() {
 
         try {
@@ -243,9 +297,14 @@ public class HomePage {
         }
 
 
-
     }
 
+    /**
+     * Switch to electronic page {@see http://www.ellos.se/elektronik}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToElectronicPage() {
 
         try {
@@ -270,22 +329,27 @@ public class HomePage {
         }
 
 
-
     }
 
-    public void switchToSkonhetPage() {
+    /**
+     * Switch to shonhet page {@see http://www.ellos.se/skonhet-halsa}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
+    public void switchToBeautyAndHealthPage() {
 
         try {
 
-            web.moveToElementAndClick("skonhetMenu", "skonhetMenuLink");
+            web.moveToElementAndClick("beautyAndHealthMenu", "beautyAndHealthMenuLink");
 
-            if (web.waitForElementPresent("skonhetNavigationLink")) {
+            if (web.waitForElementPresent("beautyAndHealthNavigationLink")) {
 
-                log.info(String.format("switch to skonhet page was correct"));
+                log.info(String.format("switch to beauty and health page was correct"));
 
             } else {
 
-                log.info(String.format("switch to skonhet page was incorrect"));
+                log.info(String.format("switch to beauty and health page was incorrect"));
 
             }
 
@@ -297,9 +361,14 @@ public class HomePage {
         }
 
 
-
     }
 
+    /**
+     * Switch to plus page {@see http://www.ellos.se/plus/?N=1z141kn}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToPlusPage() {
 
         try {
@@ -324,9 +393,14 @@ public class HomePage {
         }
 
 
-
     }
 
+    /**
+     * Switch to REA page {@see http://www.ellos.se/rea}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToREAPage() {
 
         try {
@@ -350,9 +424,14 @@ public class HomePage {
         }
 
 
-
     }
 
+    /**
+     * Switch to inspiration page {@see http://www.ellos.se/inspiration}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToInspirationPage() {
 
         try {
@@ -377,9 +456,14 @@ public class HomePage {
         }
 
 
-
     }
 
+    /**
+     * Switch to resor page {@see http://www.ellos.se/g/travel/travelStart?menuId=34}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
+     *                       {@link WebElementsActions#waitForElementPresent(String)}
+     */
     public void switchToResorPage() {
 
         try {
@@ -403,9 +487,13 @@ public class HomePage {
         }
 
 
-
     }
 
+    /**
+     * Close the blurb in the page
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickButton(String)}
+     */
     public void closeBlurb() {
 
         try {
@@ -420,6 +508,11 @@ public class HomePage {
 
     }
 
+    /**
+     * Click on logout link
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
+     */
     public void clickLogoutLink() {
 
         try {
@@ -435,6 +528,11 @@ public class HomePage {
 
     }
 
+    /**
+     * Click on login link
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
+     */
     public void clickLoginLink() {
 
         try {
@@ -450,6 +548,11 @@ public class HomePage {
 
     }
 
+    /**
+     * Method verifies a successful user login
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     */
     public boolean isUserLogIn() {
 
         try {
@@ -477,6 +580,11 @@ public class HomePage {
 
     }
 
+    /**
+     * Method verifies a successful user logout
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     */
     public boolean isUserLogOut() {
 
         try {
@@ -504,6 +612,9 @@ public class HomePage {
 
     }
 
+    /**
+     * Refresh the home page
+     */
     public void refreshHomePage() {
         web.refreshPage();
     }

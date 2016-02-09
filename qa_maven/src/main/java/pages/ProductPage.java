@@ -34,6 +34,12 @@ public class ProductPage {
 
     }
 
+    public void switchToHomePageStart() {
+
+        web.moveToElementAndClick("logoLeftLink", "logoLeftLink");
+
+    }
+
     public void switchToProductCategory() {
 
         try {
@@ -114,6 +120,80 @@ public class ProductPage {
         }
 
         return false;
+
+    }
+
+    public void forInspirationPage() {
+
+        for (int i = 0; i < 3; i++) {
+
+            web.windowScroll();
+
+        }
+
+        web.clickLink("inspirationProductTwo");
+
+        if (web.waitForElementPresent("isInspirationElementPresent")) {
+
+            log.info(String.format("correct page"));
+
+            String name = "Alexandra Ogonowski";
+
+            if (web.isElementPresent("isInspirationElementPresent")) {
+
+                log.info(String.format("you know who are %s.", name));
+
+            } else {
+
+                log.info(String.format("you didn't know who are %s.", name));
+
+            }
+
+        } else {
+
+            log.info(String.format("incorrect page"));
+
+        }
+
+
+    }
+
+    public void forResorPage() {
+
+        web.moveToElementAndClick("resorMenuElementTwo", "resorMenuElementTwo");
+//        web.clickLink("linkNazar");
+        isTravelPage();
+        isNazarPagePresent();
+
+    }
+
+    private boolean isTravelPage() {
+
+        if (web.isElementPresent("travelLogo")) {
+
+            web.clickLink("linkNazar");
+            log.info(String.format("resor page"));
+            return true;
+
+        } else {
+
+            log.info(String.format("not resor page"));
+            return false;
+        }
+
+    }
+
+    private boolean isNazarPagePresent() {
+
+        if (web.isElementPresent("nazarPage")) {
+
+            return true;
+
+        } else {
+
+            return false;
+
+        }
 
     }
 
