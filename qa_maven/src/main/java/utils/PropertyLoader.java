@@ -8,11 +8,10 @@ import java.util.Properties;
 public class PropertyLoader {
 
     @FileProperties(properties = true)
-    private static final String PROPERTY_FILE = "src/main/resources/application.properties";
+    private static final String PROPERTY_FILE = "/application.properties";
+    private static Properties properties = new Properties();
 
     public static String loadProperty(String name) {
-
-        Properties properties = new Properties();
 
         try {
 
@@ -33,6 +32,12 @@ public class PropertyLoader {
         }
 
         return value;
+
+    }
+
+    public static Properties getProperties() {
+
+        return properties;
 
     }
 

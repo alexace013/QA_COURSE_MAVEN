@@ -1,10 +1,12 @@
 package test_package;
 
 import org.openqa.selenium.WebDriver;
+import utils.PropertyLoader;
 
 public class Test {
 
     static WebDriver driver;
+    private static final String BROWSER_NAME = PropertyLoader.loadProperty("browser.name");
 
     public static void main(String[] args) {
 
@@ -30,6 +32,8 @@ public class Test {
 
         Integer val = 17_845_962;
         Long val2 = 123_457L;
+
+        System.out.println("browser: " + BROWSER_NAME);
 
         System.out.format("val < %d >", val);
         System.out.format("val2 < %d >", val2);
