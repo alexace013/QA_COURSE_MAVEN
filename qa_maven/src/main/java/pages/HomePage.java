@@ -63,7 +63,7 @@ public class HomePage {
 
             web.moveToElementAndClick("womanMenu", "womanMenuLink");
 
-            if (web.waitForElementPresent("productOuterwearLink")) {
+            if (web.waitForElementPresent("inThePage")) {
 
                 log.info(String.format("switch to woman page was correct"));
 

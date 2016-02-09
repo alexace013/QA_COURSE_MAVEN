@@ -18,8 +18,8 @@ public class BrowserFixture {
     /* Browsers constants */
     private static final String CHROME = "chrome";
     private static final String FIREFOX = "firefox";
-    private static final String INTERNET_EXPLORER = "ie";
     private static final String PHANTOMJS = "phantomjs";
+//    private static final String INTERNET_EXPLORER = "ie";
     /**/
     private static final String BROWSER_NAME = PropertyLoader.loadProperty("browser.name");
     private static WebDriver driver;
@@ -60,8 +60,10 @@ public class BrowserFixture {
     public void quitBrowser() {
 
         if (driver != null) {
+
             driver.quit();
             log.info(String.format("browser close successful"));
+
         }
 
         log.info(String.format("tests suite execution completed"));

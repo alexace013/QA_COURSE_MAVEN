@@ -1,0 +1,290 @@
+14:56:14,913  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+14:56:21,104  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+14:56:21,110  INFO main rootLogger:<init>:33 - created properties
+14:56:21,121  INFO main rootLogger:<init>:38 - created map properties
+14:56:21,122  INFO main ProductPageFixture:setUp:27 - start product page tests
+14:56:21,254  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+14:56:21,344  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+14:56:22,951  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+14:56:33,514  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+14:56:35,049  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+14:56:45,127  INFO main ProductPageFixture:tearDown:33 - end product page tests
+14:56:45,210  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+14:56:45,210  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+14:59:36,134  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+14:59:47,779  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+14:59:47,788  INFO main rootLogger:<init>:33 - created properties
+14:59:47,797  INFO main rootLogger:<init>:38 - created map properties
+14:59:47,797  INFO main ProductPageFixture:setUp:27 - start product page tests
+14:59:47,905  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+14:59:47,944  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+14:59:49,890  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:00:00,377  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:00:01,832  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:00:11,861  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:00:11,956  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:00:11,956  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:05:21,923  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:05:28,415  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:05:28,421  INFO main rootLogger:<init>:33 - created properties
+15:05:28,426  INFO main rootLogger:<init>:38 - created map properties
+15:05:28,427  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:05:28,524  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:05:28,566  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:05:29,755  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:05:39,939  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:05:41,106  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:05:51,146  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:05:51,231  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:05:51,232  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:09:20,608  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:09:26,458  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:09:26,465  INFO main rootLogger:<init>:33 - created properties
+15:09:26,472  INFO main rootLogger:<init>:38 - created map properties
+15:09:26,473  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:09:26,578  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:09:26,611  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:09:28,015  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:09:38,079  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:09:39,201  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:09:49,718  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:09:49,812  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:09:49,813  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:12:15,518  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:12:19,615  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:12:19,623  INFO main rootLogger:<init>:33 - created properties
+15:12:19,630  INFO main rootLogger:<init>:38 - created map properties
+15:12:19,631  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:12:19,720  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:12:19,749  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:12:21,155  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:12:21,179  INFO main WebElementsActions:moveToElement:163 - move to element < thePageIn >
+15:12:21,249  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < thePageIn > present
+15:12:21,249  INFO main HomePage:switchToWomanPage:70 - switch to woman page was correct
+15:12:31,355  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:12:32,508  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:12:32,555  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+15:12:32,555  INFO main HomePage:switchToManPage:95 - switch to man page was correct
+15:12:42,573  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:12:42,669  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:12:42,669  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:17:05,580  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:17:10,890  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:17:10,901  INFO main rootLogger:<init>:33 - created properties
+15:17:10,908  INFO main rootLogger:<init>:38 - created map properties
+15:17:10,909  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:17:11,042  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:17:11,084  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:17:12,464  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:17:12,494  INFO main WebElementsActions:moveToElement:163 - move to element < thePageIn >
+15:17:12,578  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < thePageIn > present
+15:17:12,578  INFO main HomePage:switchToWomanPage:70 - switch to woman page was correct
+15:17:12,603  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:17:12,643  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productOuterwearLink >
+15:17:14,665  INFO main WebElementsActions:clickElement:118 - click element < productOuterwearText >
+15:17:14,698  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:17:14,779  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productOuterwearLink >
+15:17:16,726  INFO main WebElementsActions:clickElement:118 - click element < productOuterwearText >
+15:17:16,762  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:17:17,058  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:17:18,199  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:17:18,256  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+15:17:18,256  INFO main HomePage:switchToManPage:95 - switch to man page was correct
+15:17:18,271  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:17:18,317  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productOuterwearLink >
+15:17:20,394  INFO main WebElementsActions:clickElement:118 - click element < productOuterwearText >
+15:17:20,427  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:17:20,477  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productOuterwearLink >
+15:17:22,028  INFO main WebElementsActions:clickElement:118 - click element < productOuterwearText >
+15:17:22,060  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:17:22,218  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:17:22,351  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:17:22,352  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:24:36,039  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:24:43,286  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:24:43,293  INFO main rootLogger:<init>:33 - created properties
+15:24:43,299  INFO main rootLogger:<init>:38 - created map properties
+15:24:43,299  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:24:43,384  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:24:43,417  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:24:44,734  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:24:44,760  INFO main WebElementsActions:moveToElement:163 - move to element < thePageIn >
+15:24:44,856  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < thePageIn > present
+15:24:44,856  INFO main HomePage:switchToWomanPage:70 - switch to woman page was correct
+15:24:44,883  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:24:44,927  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productOuterwearLink >
+15:24:47,206  INFO main WebElementsActions:clickElement:118 - click element < productOuterwearText >
+15:24:47,239  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:24:47,312  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productOuterwearLink >
+15:24:49,010  INFO main WebElementsActions:clickElement:118 - click element < productOuterwearText >
+15:24:49,062  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:24:56,128  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:24:57,278  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:24:57,352  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+15:24:57,353  INFO main HomePage:switchToManPage:95 - switch to man page was correct
+15:24:57,381  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:24:57,430  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productOuterwearLink >
+15:24:59,560  INFO main WebElementsActions:clickElement:118 - click element < productOuterwearText >
+15:24:59,594  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:24:59,647  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productOuterwearLink >
+15:25:01,212  INFO main WebElementsActions:clickElement:118 - click element < productOuterwearText >
+15:25:01,256  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:25:05,111  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:25:05,190  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:25:05,191  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:36:59,672  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:37:04,711  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:37:04,716  INFO main rootLogger:<init>:33 - created properties
+15:37:04,724  INFO main rootLogger:<init>:38 - created map properties
+15:37:04,725  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:37:04,862  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:37:04,904  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:37:06,662  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:37:06,712  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < inThePage > present
+15:37:06,712  INFO main HomePage:switchToWomanPage:68 - switch to woman page was correct
+15:37:06,733  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:37:06,791  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:37:08,835  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:37:08,879  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:37:08,930  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:37:09,206  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:37:10,546  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:37:10,628  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+15:37:10,628  INFO main HomePage:switchToManPage:93 - switch to man page was correct
+15:37:10,639  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:37:10,691  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:37:12,836  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:37:12,865  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:37:12,915  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:37:13,091  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:37:13,188  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:37:13,188  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:37:27,098  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:37:31,361  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:37:31,369  INFO main rootLogger:<init>:33 - created properties
+15:37:31,374  INFO main rootLogger:<init>:38 - created map properties
+15:37:31,375  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:37:31,473  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:37:31,502  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:37:32,857  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:37:32,910  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < inThePage > present
+15:37:32,910  INFO main HomePage:switchToWomanPage:68 - switch to woman page was correct
+15:37:32,937  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:37:32,986  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:37:35,130  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:37:35,171  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:37:35,222  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:37:35,520  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:37:36,884  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:37:36,932  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+15:37:36,932  INFO main HomePage:switchToManPage:93 - switch to man page was correct
+15:37:36,944  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:37:37,006  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:37:38,955  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:37:38,996  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:37:39,063  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:37:39,227  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:37:39,323  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:37:39,323  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:41:37,879  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:41:43,614  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:41:43,626  INFO main rootLogger:<init>:33 - created properties
+15:41:43,631  INFO main rootLogger:<init>:38 - created map properties
+15:41:43,632  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:41:43,756  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:41:43,789  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:41:45,262  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:41:45,315  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < inThePage > present
+15:41:45,316  INFO main HomePage:switchToWomanPage:68 - switch to woman page was correct
+15:41:45,343  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:41:45,390  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:41:47,303  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:41:47,338  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:41:47,396  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+15:41:47,552  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:41:48,805  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:41:48,873  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+15:41:48,873  INFO main HomePage:switchToManPage:93 - switch to man page was correct
+15:41:48,884  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:41:48,936  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:41:50,801  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:41:50,834  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:41:50,910  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+15:41:51,013  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:41:51,097  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:41:51,097  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:42:43,833  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:42:48,379  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:42:48,387  INFO main rootLogger:<init>:33 - created properties
+15:42:48,395  INFO main rootLogger:<init>:38 - created map properties
+15:42:48,396  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:42:48,501  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:42:48,530  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:42:50,413  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:42:50,463  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < inThePage > present
+15:42:50,463  INFO main HomePage:switchToWomanPage:68 - switch to woman page was correct
+15:42:50,485  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:42:50,533  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:42:52,660  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:42:52,698  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+15:42:52,835  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:42:54,349  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:42:54,415  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+15:42:54,415  INFO main HomePage:switchToManPage:93 - switch to man page was correct
+15:42:54,439  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:42:54,483  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:42:56,387  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:42:56,443  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+15:42:56,548  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:42:56,638  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:42:56,638  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:46:25,123  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:46:33,181  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:46:33,192  INFO main rootLogger:<init>:33 - created properties
+15:46:33,198  INFO main rootLogger:<init>:38 - created map properties
+15:46:33,199  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:46:33,297  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:46:33,334  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:46:34,684  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:46:34,746  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < inThePage > present
+15:46:34,746  INFO main HomePage:switchToWomanPage:68 - switch to woman page was correct
+15:46:34,770  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:46:34,811  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:46:36,869  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:46:36,906  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:46:37,130  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:46:38,253  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:46:38,326  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+15:46:38,326  INFO main HomePage:switchToManPage:93 - switch to man page was correct
+15:46:38,389  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:46:38,444  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:46:40,259  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:46:40,298  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:46:40,434  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:46:40,526  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:46:40,526  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+15:46:47,427  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+15:46:53,715  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+15:46:53,725  INFO main rootLogger:<init>:33 - created properties
+15:46:53,732  INFO main rootLogger:<init>:38 - created map properties
+15:46:53,732  INFO main ProductPageFixture:setUp:27 - start product page tests
+15:46:53,831  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+15:46:53,865  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < womanMenu >
+15:46:55,412  INFO main WebElementsActions:clickElement:118 - click element < womanMenuLink >
+15:46:55,465  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < inThePage > present
+15:46:55,466  INFO main HomePage:switchToWomanPage:68 - switch to woman page was correct
+15:46:55,492  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:46:55,548  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:46:59,217  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:46:59,257  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:46:59,448  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+15:47:00,682  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+15:47:00,777  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+15:47:00,778  INFO main HomePage:switchToManPage:93 - switch to man page was correct
+15:47:00,810  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+15:47:00,869  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+15:47:03,214  INFO main WebElementsActions:clickElement:118 - click element < productCategoryLinkOuterwear >
+15:47:03,273  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionImage >
+15:47:03,440  INFO main ProductPageFixture:tearDown:33 - end product page tests
+15:47:03,575  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+15:47:03,576  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed

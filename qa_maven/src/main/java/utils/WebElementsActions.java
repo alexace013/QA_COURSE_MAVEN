@@ -347,8 +347,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public boolean waitForElementPresent(String elementLocator) throws ElementNoSuch {
 
-        if (driverWait.until(ExpectedConditions.
-                elementToBeSelected(CONFIGURATION.getLocator(elementLocator)))) {
+        if (elementLocator != null) {
 
             driverWait.until(ExpectedConditions.
                     visibilityOfElementLocated(CONFIGURATION.getLocator(elementLocator)));

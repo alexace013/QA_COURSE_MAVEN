@@ -39,23 +39,7 @@ public class ProductPage {
         try {
 
             web.moveToElement("logoLeftLink");
-            web.moveToElementAndClick("productOuterwearLink", "productOuterwearText");
-
-        } catch (ElementNoSuch e) {
-
-            e.printStackTrace();
-            log.error(String.format("Exception < %s >", e.getStackTrace()));
-
-        }
-
-    }
-
-    public void switchToProductOuterwear() {
-
-        try {
-
-            web.moveToElement("logoLeftLink");
-            web.moveToElementAndClick("productOuterwearLink", "productOuterwearText");
+            web.moveToElementAndClick("productCategoryOuterwear", "productCategoryLinkOuterwear");
 
         } catch (ElementNoSuch e) {
 
@@ -70,7 +54,21 @@ public class ProductPage {
 
         try {
 
+//            web.moveToElement("logoLeftLink");
             web.moveToElementAndClick("productFirstPositionImage", "productFirstPositionLink");
+
+        } catch (ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+    }
+
+    public void inTheProductPage() {
+
+        try {
 
             if (web.waitForElementPresent("productName")) {
 

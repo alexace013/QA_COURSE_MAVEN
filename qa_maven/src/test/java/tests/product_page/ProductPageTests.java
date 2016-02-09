@@ -14,8 +14,8 @@ public class ProductPageTests extends ProductPageFixture {
         getHomePage().closeBlurb();
         getHomePage().switchToWomanPage();
         getProductPage().switchToProductCategory();
-        getProductPage().switchToProductOuterwear();
         getProductPage().switchToFirstProductPage();
+        getProductPage().inTheProductPage();
 
         Assert.assertTrue(getProductPage().checkCorrectSwitchToProductPage(), "correct switch to product page");
 
@@ -29,8 +29,8 @@ public class ProductPageTests extends ProductPageFixture {
 //        getHomePage().closeBlurb();
         getHomePage().switchToManPage();
         getProductPage().switchToProductCategory();
-        getProductPage().switchToProductOuterwear();
         getProductPage().switchToFirstProductPage();
+        getProductPage().inTheProductPage();
 
         Assert.assertTrue(getProductPage().checkCorrectSwitchToProductPage(), "correct switch to product page");
 
