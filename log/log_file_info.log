@@ -19,3 +19,613 @@
 19:54:23,682  INFO main BasketFixture:tearDown:54 - end login tests
 19:54:23,769  INFO main BrowserFixture:quitBrowser:65 - browser close successful
 19:54:23,769  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+19:57:26,234  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+19:57:33,844  INFO main LoginFixture:setUp:21 - browser open page: < http://www.ellos.se/ >
+19:57:33,853  INFO main rootLogger:<init>:37 - created properties
+19:57:33,861  INFO main rootLogger:<init>:42 - created map properties
+19:57:33,862  INFO main LoginFixture:setUp:24 - start login tests
+19:57:33,864  INFO main LoginTests:test1_positiveLogin:17 - test1_positiveLogin
+19:57:33,957  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+19:57:33,959  INFO main LoginTests:test1_positiveLogin:22 - close blurb
+19:57:36,416  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:36,474  INFO main WebElementsActions:isElementPresent:245 - < loginFieldInput > is present on page.
+19:57:36,475  INFO main HomePage:switchToRegistrationPage:57 - Switch to LOGIN_PAGE successful.
+19:57:36,475  INFO main LoginTests:test1_positiveLogin:25 - switch to registration page
+19:57:36,563  INFO main WebElementsActions:clickElement:118 - click element < loginFieldInput >
+19:57:36,607  INFO main WebElementsActions:clear:70 - clear element < loginFieldInput >
+19:57:36,715  INFO main WebElementsActions:input:56 - input < loginFieldInput > and send < alex_ace@ukr.net >
+19:57:36,715  INFO main LoginTests:test1_positiveLogin:32 - click and input alex_ace@ukr.net in login filed
+19:57:36,800  INFO main WebElementsActions:clickElement:118 - click element < passFieldInputFirst >
+19:57:36,851  INFO main WebElementsActions:clear:70 - clear element < passFieldInputSecond >
+19:57:36,939  INFO main WebElementsActions:input:56 - input < passFieldInputSecond > and send < a1989 >
+19:57:36,939  INFO main LoginTests:test1_positiveLogin:35 - click and input a1989 in password field
+19:57:38,506  INFO main WebElementsActions:clickElement:118 - click element < loginButton >
+19:57:38,506  INFO main LoginTests:test1_positiveLogin:38 - click on login button
+19:57:39,824  INFO main WebElementsActions:clickLink:146 - click on link < logoutLink >
+19:57:39,824  INFO main LoginTests:test1_positiveLogin:43 - click on logout link
+19:57:39,825  INFO main LoginTests:test2_incorrectLogin:51 - test2_incorrectLogin
+19:57:40,787  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:40,787  INFO main LoginTests:test2_incorrectLogin:56 - click login link
+19:57:40,871  INFO main WebElementsActions:clickElement:118 - click element < loginFieldInput >
+19:57:40,918  INFO main WebElementsActions:clear:70 - clear element < loginFieldInput >
+19:57:41,013  INFO main WebElementsActions:input:56 - input < loginFieldInput > and send < qwertyalex_ace@ukr.net >
+19:57:41,084  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:41,084  INFO main LoginTests:test2_incorrectLogin:65 - click and input qwertyalex_ace@ukr.net in login field and click TAB
+19:57:41,163  INFO main WebElementsActions:clickElement:118 - click element < passFieldInputSecond >
+19:57:41,224  INFO main WebElementsActions:clear:70 - clear element < passFieldInputSecond >
+19:57:41,289  INFO main WebElementsActions:input:56 - input < passFieldInputSecond > and send < a1989 >
+19:57:41,290  INFO main LoginTests:test2_incorrectLogin:68 - click and input a1989 in password filed
+19:57:42,079  INFO main WebElementsActions:clickElement:118 - click element < loginButton >
+19:57:42,079  INFO main LoginTests:test2_incorrectLogin:71 - click on login button
+19:57:42,129  INFO main WebElementsActions:isElementPresent:245 - < errorMessage > is present on page.
+19:57:42,135  INFO main LoginTests:test3_incorrectPassField:84 - test3_incorrectPassField
+19:57:42,198  INFO main WebElementsActions:clickElement:118 - click element < loginFieldInput >
+19:57:42,233  INFO main WebElementsActions:clear:70 - clear element < loginFieldInput >
+19:57:42,299  INFO main WebElementsActions:input:56 - input < loginFieldInput > and send < alex_ace@ukr.net >
+19:57:42,359  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:42,360  INFO main LoginTests:test3_incorrectPassField:89 - click and input alex_ace@ukr.net in login field and click TAB
+19:57:42,424  INFO main WebElementsActions:clickElement:118 - click element < passFieldInputSecond >
+19:57:42,464  INFO main WebElementsActions:clear:70 - clear element < passFieldInputSecond >
+19:57:42,530  INFO main WebElementsActions:input:56 - input < passFieldInputSecond > and send < a19 >
+19:57:42,531  INFO main LoginTests:test3_incorrectPassField:95 - click and input a19 in password field
+19:57:43,237  INFO main WebElementsActions:clickElement:118 - click element < loginButton >
+19:57:43,237  INFO main LoginTests:test3_incorrectPassField:98 - click on login button
+19:57:43,281  INFO main WebElementsActions:isElementPresent:245 - < errorMessage > is present on page.
+19:57:43,282  INFO main LoginTests:test4_emptyEmailAndPassFields:111 - test4_emptyEmailAndPassFields
+19:57:43,341  INFO main WebElementsActions:clickElement:118 - click element < loginFieldInput >
+19:57:43,378  INFO main WebElementsActions:clear:70 - clear element < loginFieldInput >
+19:57:43,421  INFO main WebElementsActions:input:56 - input < loginFieldInput > and send <  >
+19:57:43,477  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:43,477  INFO main LoginTests:test4_emptyEmailAndPassFields:116 - click and input empty in login field and click TAB
+19:57:43,543  INFO main WebElementsActions:clickElement:118 - click element < passFieldInputSecond >
+19:57:43,583  INFO main WebElementsActions:clear:70 - clear element < passFieldInputSecond >
+19:57:43,633  INFO main WebElementsActions:input:56 - input < passFieldInputSecond > and send <  >
+19:57:43,633  INFO main LoginTests:test4_emptyEmailAndPassFields:119 - click and input empty in password field
+19:57:43,715  INFO main WebElementsActions:clickElement:118 - click element < loginButton >
+19:57:43,715  INFO main LoginTests:test4_emptyEmailAndPassFields:122 - click on login button
+19:57:43,760  INFO main WebElementsActions:isElementPresent:245 - < errorMessageEmptyFields > is present on page.
+19:57:43,760  INFO main LoginTests:test5_emptyEmailField:135 - test5_emptyEmailField
+19:57:43,808  INFO main WebElementsActions:clickElement:118 - click element < loginFieldInput >
+19:57:43,847  INFO main WebElementsActions:clear:70 - clear element < loginFieldInput >
+19:57:43,870  INFO main WebElementsActions:input:56 - input < loginFieldInput > and send <  >
+19:57:43,918  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:43,918  INFO main LoginTests:test5_emptyEmailField:140 - click and input empty in login field and click TAB
+19:57:43,971  INFO main WebElementsActions:clickElement:118 - click element < passFieldInputSecond >
+19:57:44,002  INFO main WebElementsActions:clear:70 - clear element < passFieldInputSecond >
+19:57:44,065  INFO main WebElementsActions:input:56 - input < passFieldInputSecond > and send < a1989 >
+19:57:44,065  INFO main LoginTests:test5_emptyEmailField:143 - click and input a1989 in password field
+19:57:44,134  INFO main WebElementsActions:clickElement:118 - click element < loginButton >
+19:57:44,134  INFO main LoginTests:test5_emptyEmailField:146 - click on login button
+19:57:44,184  INFO main WebElementsActions:isElementPresent:245 - < errorMessageOneFieldEmpty > is present on page.
+19:57:44,184  INFO main LoginTests:test6_emptyPassField:159 - test6_emptyPassField
+19:57:44,225  INFO main WebElementsActions:clickElement:118 - click element < loginFieldInput >
+19:57:44,265  INFO main WebElementsActions:clear:70 - clear element < loginFieldInput >
+19:57:44,329  INFO main WebElementsActions:input:56 - input < loginFieldInput > and send < alex_ace@ukr.net >
+19:57:44,376  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:44,377  INFO main LoginTests:test6_emptyPassField:164 - click and input alex_ace@ukr.net in login field and click TAB
+19:57:44,425  INFO main WebElementsActions:clickElement:118 - click element < passFieldInputSecond >
+19:57:44,461  INFO main WebElementsActions:clear:70 - clear element < passFieldInputSecond >
+19:57:44,490  INFO main WebElementsActions:input:56 - input < passFieldInputSecond > and send <  >
+19:57:44,490  INFO main LoginTests:test6_emptyPassField:167 - click and input empty in password field and click TAB
+19:57:44,548  INFO main WebElementsActions:clickElement:118 - click element < loginButton >
+19:57:44,549  INFO main LoginTests:test6_emptyPassField:170 - click on login button
+19:57:44,588  INFO main WebElementsActions:isElementPresent:245 - < errorMessageOneFieldEmpty > is present on page.
+19:57:44,588  INFO main LoginFixture:tearDown:30 - end login tests
+19:57:45,588  INFO main RegistrationFixture:setUp:21 - browser open page: http://www.ellos.se/
+19:57:45,589  INFO main RegistrationFixture:setUp:24 - start registration tests
+19:57:45,590  INFO main RegistrationTests:test1_positiveRegistration:18 - 
+test1_positiveRegistration
+
+19:57:45,646  INFO main RegistrationTests:test2_negativeOnlyFirstEmailField:59 - 
+test2_negativeOnlyFirstEmailField
+
+19:57:46,474  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:46,475  INFO main RegistrationTests:test2_negativeOnlyFirstEmailField:64 - click login link
+19:57:46,563  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:57:46,617  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:57:46,722  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send < Test_user-25952505@gmail.com >
+19:57:46,723  INFO main RegistrationTests:test2_negativeOnlyFirstEmailField:71 - click and input Test_user-25952505@gmail.com in email field
+19:57:46,809  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:57:46,852  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:57:46,900  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send <  >
+19:57:46,952  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:46,953  INFO main RegistrationTests:test2_negativeOnlyFirstEmailField:76 - click and input  in email field repeat and click TAB
+19:57:47,025  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:57:47,093  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:57:47,148  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send <  >
+19:57:47,212  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:47,212  INFO main RegistrationTests:test2_negativeOnlyFirstEmailField:79 - click and input  in password field and click TAB
+19:57:47,293  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:57:47,346  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:57:47,399  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send <  >
+19:57:47,400  INFO main RegistrationTests:test2_negativeOnlyFirstEmailField:82 - click and input  password field repeat
+19:57:47,410  INFO main RegistrationTests:test2_negativeOnlyFirstEmailField:85 - window scroll
+19:57:47,499  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:57:47,499  INFO main RegistrationTests:test2_negativeOnlyFirstEmailField:88 - click on registration button
+19:57:47,546  INFO main WebElementsActions:isElementPresent:245 - < errorRegJustFirstEmail > is present on page.
+19:57:47,546  INFO main RegistrationTests:test3_negativeOnlySecondEmailField:100 - 
+test3_negativeOnlySecondEmailField
+
+19:57:48,228  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:48,229  INFO main RegistrationTests:test3_negativeOnlySecondEmailField:105 - click login link
+19:57:48,309  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:57:48,345  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:57:48,400  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send <  >
+19:57:48,400  INFO main RegistrationTests:test3_negativeOnlySecondEmailField:113 - click and input  in email field
+19:57:48,477  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:57:48,512  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:57:48,624  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send < Test_user-25952505@gmail.com >
+19:57:48,678  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:48,678  INFO main RegistrationTests:test3_negativeOnlySecondEmailField:116 - click and input Test_user-25952505@gmail.com in email field repeat and click TAB
+19:57:48,748  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:57:48,786  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:57:48,832  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send <  >
+19:57:48,893  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:48,893  INFO main RegistrationTests:test3_negativeOnlySecondEmailField:119 - click and input  in password field and click TAB
+19:57:48,952  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:57:48,996  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:57:49,055  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send <  >
+19:57:49,055  INFO main RegistrationTests:test3_negativeOnlySecondEmailField:122 - click and input  password field repeat
+19:57:49,063  INFO main RegistrationTests:test3_negativeOnlySecondEmailField:125 - window scroll
+19:57:49,144  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:57:49,144  INFO main RegistrationTests:test3_negativeOnlySecondEmailField:128 - click on registration button
+19:57:49,191  INFO main WebElementsActions:isElementPresent:245 - < errorRegJustFirstEmail > is present on page.
+19:57:49,191  INFO main RegistrationTests:test4_negativeOnlyFirstPassField:140 - 
+test4_negativeOnlyFirstPassField
+
+19:57:49,871  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:49,871  INFO main RegistrationTests:test4_negativeOnlyFirstPassField:145 - click login link
+19:57:49,956  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:57:49,994  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:57:50,033  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send <  >
+19:57:50,034  INFO main RegistrationTests:test4_negativeOnlyFirstPassField:154 - click and input  in email field
+19:57:50,092  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:57:50,129  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:57:50,174  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send <  >
+19:57:50,233  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:50,234  INFO main RegistrationTests:test4_negativeOnlyFirstPassField:157 - click and input  in email field repeat and click TAB
+19:57:50,300  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:57:50,337  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:57:50,406  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send < qwerty12345 >
+19:57:50,462  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:50,462  INFO main RegistrationTests:test4_negativeOnlyFirstPassField:160 - click and input qwerty12345 in password field and click TAB
+19:57:50,520  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:57:50,562  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:57:50,611  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send <  >
+19:57:50,611  INFO main RegistrationTests:test4_negativeOnlyFirstPassField:163 - click and input  password field repeat
+19:57:50,624  INFO main RegistrationTests:test4_negativeOnlyFirstPassField:166 - window scroll
+19:57:50,691  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:57:50,691  INFO main RegistrationTests:test4_negativeOnlyFirstPassField:169 - click on registration button
+19:57:50,738  INFO main WebElementsActions:isElementPresent:245 - < errorRegJustFirstEmail > is present on page.
+19:57:50,738  INFO main RegistrationTests:test5_negativeOnlySecondPassField:181 - 
+test5_negativeOnlySecondPassField
+
+19:57:51,400  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:51,400  INFO main RegistrationTests:test5_negativeOnlySecondPassField:186 - click login link
+19:57:51,499  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:57:51,554  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:57:51,603  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send <  >
+19:57:51,603  INFO main RegistrationTests:test5_negativeOnlySecondPassField:195 - click and input  in email field
+19:57:51,674  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:57:51,711  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:57:51,761  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send <  >
+19:57:51,813  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:51,814  INFO main RegistrationTests:test5_negativeOnlySecondPassField:198 - click and input  in email field repeat and click TAB
+19:57:51,872  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:57:51,914  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:57:51,965  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send <  >
+19:57:52,014  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:52,014  INFO main RegistrationTests:test5_negativeOnlySecondPassField:201 - click and input  in password field and click TAB
+19:57:52,071  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:57:52,122  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:57:52,220  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send < qwerty12345 >
+19:57:52,220  INFO main RegistrationTests:test5_negativeOnlySecondPassField:204 - click and input qwerty12345 password field repeat
+19:57:52,240  INFO main RegistrationTests:test5_negativeOnlySecondPassField:207 - window scroll
+19:57:52,319  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:57:52,320  INFO main RegistrationTests:test5_negativeOnlySecondPassField:210 - click on registration button
+19:57:52,350  INFO main WebElementsActions:isElementPresent:245 - < errorRegJustFirstEmail > is present on page.
+19:57:52,350  INFO main RegistrationTests:test6_negativeOnlyEmailFields:222 - 
+test6_negativeOnlyEmailFields
+
+19:57:53,085  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:53,085  INFO main RegistrationTests:test6_negativeOnlyEmailFields:227 - click login link
+19:57:53,174  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:57:53,213  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:57:53,315  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send < Test_user-25952505@gmail.com >
+19:57:53,315  INFO main RegistrationTests:test6_negativeOnlyEmailFields:234 - click and input Test_user-25952505@gmail.com in email field
+19:57:53,392  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:57:53,432  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:57:53,541  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send < Test_user-25952505@gmail.com >
+19:57:53,585  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:53,585  INFO main RegistrationTests:test6_negativeOnlyEmailFields:237 - click and input Test_user-25952505@gmail.com in email field repeat and click TAB
+19:57:53,656  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:57:53,688  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:57:53,738  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send <  >
+19:57:53,794  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:53,794  INFO main RegistrationTests:test6_negativeOnlyEmailFields:242 - click and input  in password field and click TAB
+19:57:53,850  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:57:53,897  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:57:53,945  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send <  >
+19:57:53,945  INFO main RegistrationTests:test6_negativeOnlyEmailFields:245 - click and input  password field repeat
+19:57:53,950  INFO main RegistrationTests:test6_negativeOnlyEmailFields:248 - window scroll
+19:57:54,033  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:57:54,033  INFO main RegistrationTests:test6_negativeOnlyEmailFields:251 - click on registration button
+19:57:54,079  INFO main WebElementsActions:isElementPresent:245 - < errorRegMessage > is present on page.
+19:57:54,080  INFO main RegistrationTests:test7_negativeOnlyPassFields:263 - 
+test7_negativeOnlyPassFields
+
+19:57:54,768  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:54,769  INFO main RegistrationTests:test7_negativeOnlyPassFields:268 - click login link
+19:57:54,866  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:57:54,903  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:57:54,951  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send <  >
+19:57:54,952  INFO main RegistrationTests:test7_negativeOnlyPassFields:277 - click and input  in email field
+19:57:55,013  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:57:55,055  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:57:55,115  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send <  >
+19:57:55,173  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:55,173  INFO main RegistrationTests:test7_negativeOnlyPassFields:280 - click and input  in email field repeat and click TAB
+19:57:55,244  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:57:55,285  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:57:55,369  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send < qwerty12345 >
+19:57:55,437  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:55,438  INFO main RegistrationTests:test7_negativeOnlyPassFields:283 - click and input qwerty12345 in password field and click TAB
+19:57:55,501  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:57:55,540  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:57:55,601  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send < qwerty12345 >
+19:57:55,601  INFO main RegistrationTests:test7_negativeOnlyPassFields:286 - click and input qwerty12345 password field repeat
+19:57:55,609  INFO main RegistrationTests:test7_negativeOnlyPassFields:289 - window scroll
+19:57:55,689  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:57:55,689  INFO main RegistrationTests:test7_negativeOnlyPassFields:292 - click on registration button
+19:57:55,728  INFO main WebElementsActions:isElementPresent:245 - < errorRegMessage > is present on page.
+19:57:55,729  INFO main RegistrationTests:test8_negativeFirstPassFieldEmpty:304 - 
+test8_negativeFirstPassFieldEmpty
+
+19:57:56,604  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:56,604  INFO main RegistrationTests:test8_negativeFirstPassFieldEmpty:309 - click login link
+19:57:56,684  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:57:56,718  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:57:56,816  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send < Test_user-25952505@gmail.com >
+19:57:56,816  INFO main RegistrationTests:test8_negativeFirstPassFieldEmpty:316 - click and input Test_user-25952505@gmail.com in email field
+19:57:56,877  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:57:56,916  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:57:57,006  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send < Test_user-25952505@gmail.com >
+19:57:57,065  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:57,065  INFO main RegistrationTests:test8_negativeFirstPassFieldEmpty:319 - click and input Test_user-25952505@gmail.com in email field repeat and click TAB
+19:57:57,130  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:57:57,181  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:57:57,228  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send <  >
+19:57:57,283  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:57,284  INFO main RegistrationTests:test8_negativeFirstPassFieldEmpty:324 - click and input  in password field and click TAB
+19:57:57,334  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:57:57,384  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:57:57,446  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send < qwerty12345 >
+19:57:57,446  INFO main RegistrationTests:test8_negativeFirstPassFieldEmpty:327 - click and input qwerty12345 password field repeat
+19:57:57,458  INFO main RegistrationTests:test8_negativeFirstPassFieldEmpty:330 - window scroll
+19:57:57,529  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:57:57,529  INFO main RegistrationTests:test8_negativeFirstPassFieldEmpty:333 - click on registration button
+19:57:57,562  INFO main WebElementsActions:isElementPresent:245 - < errorRegMessage > is present on page.
+19:57:57,563  INFO main RegistrationTests:test9_negativeSecondPassFieldEmpty:345 - 
+test9_negativeSecondPassFieldEmpty
+
+19:57:58,211  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:58,212  INFO main RegistrationTests:test9_negativeSecondPassFieldEmpty:350 - click login link
+19:57:58,287  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:57:58,320  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:57:58,416  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send < Test_user-25952505@gmail.com >
+19:57:58,417  INFO main RegistrationTests:test9_negativeSecondPassFieldEmpty:357 - click and input Test_user-25952505@gmail.com in email field
+19:57:58,483  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:57:58,534  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:57:58,647  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send < Test_user-25952505@gmail.com >
+19:57:58,704  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:58,704  INFO main RegistrationTests:test9_negativeSecondPassFieldEmpty:360 - click and input Test_user-25952505@gmail.com in email field repeat and click TAB
+19:57:58,764  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:57:58,800  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:57:58,863  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send < qwerty12345 >
+19:57:58,917  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:57:58,918  INFO main RegistrationTests:test9_negativeSecondPassFieldEmpty:363 - click and input qwerty12345 in password field and click TAB
+19:57:58,972  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:57:59,005  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:57:59,055  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send <  >
+19:57:59,055  INFO main RegistrationTests:test9_negativeSecondPassFieldEmpty:368 - click and input  password field repeat
+19:57:59,065  INFO main RegistrationTests:test9_negativeSecondPassFieldEmpty:371 - window scroll
+19:57:59,135  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:57:59,135  INFO main RegistrationTests:test9_negativeSecondPassFieldEmpty:374 - click on registration button
+19:57:59,169  INFO main WebElementsActions:isElementPresent:245 - < errorRegMessage > is present on page.
+19:57:59,170  INFO main RegistrationTests:test10_negativeFirstEmailFieldEmpty:386 - 
+test10_negativeFirstEmailFieldEmpty
+
+19:57:59,848  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:57:59,848  INFO main RegistrationTests:test10_negativeFirstEmailFieldEmpty:391 - click login link
+19:57:59,947  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:57:59,981  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:58:00,040  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send <  >
+19:58:00,040  INFO main RegistrationTests:test10_negativeFirstEmailFieldEmpty:400 - click and input  in email field
+19:58:00,111  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:58:00,150  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:58:00,246  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send < Test_user-25952505@gmail.com >
+19:58:00,302  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:58:00,303  INFO main RegistrationTests:test10_negativeFirstEmailFieldEmpty:403 - click and input Test_user-25952505@gmail.com in email field repeat and click TAB
+19:58:00,368  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:58:00,409  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:58:00,475  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send < qwerty12345 >
+19:58:00,535  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:58:00,535  INFO main RegistrationTests:test10_negativeFirstEmailFieldEmpty:406 - click and input qwerty12345 in password field and click TAB
+19:58:00,597  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:58:00,631  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:58:00,692  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send < qwerty12345 >
+19:58:00,692  INFO main RegistrationTests:test10_negativeFirstEmailFieldEmpty:409 - click and input qwerty12345 password field repeat
+19:58:00,698  INFO main RegistrationTests:test10_negativeFirstEmailFieldEmpty:412 - window scroll
+19:58:00,776  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:58:00,776  INFO main RegistrationTests:test10_negativeFirstEmailFieldEmpty:415 - click on registration button
+19:58:00,810  INFO main WebElementsActions:isElementPresent:245 - < errorRegMessage > is present on page.
+19:58:00,811  INFO main RegistrationTests:test11_negativeSecondEmailFieldEmpty:427 - 
+test11_negativeSecondEmailFieldEmpty
+
+19:58:01,495  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:58:01,495  INFO main RegistrationTests:test11_negativeSecondEmailFieldEmpty:432 - click login link
+19:58:01,588  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:58:01,627  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:58:01,729  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send < Test_user-25952505@gmail.com >
+19:58:01,729  INFO main RegistrationTests:test11_negativeSecondEmailFieldEmpty:439 - click and input Test_user-25952505@gmail.com in email field
+19:58:01,802  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:58:01,841  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:58:01,891  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send <  >
+19:58:01,953  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:58:01,953  INFO main RegistrationTests:test11_negativeSecondEmailFieldEmpty:444 - click and input  in email field repeat and click TAB
+19:58:02,015  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:58:02,058  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:58:02,125  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send < qwerty12345 >
+19:58:02,180  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:58:02,180  INFO main RegistrationTests:test11_negativeSecondEmailFieldEmpty:447 - click and input qwerty12345 in password field and click TAB
+19:58:02,242  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:58:02,275  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:58:02,346  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send < qwerty12345 >
+19:58:02,346  INFO main RegistrationTests:test11_negativeSecondEmailFieldEmpty:450 - click and input qwerty12345 password field repeat
+19:58:02,355  INFO main RegistrationTests:test11_negativeSecondEmailFieldEmpty:453 - window scroll
+19:58:02,440  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:58:02,440  INFO main RegistrationTests:test11_negativeSecondEmailFieldEmpty:456 - click on registration button
+19:58:02,475  INFO main WebElementsActions:isElementPresent:245 - < errorRegMessage > is present on page.
+19:58:02,476  INFO main RegistrationTests:test12_negativeVariousEmailAddress:468 - 
+test12_negativeVariousEmailAddress
+
+19:58:03,186  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:58:03,186  INFO main RegistrationTests:test12_negativeVariousEmailAddress:473 - click login link
+19:58:03,271  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:58:03,308  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:58:03,407  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send < Test_user-25952505@gmail.com >
+19:58:03,407  INFO main RegistrationTests:test12_negativeVariousEmailAddress:480 - click and input Test_user-25952505@gmail.com in email field
+19:58:03,472  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:58:03,507  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:58:03,605  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send < 1Test_user-25952505@gmail.com >
+19:58:03,677  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:58:03,677  INFO main RegistrationTests:test12_negativeVariousEmailAddress:483 - click and input 1Test_user-25952505@gmail.com in email field repeat and click TAB
+19:58:03,734  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:58:03,776  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:58:03,840  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send < qwerty12345 >
+19:58:03,896  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:58:03,897  INFO main RegistrationTests:test12_negativeVariousEmailAddress:486 - click and input qwerty12345 in password field and click TAB
+19:58:03,948  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:58:03,984  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:58:04,054  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send < qwerty12345 >
+19:58:04,054  INFO main RegistrationTests:test12_negativeVariousEmailAddress:489 - click and input qwerty12345 password field repeat
+19:58:04,059  INFO main RegistrationTests:test12_negativeVariousEmailAddress:492 - window scroll
+19:58:04,754  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:58:04,754  INFO main RegistrationTests:test12_negativeVariousEmailAddress:495 - click on registration button
+19:58:04,781  INFO main WebElementsActions:isElementPresent:245 - < errorRegMessage > is present on page.
+19:58:04,782  INFO main RegistrationTests:test13_negativeVariousPassFields:507 - 
+test13_negativeVariousPassFields
+
+19:58:05,488  INFO main WebElementsActions:clickLink:146 - click on link < loginLink >
+19:58:05,488  INFO main RegistrationTests:test13_negativeVariousPassFields:512 - click login link
+19:58:05,586  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailMain >
+19:58:05,628  INFO main WebElementsActions:clear:70 - clear element < registrationEmailMain >
+19:58:05,717  INFO main WebElementsActions:input:56 - input < registrationEmailMain > and send < Test_user-25952505@gmail.com >
+19:58:05,717  INFO main RegistrationTests:test13_negativeVariousPassFields:519 - click and input Test_user-25952505@gmail.com in email field
+19:58:05,783  INFO main WebElementsActions:clickElement:118 - click element < registrationEmailRepeat >
+19:58:05,817  INFO main WebElementsActions:clear:70 - clear element < registrationEmailRepeat >
+19:58:05,921  INFO main WebElementsActions:input:56 - input < registrationEmailRepeat > and send < Test_user-25952505@gmail.com >
+19:58:05,977  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:58:05,978  INFO main RegistrationTests:test13_negativeVariousPassFields:522 - click and input Test_user-25952505@gmail.com in email field repeat and click TAB
+19:58:06,033  INFO main WebElementsActions:clickElement:118 - click element < registrationPassMain >
+19:58:06,069  INFO main WebElementsActions:clear:70 - clear element < registrationPassMain >
+19:58:06,155  INFO main WebElementsActions:input:56 - input < registrationPassMain > and send < qwerty12345 >
+19:58:06,214  INFO main WebElementsActions:pressTAB:481 - press TAB
+19:58:06,214  INFO main RegistrationTests:test13_negativeVariousPassFields:525 - click and input qwerty12345 in password field and click TAB
+19:58:06,268  INFO main WebElementsActions:clickElement:118 - click element < registrationPassRepeat >
+19:58:06,307  INFO main WebElementsActions:clear:70 - clear element < registrationPassRepeat >
+19:58:06,387  INFO main WebElementsActions:input:56 - input < registrationPassRepeat > and send < qwerty123451 >
+19:58:06,388  INFO main RegistrationTests:test13_negativeVariousPassFields:528 - click and input qwerty123451 password field repeat
+19:58:06,399  INFO main RegistrationTests:test13_negativeVariousPassFields:531 - window scroll
+19:58:07,198  INFO main WebElementsActions:clickElement:118 - click element < buttonRegistration >
+19:58:07,199  INFO main RegistrationTests:test13_negativeVariousPassFields:534 - click on registration button
+19:58:07,238  INFO main WebElementsActions:isElementPresent:245 - < errorRegMessage > is present on page.
+19:58:07,239  INFO main RegistrationFixture:tearDown:30 - end registration tests
+19:58:08,384  INFO main ProductPageFixture:setUp:23 - browser open page: http://www.ellos.se/
+19:58:08,384  INFO main ProductPageFixture:setUp:27 - start product page tests
+19:58:08,453  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < manMenu >
+19:58:09,522  INFO main WebElementsActions:clickElement:118 - click element < manMenuLink >
+19:58:09,578  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < manNavigationLink > present
+19:58:09,579  INFO main HomePage:switchToManPage:119 - switch to man page was correct
+19:58:09,605  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:09,659  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:58:11,327  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:58:11,361  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:11,431  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:58:15,688  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:58:15,733  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:58:15,733  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:58:15,762  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:58:15,763  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:58:15,784  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:58:16,756  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:58:16,778  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < barnMenu >
+19:58:17,877  INFO main WebElementsActions:clickElement:118 - click element < barnMenuLink >
+19:58:17,917  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < barnNavigationLink > present
+19:58:17,960  INFO main HomePage:switchToChildPage:154 - switch to barn page was correct
+19:58:17,990  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:18,043  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:58:20,041  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:58:20,073  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:20,122  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:58:22,240  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:58:22,284  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:58:22,284  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:58:22,323  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:58:22,324  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:58:22,345  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:58:23,450  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:58:23,475  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < sportMenu >
+19:58:24,834  INFO main WebElementsActions:clickElement:118 - click element < sportMenuLink >
+19:58:24,879  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < sportNavigationLink > present
+19:58:24,889  INFO main HomePage:switchToSportPage:189 - switch to sport page was correct
+19:58:24,911  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:24,955  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:58:26,575  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:58:26,610  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:26,669  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:58:28,682  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:58:28,726  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:58:28,726  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:58:28,767  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:58:28,767  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:58:28,787  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:58:29,847  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:58:29,871  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < linen&bathMenu >
+19:58:31,461  INFO main WebElementsActions:clickElement:118 - click element < linen&bathMenuLink >
+19:58:31,525  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < linen&bathNavigationLink > present
+19:58:31,531  INFO main HomePage:switchToLinenAndBathPage:224 - switch to linen and bath page was correct
+19:58:31,575  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:31,625  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:58:33,530  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:58:33,571  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:33,624  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:58:36,427  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:58:36,464  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:58:36,464  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:58:36,493  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:58:36,493  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:58:36,516  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:58:37,513  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:58:37,537  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < footwearMenu >
+19:58:37,628  INFO main WebElementsActions:clickElement:118 - click element < footwearMenuLink >
+19:58:38,666  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < footwearNavigationLink > present
+19:58:38,666  INFO main HomePage:switchToFootwearPage:256 - switch to footwear page was correct
+19:58:38,712  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:38,772  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:58:40,821  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:58:40,857  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:40,914  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:58:43,063  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:58:43,104  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:58:43,104  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:58:43,144  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:58:43,144  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:58:43,165  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:58:44,201  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:58:44,224  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < hemMenu >
+19:58:45,321  INFO main WebElementsActions:clickElement:118 - click element < hemMenuLink >
+19:58:45,382  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < hemNavigationLink > present
+19:58:45,382  INFO main HomePage:switchToHemPage:287 - switch to hem page was correct
+19:58:45,404  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:45,446  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:58:47,659  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:58:47,684  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:47,730  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:58:49,722  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:58:49,760  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:58:49,760  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:58:49,790  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:58:49,790  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:58:49,806  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:58:50,892  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:58:50,922  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < electronicMenu >
+19:58:52,403  INFO main WebElementsActions:clickElement:118 - click element < electronicMenuLink >
+19:58:52,444  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < electronicNavigationLink > present
+19:58:52,444  INFO main HomePage:switchToElectronicPage:319 - switch to electronic page was correct
+19:58:52,466  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:52,507  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:58:53,924  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:58:53,952  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:53,993  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:58:55,850  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:58:55,885  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:58:55,885  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:58:55,921  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:58:55,922  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:58:55,938  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:58:56,961  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:58:56,986  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < beautyAndHealthMenu >
+19:58:58,825  INFO main WebElementsActions:clickElement:118 - click element < beautyAndHealthMenuLink >
+19:58:58,871  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < beautyAndHealthNavigationLink > present
+19:58:58,871  INFO main HomePage:switchToBeautyAndHealthPage:351 - switch to beauty and health page was correct
+19:58:58,893  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:58:58,932  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:59:00,482  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:59:00,510  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:59:00,557  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:59:02,450  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:59:02,490  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:59:02,490  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:59:02,526  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:59:02,527  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:59:02,547  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:59:03,568  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:59:03,593  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < plusMenu >
+19:59:04,566  INFO main WebElementsActions:clickElement:118 - click element < plusMenuLink >
+19:59:04,633  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < plusNavigationLink > present
+19:59:04,633  INFO main HomePage:switchToPlusPage:383 - switch to plus page was correct
+19:59:04,653  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:59:04,701  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:59:07,032  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:59:07,068  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:59:07,116  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:59:09,143  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:59:09,183  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:59:09,183  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:59:09,222  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:59:09,222  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:59:09,245  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:59:10,247  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:59:10,271  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < reaMenu >
+19:59:11,289  INFO main WebElementsActions:clickElement:118 - click element < reaMenuLink >
+19:59:11,346  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < reaNavigationLink > present
+19:59:11,346  INFO main HomePage:switchToREAPage:415 - switch to rea page was correct
+19:59:11,367  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:59:11,407  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productCategoryOuterwear >
+19:59:13,241  INFO main WebElementsActions:clickElement:118 - click element < productCategoryOuterwearLink >
+19:59:13,276  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:59:13,320  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:59:15,903  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:59:15,939  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < productName > present
+19:59:15,940  INFO main ProductPage:isTheProductPage:124 - switch to product page < productName > was correct
+19:59:15,984  INFO main WebElementsActions:isElementPresent:245 - < productName > is present on page.
+19:59:15,984  INFO main ProductPage:checkCorrectSwitchToProductPage:158 - switch to product page was correct
+19:59:16,007  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:59:17,060  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:59:17,088  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < inspirationMenu >
+19:59:19,022  INFO main WebElementsActions:clickElement:118 - click element < inspirationMenuLink >
+19:59:19,071  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < inspirationNavigationLink > present
+19:59:19,071  INFO main HomePage:switchToInspirationPage:446 - switch to inspiration page was correct
+19:59:20,127  INFO main WebElementsActions:clickLink:146 - click on link < inspirationProductTwo >
+19:59:20,177  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < isInspirationElementPresent > present
+19:59:20,177  INFO main ProductPage:forInspirationPage:200 - correct page
+19:59:20,233  INFO main WebElementsActions:isElementPresent:245 - < isInspirationElementPresent > is present on page.
+19:59:20,233  INFO main ProductPage:forInspirationPage:211 - you know who are Alexandra Ogonowski.
+19:59:20,260  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoCenterLink >
+19:59:21,257  INFO main WebElementsActions:clickElement:118 - click element < logoCenterLink >
+19:59:21,280  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < resorMenu >
+19:59:23,562  INFO main WebElementsActions:clickElement:118 - click element < resorMenuLink >
+19:59:23,613  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < resorNavigationLink > present
+19:59:23,613  INFO main HomePage:switchToResorPage:478 - switch to resor page was correct
+19:59:23,634  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < resorMenuElementTwo >
+19:59:23,723  INFO main WebElementsActions:clickElement:118 - click element < resorMenuElementTwo >
+19:59:23,761  INFO main WebElementsActions:isElementPresent:245 - < travelLogo > is present on page.
+19:59:24,638  INFO main WebElementsActions:clickLink:146 - click on link < linkNazar >
+19:59:24,638  INFO main ProductPage:isTravelPage:276 - resor page
+19:59:24,695  INFO main WebElementsActions:isElementPresent:245 - < nazarPage > is present on page.
+19:59:24,715  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < logoLeftLink >
+19:59:25,831  INFO main WebElementsActions:clickElement:118 - click element < logoLeftLink >
+19:59:25,831  INFO main ProductPageFixture:tearDown:33 - end product page tests
+19:59:25,955  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+19:59:25,955  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed

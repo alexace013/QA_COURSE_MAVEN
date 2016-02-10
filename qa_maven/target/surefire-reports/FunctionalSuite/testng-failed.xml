@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [FunctionalSuite]">
+  <test name="Functional(failed)">
+    <classes>
+      <class name="tests.product_page.ProductPageTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="test1_womanProductPage"/>
+          <include name="quitBrowser"/>
+          <include name="startBrowser"/>
+        </methods>
+      </class> <!-- tests.product_page.ProductPageTests -->
+      <class name="tests.registration.RegistrationTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="test1_positiveRegistration"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.registration.RegistrationTests -->
+      <class name="tests.login.LoginTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.login.LoginTests -->
+    </classes>
+  </test> <!-- Functional(failed) -->
+</suite> <!-- Failed suite [FunctionalSuite] -->

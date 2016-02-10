@@ -499,14 +499,18 @@ public class HomePage {
      */
     public void closeBlurb() {
 
-        try {
+        if (web.isElementPresent("buttonBlurb")) {
 
-            web.clickButton("buttonBlurb");
+            try {
 
-        } catch (ElementNoSuch e) {
+                web.clickButton("buttonBlurb");
 
-            e.printStackTrace();
-            log.error(String.format("Exception < %s >", e.getStackTrace()));
+            } catch (ElementNoSuch e) {
+
+                e.printStackTrace();
+                log.error(String.format("Exception < %s >", e.getStackTrace()));
+            }
+
         }
 
     }
