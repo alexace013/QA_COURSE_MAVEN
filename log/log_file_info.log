@@ -1,0 +1,21 @@
+19:54:11,085  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+19:54:17,012  INFO main BasketFixture:setUp:43 - browser open: < http://www.ellos.se/ >
+19:54:17,019  INFO main rootLogger:<init>:37 - created properties
+19:54:17,026  INFO main rootLogger:<init>:42 - created map properties
+19:54:17,027  INFO main BasketFixture:setUp:47 - start login tests
+19:54:17,121  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+19:54:17,154  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < electronicMenu >
+19:54:18,341  INFO main WebElementsActions:clickElement:118 - click element < electronicMenuLink >
+19:54:18,395  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < electronicNavigationLink > present
+19:54:18,395  INFO main HomePage:switchToElectronicPage:319 - switch to electronic page was correct
+19:54:18,691  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < mobile >
+19:54:20,362  INFO main WebElementsActions:clickElement:118 - click element < mobile >
+19:54:20,565  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+19:54:20,631  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+19:54:23,125  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+19:54:23,392  INFO main WebElementsActions:clickElement:118 - click element < addProductToPage >
+19:54:23,677  INFO main WebElementsActions:isElementPresent:245 - < textIphone > is present on page.
+19:54:23,677  INFO main BasketPage:textPresent:45 - correct page
+19:54:23,682  INFO main BasketFixture:tearDown:54 - end login tests
+19:54:23,769  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+19:54:23,769  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
