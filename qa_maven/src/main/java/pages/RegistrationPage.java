@@ -5,8 +5,10 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
 
+/**
+ * This class works with registration page {@see https://www.ellos.se/LoginAndRegistration/Login?returnUrl=%2f}
+ */
 public class RegistrationPage {
-
 
     private final static Logger log = Logger.getLogger("log4j.rootLogger");
     private WebDriver driver;
@@ -17,6 +19,14 @@ public class RegistrationPage {
         web = new WebElementsActions(driver);
     }
 
+    /**
+     * Method clicked and input data in the first email field
+     *
+     * @param email where this string is the E-mail address
+     * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)} and
+     *                       {@link WebElementsActions#clear(String)} and
+     *                       {@link WebElementsActions#input(String, String)}
+     */
     public void clickAndInputEmailMain(String email) {
 
         try {
@@ -34,6 +44,15 @@ public class RegistrationPage {
 
     }
 
+    /**
+     * Method clicked and input data in the second email field
+     *
+     * @param email where this string is the E-mail address
+     * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)} and
+     *                       {@link WebElementsActions#clear(String)} and
+     *                       {@link WebElementsActions#input(String, String)} and
+     *                       {@link WebElementsActions#pressTAB(String)}
+     */
     public void clickAndInputEmailRepeatAndClickTAB(String email) {
 
         try {
@@ -52,13 +71,22 @@ public class RegistrationPage {
 
     }
 
-    public void clickAndInputPassMainAndClickTAB(String pass) {
+    /**
+     * Method clicked and input data in the first password field
+     *
+     * @param password where this string is the E-mail address
+     * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)} and
+     *                       {@link WebElementsActions#clear(String)} and
+     *                       {@link WebElementsActions#input(String, String)} and
+     *                       {@link WebElementsActions#pressTAB(String)}
+     */
+    public void clickAndInputPassMainAndClickTAB(String password) {
 
         try {
 
             web.clickElement("registrationPassMain");
             web.clear("registrationPassMain");
-            web.input("registrationPassMain", pass);
+            web.input("registrationPassMain", password);
             web.pressTAB("registrationPassMain");
 
         } catch (ElementNoSuch e) {
@@ -70,13 +98,21 @@ public class RegistrationPage {
 
     }
 
-    public void clickAndInputPassRepeat(String pass) {
+    /**
+     * Method clicked and input data in the second password field
+     *
+     * @param password where this string is the E-mail address
+     * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)} and
+     *                       {@link WebElementsActions#clear(String)} and
+     *                       {@link WebElementsActions#input(String, String)}
+     */
+    public void clickAndInputPassRepeat(String password) {
 
         try {
 
             web.clickElement("registrationPassRepeat");
             web.clear("registrationPassRepeat");
-            web.input("registrationPassRepeat", pass);
+            web.input("registrationPassRepeat", password);
 
         } catch (ElementNoSuch e) {
 
@@ -87,13 +123,23 @@ public class RegistrationPage {
 
     }
 
-    public void clickAndInputPassRepeatVVVVV(String pass) {
+    /**
+     * Method clicked and input data in the second email field (test method), this
+     * method is deprecated
+     *
+     * @param password where this string is the E-mail address
+     * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)} and
+     *                       {@link WebElementsActions#clear(String)} and
+     *                       {@link WebElementsActions#clearAndInputAndClickEnter(String, String)}
+     */
+    @Deprecated
+    public void clickAndInputPassRepeatTest(String password) {
 
         try {
 
             web.clickElement("registrationPassRepeat");
             web.clear("registrationPassRepeat");
-            web.clearAndInputAndClickEnter("registrationPassRepeat", pass);
+            web.clearAndInputAndClickEnter("registrationPassRepeat", password);
 
         } catch (ElementNoSuch e) {
 
@@ -104,12 +150,20 @@ public class RegistrationPage {
 
     }
 
+    /**
+     * This method scroll you window
+     */
     public void windowScroll() {
 
         web.windowScroll();
 
     }
 
+    /**
+     * This method click on check box
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)}
+     */
     public void clickCheckBox() {
 
         try {
@@ -125,6 +179,11 @@ public class RegistrationPage {
 
     }
 
+    /**
+     * This method click on the registration button
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)}
+     */
     public void clickButtonRegistration() {
 
         try {
@@ -140,6 +199,12 @@ public class RegistrationPage {
 
     }
 
+    /**
+     * This method click on login link if we need to get the registration page
+     * and user does not come under its profile
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
+     */
     public void clickLogin() {
 
         try {
@@ -155,6 +220,12 @@ public class RegistrationPage {
 
     }
 
+    /**
+     * This method click on logout link if the user needs to log out and
+     * the user under her own account
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
+     */
     public void clickLogOut() {
 
         try {
@@ -170,6 +241,12 @@ public class RegistrationPage {
 
     }
 
+    /**
+     * Method checks whether the user is logged under her own account
+     *
+     * @return true if user login successful, otherwise false
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     */
     public boolean isRegistrationSuccessful() {
 
         try {
@@ -195,6 +272,12 @@ public class RegistrationPage {
 
     }
 
+    /**
+     * Method checks for an error message on the page, when password field empty.
+     *
+     * @return true if error message present on a page, otherwise false
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     */
     public boolean isErrorPassPresent() {
 
         try {
@@ -216,6 +299,13 @@ public class RegistrationPage {
 
     }
 
+    /**
+     * Method checks for an error message on the page, when one registration
+     * field (email or password) empty.
+     *
+     * @return true if error message present on a page, otherwise false
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     */
     public boolean isErrorJustOneField() {
 
         try {
@@ -237,6 +327,12 @@ public class RegistrationPage {
 
     }
 
+    /**
+     * Method checks for an error message on the page
+     *
+     * @return true if error message present on a page, otherwise false
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     */
     public boolean isErrorMessagePresent() {
 
         try {

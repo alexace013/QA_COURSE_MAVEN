@@ -21,6 +21,7 @@ public class BasketPage {
     public void addProductToBasket() {
 
         web.windowScroll();
+
         web.clickElement("addProductToPage");
 
     }

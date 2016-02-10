@@ -49,7 +49,7 @@ public class BasketTests extends BasketFixture {
 
         }
 
-        getProductPage().switchToFirstProductPage();
+        getProductPage().switchToFirstPositionProductPage();
 
         File screenShot3 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 

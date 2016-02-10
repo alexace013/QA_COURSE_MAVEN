@@ -1,6 +1,12 @@
 package exception;
 
+import utils.ConfigurationData;
+
 import java.io.FileNotFoundException;
+
+/**
+ * This exception used in {@link ConfigurationData#loadPropertiesToMap()}
+ * */
 
 public class FileException extends FileNotFoundException {
 

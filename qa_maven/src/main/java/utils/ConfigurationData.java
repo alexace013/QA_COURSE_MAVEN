@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -27,6 +26,11 @@ public class ConfigurationData {
     private final Properties PROPERTIES;
     private Map<String, String> propertiesMap;
 
+    /**
+     * Private construction
+     *
+     * @throws IOException throw exception in {@link ConfigurationData#loadPropertiesToMap()}
+     */
     private ConfigurationData() {
 
         this.PROPERTIES = new Properties();
@@ -49,7 +53,7 @@ public class ConfigurationData {
     /**
      * Static method for return configuration data
      *
-     * @return {@link ConfigurationData#ConfigurationData()}
+     * @return new object Configuration Data {@link ConfigurationData#config}
      */
     public static ConfigurationData getConfigurationData() {
 
@@ -66,7 +70,7 @@ public class ConfigurationData {
      * Private method for loaded properties to the map {@link ConfigurationData#propertiesMap}
      *
      * @return {@link HashMap<String, String> with {@value PROPERTIES}} If file is not exists and
-     * path correct, otherwise {@link FileNotFoundException}
+     * path correct, otherwise {@link FileException}
      * @throws ElementNoSuch    If {@link FileInputStream not opening a connection to an actual
      *                          file {@value UI_MAPPING_PATH}}
      * @throws FileException    If false {@link Files#exists(Path, LinkOption...) and

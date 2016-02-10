@@ -5,6 +5,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
 
+/**
+ * This class works with login page {@see https://www.ellos.se/LoginAndRegistration/Login?returnUrl=%2f}
+ */
 public class LoginPage {
 
     private final static Logger log = Logger.getLogger(LoginPage.class);

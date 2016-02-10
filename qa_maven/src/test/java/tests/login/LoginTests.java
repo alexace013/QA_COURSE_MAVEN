@@ -16,20 +16,28 @@ public class LoginTests extends LoginFixture {
 
         log.info(String.format("test1_positiveLogin"));
 
-        getHomePage().closeBlurb();
-        log.info(String.format("close blurb"));
+        {
 
-        getHomePage().switchToRegistrationPage();
-        log.info(String.format("switch to registration page"));
+            getHomePage().closeBlurb();
+            log.info(String.format("close blurb"));
 
-        getLoginPage().clickAndInputLoginField(EMAIL);
-        log.info(String.format("click and input %s in login filed", EMAIL));
+            getHomePage().switchToRegistrationPage();
+            log.info(String.format("switch to registration page"));
 
-        getLoginPage().clickAndInputPassFieldWithTwoLocators(PASS);
-        log.info(String.format("click and input %s in password field", PASS));
+        }
 
-        getLoginPage().clickLoginButton();
-        log.info(String.format("click on login button"));
+        {
+
+            getLoginPage().clickAndInputLoginField(EMAIL);
+            log.info(String.format("click and input %s in login filed", EMAIL));
+
+            getLoginPage().clickAndInputPassFieldWithTwoLocators(PASS);
+            log.info(String.format("click and input %s in password field", PASS));
+
+            getLoginPage().clickLoginButton();
+            log.info(String.format("click on login button"));
+
+        }
 
         getHomePage().clickLogoutLink();
         log.info(String.format("click on logout link"));
@@ -42,18 +50,27 @@ public class LoginTests extends LoginFixture {
 
         log.info(String.format("test2_incorrectLogin"));
 
-        getHomePage().clickLoginLink();
-        log.info(String.format("click login link"));
+        {
 
-        String failedEMAIL = "qwerty" + EMAIL;
-        getLoginPage().clickAndInputLoginFieldAndClickTAB(failedEMAIL);
-        log.info(String.format("click and input %s in login field and click TAB", failedEMAIL));
+            getHomePage().clickLoginLink();
+            log.info(String.format("click login link"));
 
-        getLoginPage().clickAndInputPassFieldWithOneLocator(PASS);
-        log.info(String.format("click and input %s in password filed", PASS));
+        }
 
-        getLoginPage().clickLoginButton();
-        log.info(String.format("click on login button"));
+        {
+
+            String failedEMAIL = "qwerty" + EMAIL;
+
+            getLoginPage().clickAndInputLoginFieldAndClickTAB(failedEMAIL);
+            log.info(String.format("click and input %s in login field and click TAB", failedEMAIL));
+
+            getLoginPage().clickAndInputPassFieldWithOneLocator(PASS);
+            log.info(String.format("click and input %s in password filed", PASS));
+
+            getLoginPage().clickLoginButton();
+            log.info(String.format("click on login button"));
+
+        }
 
         Assert.assertTrue(getLoginPage().isErrorMessagePresentOnPage(),
                 "error message is present on page");
@@ -66,17 +83,21 @@ public class LoginTests extends LoginFixture {
 
         log.info(String.format("test3_incorrectPassField"));
 
-        getLoginPage().clickAndInputLoginFieldAndClickTAB(EMAIL);
-        log.info(String.format("click and input %s in login field and click TAB",
-                EMAIL));
+        {
 
-        String failedPass = PASS.substring(0, 3);
+            getLoginPage().clickAndInputLoginFieldAndClickTAB(EMAIL);
+            log.info(String.format("click and input %s in login field and click TAB",
+                    EMAIL));
 
-        getLoginPage().clickAndInputPassFieldWithOneLocator(failedPass);
-        log.info(String.format("click and input %s in password field", failedPass));
+            String failedPass = PASS.substring(0, 3);
 
-        getLoginPage().clickLoginButton();
-        log.info(String.format("click on login button"));
+            getLoginPage().clickAndInputPassFieldWithOneLocator(failedPass);
+            log.info(String.format("click and input %s in password field", failedPass));
+
+            getLoginPage().clickLoginButton();
+            log.info(String.format("click on login button"));
+
+        }
 
         Assert.assertTrue(getLoginPage().isErrorMessagePresentOnPage(),
                 "error message is present on page");
@@ -89,14 +110,18 @@ public class LoginTests extends LoginFixture {
 
         log.info(String.format("test4_emptyEmailAndPassFields"));
 
-        getLoginPage().clickAndInputLoginFieldAndClickTAB("");
-        log.info(String.format("click and input empty in login field and click TAB"));
+        {
 
-        getLoginPage().clickAndInputPassFieldWithOneLocator("");
-        log.info(String.format("click and input empty in password field"));
+            getLoginPage().clickAndInputLoginFieldAndClickTAB("");
+            log.info(String.format("click and input empty in login field and click TAB"));
 
-        getLoginPage().clickLoginButton();
-        log.info(String.format("click on login button"));
+            getLoginPage().clickAndInputPassFieldWithOneLocator("");
+            log.info(String.format("click and input empty in password field"));
+
+            getLoginPage().clickLoginButton();
+            log.info(String.format("click on login button"));
+
+        }
 
         Assert.assertTrue(getLoginPage().isErrorMessageFieldsEmpty(),
                 "error message is present on page");
@@ -109,14 +134,18 @@ public class LoginTests extends LoginFixture {
 
         log.info(String.format("test5_emptyEmailField"));
 
-        getLoginPage().clickAndInputLoginFieldAndClickTAB("");
-        log.info(String.format("click and input empty in login field and click TAB"));
+        {
 
-        getLoginPage().clickAndInputPassFieldWithOneLocator(PASS);
-        log.info(String.format("click and input %s in password field", PASS));
+            getLoginPage().clickAndInputLoginFieldAndClickTAB("");
+            log.info(String.format("click and input empty in login field and click TAB"));
 
-        getLoginPage().clickLoginButton();
-        log.info(String.format("click on login button"));
+            getLoginPage().clickAndInputPassFieldWithOneLocator(PASS);
+            log.info(String.format("click and input %s in password field", PASS));
+
+            getLoginPage().clickLoginButton();
+            log.info(String.format("click on login button"));
+
+        }
 
         Assert.assertTrue(getLoginPage().isErrorMessageOneFieldEmpty(),
                 "error message is present on page");
@@ -129,15 +158,19 @@ public class LoginTests extends LoginFixture {
 
         log.info(String.format("test6_emptyPassField"));
 
-        getLoginPage().clickAndInputLoginFieldAndClickTAB(EMAIL);
-        log.info(String.format("click and input %s in login field and click TAB", EMAIL));
+        {
 
-        getLoginPage().clickAndInputPassFieldWithOneLocator("");
-        log.info(String.format("click and input empty in password field and click TAB"));
+            getLoginPage().clickAndInputLoginFieldAndClickTAB(EMAIL);
+            log.info(String.format("click and input %s in login field and click TAB", EMAIL));
 
-        getLoginPage().clickLoginButton();
-        log.info(String.format("click on login button"));
-        
+            getLoginPage().clickAndInputPassFieldWithOneLocator("");
+            log.info(String.format("click and input empty in password field and click TAB"));
+
+            getLoginPage().clickLoginButton();
+            log.info(String.format("click on login button"));
+
+        }
+
         Assert.assertTrue(getLoginPage().isErrorMessageOneFieldEmpty(),
                 "error message is present on page");
 

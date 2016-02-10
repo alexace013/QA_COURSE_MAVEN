@@ -5,6 +5,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
 
+/**
+ * This class works with the product page
+ */
 public class ProductPage {
 
     private static final Logger log = Logger.getLogger(ProductPage.class);
@@ -19,6 +22,11 @@ public class ProductPage {
 
     }
 
+    /**
+     * Switch to home page {@see http://www.ellos.se/}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
+     */
     public void switchToHomePage() {
 
         try {
@@ -34,12 +42,34 @@ public class ProductPage {
 
     }
 
-    public void switchToHomePageStart() {
+    /**
+     * Switch to home page {@see http://www.ellos.se/}
+     * <p>
+     * In this method used other locator {@see /main/resources/UAMapping.properties => locator = logoLeftLink}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
+     */
+    public void switchToHomeFinishedTest() {
 
-        web.moveToElementAndClick("logoLeftLink", "logoLeftLink");
+        try {
+
+            web.moveToElementAndClick("logoLeftLink", "logoLeftLink");
+
+        } catch (ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
 
     }
 
+    /**
+     * Switch to product category page
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElement(String)} and
+     *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
+     */
     public void switchToProductCategory() {
 
         try {
@@ -56,7 +86,14 @@ public class ProductPage {
 
     }
 
-    public void switchToFirstProductPage() {
+
+    /**
+     * Switch to first position product on the product category page
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElement(String)} and
+     *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
+     */
+    public void switchToFirstPositionProductPage() {
 
         try {
 
@@ -72,17 +109,25 @@ public class ProductPage {
 
     }
 
-    public void inTheProductPage() {
+    /**
+     * This method wait for element present on page {wait timeout = @see {@link WebElementsActions#driverWait}}
+     *
+     * @return true if locator {@see productName} is present on page, otherwise false
+     * @throws ElementNoSuch {@link WebElementsActions#waitForElementPresent(String)}
+     */
+    public boolean isTheProductPage() {
 
         try {
 
             if (web.waitForElementPresent("productName")) {
 
-                log.info(String.format("switch to woman product was correct"));
+                log.info(String.format("switch to product page < %s > was correct", "productName"));
+                return true;
 
             } else {
 
-                log.info(String.format("switch to woman product was failed"));
+                log.info(String.format("switch to product page < %s > was failed", "productName"));
+                return false;
 
             }
 
@@ -93,9 +138,17 @@ public class ProductPage {
 
         }
 
+        return false;
 
     }
 
+    /**
+     * Verification that includes the desired page
+     *
+     * @return true if element {@see productName in UAMapping.properties} present on
+     * page{@link WebElementsActions#isElementPresent(String)}, otherwise false
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     */
     public boolean checkCorrectSwitchToProductPage() {
 
         try {
@@ -123,77 +176,153 @@ public class ProductPage {
 
     }
 
+    /**
+     * This method used only inspiration page {@see http://www.ellos.se/inspiration}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#waitForElementPresent(String)} and
+     *                       {@link WebElementsActions#isElementPresent(String)}
+     */
     public void forInspirationPage() {
 
+        // this cycle down the page to the desired element
         for (int i = 0; i < 3; i++) {
 
             web.windowScroll();
 
         }
 
-        web.clickLink("inspirationProductTwo");
+        try {
 
-        if (web.waitForElementPresent("isInspirationElementPresent")) {
+            web.clickLink("inspirationProductTwo");
 
-            log.info(String.format("correct page"));
+            if (web.waitForElementPresent("isInspirationElementPresent")) {
 
-            String name = "Alexandra Ogonowski";
+                log.info(String.format("correct page"));
 
-            if (web.isElementPresent("isInspirationElementPresent")) {
+                /**
+                 * It is used to confirm that exactly on the correct page.
+                 * You should fall on the page {@see http://www.ellos.se/inspiration/svavande-gronska/1542}
+                 * @param name this person's name, as referred on page
+                 * */
+                String name = "Alexandra Ogonowski";
 
-                log.info(String.format("you know who are %s.", name));
+                if (web.isElementPresent("isInspirationElementPresent")) {
+
+                    log.info(String.format("you know who are %s.", name));
+
+                } else {
+
+                    log.info(String.format("you didn't know who are %s.", name));
+
+                }
 
             } else {
 
-                log.info(String.format("you didn't know who are %s.", name));
+                log.info(String.format("incorrect page"));
 
             }
 
-        } else {
 
-            log.info(String.format("incorrect page"));
+        } catch (ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
 
-
     }
 
+    /**
+     * This method used only for resor page {@see http://www.ellos.se/g/travel/travelStart?menuId=34}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
+     */
     public void forResorPage() {
 
-        web.moveToElementAndClick("resorMenuElementTwo", "resorMenuElementTwo");
+        try {
+
+            web.moveToElementAndClick("resorMenuElementTwo", "resorMenuElementTwo");
 //        web.clickLink("linkNazar");
-        isTravelPage();
-        isNazarPagePresent();
+            isTravelPage();
+            isNazarPagePresent();
+
+        } catch (ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
 
     }
 
+    /**
+     * This method ensures that we are on the travel page {@see http://www.ellos.se/g/travel/travelStart?menuId=34}
+     * where locator travelLogo = Resor page
+     *
+     * @return true if element present on a page, otherwise false
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)} and
+     *                       {@link WebElementsActions#clickLink(String)}
+     */
     private boolean isTravelPage() {
 
-        if (web.isElementPresent("travelLogo")) {
+        try {
 
-            web.clickLink("linkNazar");
-            log.info(String.format("resor page"));
-            return true;
+            if (web.isElementPresent("travelLogo")) {
 
-        } else {
+                // click on an item on the page
+                web.clickLink("linkNazar");
 
-            log.info(String.format("not resor page"));
-            return false;
+                log.info(String.format("resor page"));
+                return true;
+
+            } else {
+
+                log.info(String.format("not resor page"));
+                return false;
+
+            }
+
+        } catch (ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
         }
+
+        return false;
 
     }
 
+    /**
+     * Private method checked that we are on the correct
+     * page {@see http://www.ellos.se/g/travel/nazar?menuId=74e60d34-b56c-4189-a818-ae4f3c0d5915}
+     *
+     * @return true is element nazarPage => some image present in page, otherwise false
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     */
     private boolean isNazarPagePresent() {
 
-        if (web.isElementPresent("nazarPage")) {
+        try {
 
-            return true;
+            if (web.isElementPresent("nazarPage")) {
 
-        } else {
+                return true;
 
-            return false;
+            } else {
+
+                return false;
+
+            }
+
+        } catch (ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
 
         }
+
+        return false;
 
     }
 

@@ -5,6 +5,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.WebElementsActions;
 
+/**
+ * This class works with home page {@see http://www.ellos.se/}
+ */
 public class HomePage {
 
     private static final Logger log = Logger.getLogger(HomePage.class);
