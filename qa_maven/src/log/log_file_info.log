@@ -2350,3 +2350,24 @@
 00:29:46,279  INFO main BasketFixture:tearDown:54 - end login tests
 00:29:46,353  INFO main BrowserFixture:quitBrowser:65 - browser close successful
 00:29:46,354  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
+00:36:52,470  INFO main BrowserFixture:startBrowser:52 - browser ChromeDriver open successful
+00:36:57,065  INFO main BasketFixture:setUp:43 - browser open: < http://www.ellos.se/ >
+00:36:57,074  INFO main rootLogger:<init>:33 - created properties
+00:36:57,082  INFO main rootLogger:<init>:38 - created map properties
+00:36:57,083  INFO main BasketFixture:setUp:47 - start login tests
+00:36:57,178  INFO main WebElementsActions:clickButton:132 - click on button < buttonBlurb >
+00:36:57,209  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < electronicMenu >
+00:36:58,785  INFO main WebElementsActions:clickElement:118 - click element < electronicMenuLink >
+00:36:58,833  INFO main WebElementsActions:waitForElementPresent:355 - wait for element < electronicNavigationLink > present
+00:36:58,834  INFO main HomePage:switchToElectronicPage:316 - switch to electronic page was correct
+00:36:59,035  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < mobile >
+00:37:00,688  INFO main WebElementsActions:clickElement:118 - click element < mobile >
+00:37:00,917  INFO main WebElementsActions:moveToElement:163 - move to element < logoLeftLink >
+00:37:00,968  INFO main WebElementsActions:moveToElementAndClick:182 - move to element < productFirstPositionLink >
+00:37:03,218  INFO main WebElementsActions:clickElement:118 - click element < productFirstPositionLink >
+00:37:03,458  INFO main WebElementsActions:clickElement:118 - click element < addProductToPage >
+00:37:03,746  INFO main WebElementsActions:isElementPresent:245 - < textIphone > is present on page.
+00:37:03,746  INFO main BasketPage:textPresent:44 - correct page
+00:37:03,750  INFO main BasketFixture:tearDown:54 - end login tests
+00:37:03,836  INFO main BrowserFixture:quitBrowser:65 - browser close successful
+00:37:03,836  INFO main BrowserFixture:quitBrowser:69 - tests suite execution completed
