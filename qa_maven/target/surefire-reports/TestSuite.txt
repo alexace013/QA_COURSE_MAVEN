@@ -1,0 +1,66 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 32, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 325.705 sec <<< FAILURE! - in TestSuite
+test1_positiveRegistration(tests.registration.RegistrationTests)  Time elapsed: 4.819 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Element is not clickable at point (828, 639). Other element would receive the click: <ul class="quick-links-list-2"></ul>
+Command duration or timeout: 69 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'alexace-pc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-77-generic', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0.1, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4f212293-c9c6-4a5c-90a8-3848cfb387bb
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at utils.WebElementsActions.clickElement(WebElementsActions.java:117)
+	at pages.RegistrationPage.clickButtonRegistration(RegistrationPage.java:213)
+	at tests.registration.RegistrationTests.test1_positiveRegistration(RegistrationTests.java:42)
+
+test12_inspirationPage(tests.product_page.ProductPageTests)  Time elapsed: 0.098 sec  <<< FAILURE!
+org.openqa.selenium.InvalidSelectorException: The given selector .//*[@id='Content']/div[1]/div[2]/div/div/div/ul/li[12]/div[1]/a); is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Unable to locate an element with the xpath expression .//*[@id='Content']/div[1]/div[2]/div/div/div/ul/li[12]/div[1]/a); because of the following error:
+SyntaxError: The expression is not a legal expression.
+Command duration or timeout: 20 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'alexace-pc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-77-generic', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0.1, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4f212293-c9c6-4a5c-90a8-3848cfb387bb
+*** Element info: {Using=xpath, value=.//*[@id='Content']/div[1]/div[2]/div/div/div/ul/li[12]/div[1]/a);}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at utils.WebElementsActions.clickElement(WebElementsActions.java:117)
+	at utils.WebElementsActions.moveToElementAndClick(WebElementsActions.java:184)
+	at pages.HomePage.switchToInspirationPage(HomePage.java:486)
+	at tests.product_page.ProductPageTests.test12_inspirationPage(ProductPageTests.java:241)
+Caused by: org.openqa.selenium.InvalidSelectorException: The given selector .//*[@id='Content']/div[1]/div[2]/div/div/div/ul/li[12]/div[1]/a); is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Unable to locate an element with the xpath expression .//*[@id='Content']/div[1]/div[2]/div/div/div/ul/li[12]/div[1]/a); because of the following error:
+SyntaxError: The expression is not a legal expression.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'alexace-pc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.13.0-77-generic', java.version: '1.8.0_60'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.annotateInvalidSelectorError_(file:///tmp/anonymous5567819272227032340webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10697)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous5567819272227032340webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10728)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///tmp/anonymous5567819272227032340webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10732)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///tmp/anonymous5567819272227032340webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12602)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///tmp/anonymous5567819272227032340webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12607)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///tmp/anonymous5567819272227032340webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12549)
+

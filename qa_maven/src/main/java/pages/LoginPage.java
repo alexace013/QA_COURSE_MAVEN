@@ -41,7 +41,7 @@ public class LoginPage {
             web.input("loginFieldInput", loginData);
 
             ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/qa_course_maven/screens/loginpage/",
+                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
                     "clickAndInputLoginField", ".png");
 
         } catch (IOException e) {
@@ -125,7 +125,7 @@ public class LoginPage {
             web.pressTAB("loginFieldInput");
 
             ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/qa_course_maven/screens/loginpage/",
+                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
                     "clickAndInputLoginFieldAndClickTAB", ".png");
 
         } catch (IOException e) {
@@ -154,7 +154,7 @@ public class LoginPage {
             web.input("passFieldInputSecond", passwordData);
 
             ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/qa_course_maven/screens/loginpage/",
+                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
                     "clickAndInputPassFieldWithOneLocator", ".png");
 
         } catch (IOException e) {
@@ -183,7 +183,7 @@ public class LoginPage {
             web.input("passFieldInputSecond", passwordData);
 
             ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/qa_course_maven/screens/loginpage/",
+                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
                     "clickAndInputPassFieldWithTwoLocators", ".png");
 
         } catch (IOException e) {
@@ -198,7 +198,7 @@ public class LoginPage {
      * Click on login button
      *
      * @throws ElementNoSuch {@link utils.WebElementsActions}
-     * @throws IOException {@link ScreenShot#screenShot(WebDriver, String, String, String)}L
+     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}L
      */
     public void clickLoginButton() {
 
@@ -207,7 +207,7 @@ public class LoginPage {
             web.clickElement("loginButton");
 
             ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/qa_course_maven/screens/loginpage/",
+                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
                     "clickLoginButton", ".png");
 
         } catch (IOException e) {
@@ -264,7 +264,7 @@ public class LoginPage {
      *
      * @return true If message active, otherwise false
      * @throws ElementNoSuch {@link utils.WebElementsActions}
-     * @throws IOException {@link ScreenShot#screenShot(WebDriver, String, String, String)}
+     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public boolean isErrorMessagePresentOnPage() {
 
@@ -273,7 +273,7 @@ public class LoginPage {
             if (web.isElementPresent("errorMessage")) {
 
                 ScreenShot.screenShot(driver,
-                        "/media/alexander/HDD/Workspace/Projects/QA/qa_course_maven/screens/loginpage/",
+                        "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
                         "isErrorMessagePresentOnPage", ".png");
 
                 return true;
@@ -300,12 +300,16 @@ public class LoginPage {
      *
      * @return false If one field is empty or failed data, otherwise true
      * @throws ElementNoSuch {@link utils.WebElementsActions}
+     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public boolean isErrorMessageOneFieldEmpty() {
 
         try {
 
             if (web.isElementPresent("errorMessageOneFieldEmpty")) {
+
+                ScreenShot.screenShot(driver, "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
+                        "isErrorMessageOneFieldEmpty", ".png");
 
                 return true;
 
@@ -315,7 +319,7 @@ public class LoginPage {
 
             }
 
-        } catch (ElementNoSuch e) {
+        } catch (IOException e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -331,12 +335,16 @@ public class LoginPage {
      *
      * @return false If fields is empty or failed data, otherwise true
      * @throws ElementNoSuch {@link utils.WebElementsActions}
+     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public boolean isErrorMessageFieldsEmpty() {
 
         try {
 
             if (web.isElementPresent("errorMessageEmptyFields")) {
+
+                ScreenShot.screenShot(driver, "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
+                        "isErrorMessageFieldsEmpty", ".png");
 
                 return true;
 
@@ -346,7 +354,7 @@ public class LoginPage {
 
             }
 
-        } catch (ElementNoSuch e) {
+        } catch (IOException e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));

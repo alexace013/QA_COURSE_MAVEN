@@ -234,6 +234,7 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToLinenAndBathPage() {
 
@@ -271,6 +272,7 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToFootwearPage() {
 
@@ -304,6 +306,7 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToHemPage() {
 
@@ -337,6 +340,7 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToElectronicPage() {
 
@@ -371,6 +375,7 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToBeautyAndHealthPage() {
 
@@ -405,6 +410,7 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToPlusPage() {
 
@@ -438,6 +444,7 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToREAPage() {
 
@@ -470,6 +477,7 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToInspirationPage() {
 
@@ -504,6 +512,7 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToResorPage() {
 
@@ -559,6 +568,7 @@ public class HomePage {
      * Click on logout link
      *
      * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void clickLogoutLink() {
 
@@ -566,7 +576,9 @@ public class HomePage {
 
             web.clickLink("logoutLink");
 
-        } catch (ElementNoSuch e) {
+            screenShot("clickLogoutLink");
+
+        } catch (IOException e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -579,6 +591,7 @@ public class HomePage {
      * Click on login link
      *
      * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void clickLoginLink() {
 
@@ -586,7 +599,9 @@ public class HomePage {
 
             web.clickLink("loginLink");
 
-        } catch (ElementNoSuch e) {
+            screenShot("clickLoginLink");
+
+        } catch (IOException e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -675,7 +690,7 @@ public class HomePage {
     private void screenShot(String fileName) throws IOException {
 
         ScreenShot.screenShot(driver,
-                "/media/alexander/HDD/Workspace/Projects/QA/qa_course_maven/screens/homepage/",
+                "/media/alexander/HDD/Workspace/Projects/QA/screens/homepage/",
                 fileName, ".png");
 
     }
