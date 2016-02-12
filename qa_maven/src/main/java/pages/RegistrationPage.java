@@ -379,6 +379,40 @@ public class RegistrationPage {
     }
 
     /**
+     * Switch from registration page to register customer page
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
+     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
+     */
+    public void switchToRegisterCustomer() {
+
+        try {
+
+            if (web.isElementPresent("isCheckOutRegistration")) {
+
+                web.moveToElementAndClick("buttonCheckOutRegistration", "buttonCheckOutRegistration");
+
+                screenShot("switchToRegisterCustomer");
+
+                log.info(String.format("switch to full registration page"));
+
+            } else {
+
+                log.info(String.format("no switch to full registration page"));
+
+            }
+
+        } catch (IOException | ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+    }
+
+    /**
      * Refresh the home page
      */
     public void refreshHomePage() {

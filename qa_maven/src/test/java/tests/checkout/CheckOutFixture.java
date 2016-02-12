@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import pages.CheckOutPage;
 import pages.HomePage;
 import pages.ProductPage;
+import pages.RegistrationPage;
 import tests.browser.BrowserFixture;
 
 public class CheckOutFixture extends BrowserFixture {
@@ -15,6 +16,7 @@ public class CheckOutFixture extends BrowserFixture {
     private HomePage homePage;
     private CheckOutPage checkOutPage;
     private ProductPage productPage;
+    private RegistrationPage registrationPage;
 
     @BeforeClass
     public void setUp() {
@@ -23,6 +25,8 @@ public class CheckOutFixture extends BrowserFixture {
         log.info(String.format("browser open page: < %s >", URL));
         homePage = new HomePage(getDriver());
         checkOutPage = new CheckOutPage(getDriver());
+        productPage = new ProductPage(getDriver());
+        registrationPage = new RegistrationPage(getDriver());
         log.info(String.format("start login tests"));
 
     }
@@ -47,6 +51,12 @@ public class CheckOutFixture extends BrowserFixture {
     public ProductPage getProductPage() {
 
         return productPage;
+
+    }
+
+    public RegistrationPage getRegistrationPage() {
+
+        return registrationPage;
 
     }
 
