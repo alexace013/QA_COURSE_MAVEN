@@ -42,7 +42,7 @@ public class ProductPage {
 
             screenShot("switchToHomePage");
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -67,7 +67,7 @@ public class ProductPage {
 
             screenShot("switchToHomeFinishedTest");
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -88,11 +88,11 @@ public class ProductPage {
         try {
 
             web.moveToElement("logoLeftLink");
-            web.moveToElementAndClick("productCategoryOuterwear", "productCategoryOuterwearLink");
+            web.moveToElementAndClick("productCategoryFirstPosition", "productCategoryFirstPositionLink");
 
             screenShot("switchToProductCategory");
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -109,19 +109,79 @@ public class ProductPage {
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
      * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
-    public void switchToFirstPositionProductPage() {
+    public void switchToFirstPositionCategory() {
 
         try {
 
             web.moveToElement("logoLeftLink");
             web.moveToElementAndClick("productFirstPositionLink", "productFirstPositionLink");
 
-            screenShot("switchToFirstPositionProductPage");
+            screenShot("switchToFirstPositionCategory");
+
+        } catch (IOException | ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+    }
+
+    /**
+     * Check to see that we are on the correct page
+     *
+     * @throws exception.ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
+     * @throws IOException             {@link ScreenShot#screenShot(WebDriver, String, String, String)}
+     */
+    public boolean textPresent() {
+
+        try {
+
+            if (web.isElementPresent("theProductText")) {
+
+                screenShot("textPresent");
+
+                log.info(String.format("correct page"));
+                return true;
+
+            } else {
+
+                log.info(String.format("incorrect page"));
+                return false;
+
+            }
+
+        } catch (IOException | ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+        return false;
+
+    }
+
+    /**
+     * Switch to second position product on the product category page
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElement(String)} and
+     *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
+     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
+     */
+    public void switchToSecondPositionCategory() {
+
+        try {
+
+            web.moveToElement("logoLeftLink");
+            web.moveToElementAndClick("productCategorySecondPositionLink", "productCategorySecondPositionLink");
+
+            screenShot("switchToSecondPositionCategory");
 
         } catch (IOException e) {
 
             e.printStackTrace();
-            log.error(String.format("Exception < %s >", e.getStackTrace()));
+            log.error(String.format("Exeption < %s >", e.getStackTrace()));
 
         }
 
@@ -195,6 +255,30 @@ public class ProductPage {
     }
 
     /**
+     * Add product to basket
+     *
+     * @throws exception.ElementNoSuch {@link WebElementsActions#clickElement(String)}
+     * @throws IOException             {@link ScreenShot#screenShot(WebDriver, String, String, String)}
+     */
+    public void addProductToBasket() {
+
+        try {
+
+            web.windowScroll();
+            web.clickElement("addProductToPage");
+
+            screenShot("addProductToBasket");
+
+        } catch (IOException | ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+    }
+
+    /**
      * This method used only inspiration page {@see http://www.ellos.se/inspiration}
      *
      * @throws ElementNoSuch {@link WebElementsActions#waitForElementPresent(String)} and
@@ -244,7 +328,7 @@ public class ProductPage {
             }
 
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -270,7 +354,7 @@ public class ProductPage {
             isTravelPage();
             isNazarPagePresent();
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -310,7 +394,7 @@ public class ProductPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -345,7 +429,7 @@ public class ProductPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -353,6 +437,58 @@ public class ProductPage {
         }
 
         return false;
+
+    }
+
+    /**
+     * This method help with product where you must select model or color product
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)}
+     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
+     */
+    public void selectColor() {
+
+        try {
+
+            web.windowScroll();
+
+            web.moveToElementAndClick("colorMenuLink", "colorMenuLink");
+
+            screenShot("selectColor_1_");
+
+            web.moveToElementAndClick("selectColorLink", "selectColorLink");
+
+            screenShot("selectColor_2_");
+
+        } catch (IOException | ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+    }
+
+    public void selectSize() {
+
+        try {
+
+            web.windowScroll();
+
+            web.moveToElementAndClick("sizeMenuLink", "sizeMenuLink");
+
+            screenShot("selectSize_1_");
+
+            web.moveToElementAndClick("sizeMenu_M_Link", "sizeMenu_M_Link");
+
+            screenShot("selectSize_2_");
+
+        } catch (IOException | ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
 
     }
 

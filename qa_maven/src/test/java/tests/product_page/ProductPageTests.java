@@ -22,7 +22,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -42,7 +42,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -62,7 +62,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -82,7 +82,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -102,7 +102,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -122,7 +122,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -142,7 +142,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -162,7 +162,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -182,7 +182,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -202,7 +202,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }
@@ -222,7 +222,7 @@ public class ProductPageTests extends ProductPageFixture {
         {
 
             getProductPage().switchToProductCategory();
-            getProductPage().switchToFirstPositionProductPage();
+            getProductPage().switchToFirstPositionCategory();
             getProductPage().isTheProductPage();
 
         }

@@ -74,7 +74,41 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
+
+            e.printStackTrace();
+            log.error(String.format("Exception < %s >", e.getStackTrace()));
+
+        }
+
+    }
+
+    /**
+     * Switch to order direct page {@see http://www.ellos.se/Checkout/Basket.aspx}
+     *
+     * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)} and
+     *                       {@link WebElementsActions#isElementPresent(String)}
+     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
+     */
+    public void switchToOrderDirect() {
+
+        try {
+
+            web.clickLink("orderDirectLink");
+
+            if (web.isElementPresent("isOrderDirectPage")) {
+
+                log.info(String.format("switch to order direct page successful"));
+
+                screenShot("switchToOrderDirect");
+
+            } else {
+
+                log.info(String.format("switch to order page failed"));
+
+            }
+
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -109,7 +143,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -144,7 +178,7 @@ public class HomePage {
             }
 
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -181,7 +215,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -219,7 +253,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -257,7 +291,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -291,7 +325,7 @@ public class HomePage {
                 log.info(String.format("switch to footwear page was incorrect"));
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -326,7 +360,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -360,7 +394,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -395,7 +429,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -430,7 +464,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -463,7 +497,7 @@ public class HomePage {
                 log.info(String.format("switch to rea page was incorrect"));
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -497,7 +531,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -532,7 +566,7 @@ public class HomePage {
 
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -578,7 +612,7 @@ public class HomePage {
 
             screenShot("clickLogoutLink");
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -601,7 +635,7 @@ public class HomePage {
 
             screenShot("clickLoginLink");
 
-        } catch (IOException e) {
+        } catch (IOException | ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
