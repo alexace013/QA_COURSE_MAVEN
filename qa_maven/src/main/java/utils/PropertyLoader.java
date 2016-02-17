@@ -8,7 +8,7 @@ public class PropertyLoader {
 
     //    private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
     //    private static final String PROPERTY_FILE = "/application.properties";
-    private static final String PROPERTY_FILE = "/src/main/resources/application.properties";
+    private static final String PROPERTY_FILE = "/application.properties";
     private static Map propertiesMap;
 
     /**

@@ -3,6 +3,7 @@ package pages;
 import exception.ElementNoSuch;
 import org.apache.log4j.Logger;
 import utils.ClassNameUtil;
+import utils.PropertyLoader;
 import utils.WebDriverWrapper;
 import utils.WebElementsActions;
 
@@ -12,10 +13,11 @@ import utils.WebElementsActions;
 public class LoginPage extends Page {
 
     private final static Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
+    private static final String MAIN_PAGE = PropertyLoader.loadProperty("site.url");
 
     public LoginPage(WebDriverWrapper driverWrapper) {
 
-        super(driverWrapper);
+        super(driverWrapper, MAIN_PAGE);
 
     }
 
