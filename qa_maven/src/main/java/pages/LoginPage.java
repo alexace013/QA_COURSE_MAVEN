@@ -18,6 +18,7 @@ public class LoginPage extends Page {
     public LoginPage(WebDriverWrapper driverWrapper) {
 
         super(driverWrapper, MAIN_PAGE);
+        openPage();
 
     }
 

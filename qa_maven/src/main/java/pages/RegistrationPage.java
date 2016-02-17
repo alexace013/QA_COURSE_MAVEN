@@ -19,6 +19,7 @@ public class RegistrationPage extends Page {
     public RegistrationPage(WebDriverWrapper driverWrapper) {
 
         super(driverWrapper, MAIN_PAGE);
+        openPage();
 
     }
 

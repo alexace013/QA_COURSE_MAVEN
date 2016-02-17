@@ -18,6 +18,7 @@ public class ProductPage extends Page {
     public ProductPage(WebDriverWrapper driverWrapper) {
 
         super(driverWrapper, MAIN_PAGE);
+        openPage();
 
     }
 

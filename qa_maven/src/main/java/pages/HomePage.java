@@ -18,6 +18,7 @@ public class HomePage extends Page {
     public HomePage(WebDriverWrapper driverWrapper) {
 
         super(driverWrapper, MAIN_PAGE);
+        openPage();
 
     }
 
