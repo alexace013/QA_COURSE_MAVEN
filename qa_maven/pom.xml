@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <browser>${browser.name}</browser>
+        <!--<browser>${browser.name}</browser>-->
     </properties>
 
     <profiles>

@@ -2,24 +2,21 @@ package pages;
 
 import exception.ElementNoSuch;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import utils.ScreenShot;
+import utils.ClassNameUtil;
+import utils.WebDriverWrapper;
 import utils.WebElementsActions;
-
-import java.io.IOException;
 
 /**
  * This class works with login page {@see https://www.ellos.se/LoginAndRegistration/Login?returnUrl=%2f}
  */
-public class LoginPage {
+public class LoginPage extends Page {
 
-    private final static Logger log = Logger.getLogger(LoginPage.class);
-    private WebDriver driver;
-    private WebElementsActions web;
+    private final static Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        web = new WebElementsActions(driver);
+    public LoginPage(WebDriverWrapper driverWrapper) {
+
+        super(driverWrapper);
+
     }
 
     /**
@@ -28,7 +25,6 @@ public class LoginPage {
      *
      * @param loginData login data for search locator
      * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void clickAndInputLoginField(String loginData) {
 
@@ -40,11 +36,7 @@ public class LoginPage {
 
             web.input("loginFieldInput", loginData);
 
-            ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
-                    "clickAndInputLoginField", ".png");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 
@@ -113,7 +105,6 @@ public class LoginPage {
      *                       {@link WebElementsActions#clear(String)} and
      *                       {@link WebElementsActions#input(String, String)} and
      *                       {@link WebElementsActions#pressTAB(String)}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void clickAndInputLoginFieldAndClickTAB(String loginData) {
 
@@ -124,11 +115,7 @@ public class LoginPage {
             web.input("loginFieldInput", loginData);
             web.pressTAB("loginFieldInput");
 
-            ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
-                    "clickAndInputLoginFieldAndClickTAB", ".png");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 
@@ -141,7 +128,6 @@ public class LoginPage {
      *
      * @param passwordData data password for search locator {@info example: 12345}
      * @throws ElementNoSuch {@link utils.WebElementsActions}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void clickAndInputPassFieldWithOneLocator(String passwordData) {
 
@@ -153,11 +139,7 @@ public class LoginPage {
 
             web.input("passFieldInputSecond", passwordData);
 
-            ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
-                    "clickAndInputPassFieldWithOneLocator", ".png");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 
@@ -170,7 +152,6 @@ public class LoginPage {
      *
      * @param passwordData data password for search locator {@info example: 12345}
      * @throws ElementNoSuch {@link utils.WebElementsActions}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void clickAndInputPassFieldWithTwoLocators(String passwordData) {
 
@@ -182,11 +163,7 @@ public class LoginPage {
 
             web.input("passFieldInputSecond", passwordData);
 
-            ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
-                    "clickAndInputPassFieldWithTwoLocators", ".png");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
 
@@ -198,7 +175,6 @@ public class LoginPage {
      * Click on login button
      *
      * @throws ElementNoSuch {@link utils.WebElementsActions}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}L
      */
     public void clickLoginButton() {
 
@@ -206,11 +182,7 @@ public class LoginPage {
 
             web.clickElement("loginButton");
 
-            ScreenShot.screenShot(driver,
-                    "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
-                    "clickLoginButton", ".png");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -264,17 +236,12 @@ public class LoginPage {
      *
      * @return true If message active, otherwise false
      * @throws ElementNoSuch {@link utils.WebElementsActions}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public boolean isErrorMessagePresentOnPage() {
 
         try {
 
             if (web.isElementPresent("errorMessage")) {
-
-                ScreenShot.screenShot(driver,
-                        "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
-                        "isErrorMessagePresentOnPage", ".png");
 
                 return true;
 
@@ -284,7 +251,7 @@ public class LoginPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -300,16 +267,12 @@ public class LoginPage {
      *
      * @return false If one field is empty or failed data, otherwise true
      * @throws ElementNoSuch {@link utils.WebElementsActions}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public boolean isErrorMessageOneFieldEmpty() {
 
         try {
 
             if (web.isElementPresent("errorMessageOneFieldEmpty")) {
-
-                ScreenShot.screenShot(driver, "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
-                        "isErrorMessageOneFieldEmpty", ".png");
 
                 return true;
 
@@ -319,7 +282,7 @@ public class LoginPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -335,16 +298,12 @@ public class LoginPage {
      *
      * @return false If fields is empty or failed data, otherwise true
      * @throws ElementNoSuch {@link utils.WebElementsActions}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public boolean isErrorMessageFieldsEmpty() {
 
         try {
 
             if (web.isElementPresent("errorMessageEmptyFields")) {
-
-                ScreenShot.screenShot(driver, "/media/alexander/HDD/Workspace/Projects/QA/screens/loginpage/",
-                        "isErrorMessageFieldsEmpty", ".png");
 
                 return true;
 
@@ -354,7 +313,7 @@ public class LoginPage {
 
             }
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));

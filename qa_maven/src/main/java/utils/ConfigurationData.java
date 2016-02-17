@@ -20,7 +20,6 @@ import java.util.Properties;
 public class ConfigurationData {
 
     private static final Logger log = Logger.getLogger("log4j.rootLogger");
-    @FileProperties(properties = true)
     private static final String UI_MAPPING_PATH = "src/main/resources/UIMapping.properties";
     private static ConfigurationData config;
     private final Properties PROPERTIES;

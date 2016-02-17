@@ -1,28 +1,23 @@
 package pages;
 
 import exception.ElementNoSuch;
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import utils.ScreenShot;
+import utils.ClassNameUtil;
+import utils.WebDriverWrapper;
 import utils.WebElementsActions;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.OutputStream;
 
 /**
  * This class works with registration page {@see https://www.ellos.se/LoginAndRegistration/Login?returnUrl=%2f}
  */
-public class RegistrationPage {
+public class RegistrationPage extends Page {
 
-    private final static Logger log = Logger.getLogger("log4j.rootLogger");
-    private WebDriver driver;
-    private WebElementsActions web;
+    //    private final static Logger log = Logger.getLogger("log4j.rootLogger");
+    private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
 
-    public RegistrationPage(WebDriver driver) {
-        this.driver = driver;
-        web = new WebElementsActions(driver);
+    public RegistrationPage(WebDriverWrapper driverWrapper) {
+
+        super(driverWrapper);
+
     }
 
     /**
@@ -32,7 +27,6 @@ public class RegistrationPage {
      * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)} and
      *                       {@link WebElementsActions#clear(String)} and
      *                       {@link WebElementsActions#input(String, String)}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void clickAndInputEmailMain(String email) {
 
@@ -42,9 +36,8 @@ public class RegistrationPage {
             web.clear("registrationEmailMain");
             web.input("registrationEmailMain", email);
 
-            screenShot("clickAndInputEmailMain");
 
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -61,7 +54,6 @@ public class RegistrationPage {
      *                       {@link WebElementsActions#clear(String)} and
      *                       {@link WebElementsActions#input(String, String)} and
      *                       {@link WebElementsActions#pressTAB(String)}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void clickAndInputEmailRepeatAndClickTAB(String email) {
 
@@ -72,9 +64,7 @@ public class RegistrationPage {
             web.input("registrationEmailRepeat", email);
             web.pressTAB("registrationEmailRepeat");
 
-            screenShot("clickAndInputEmailRepeatAndClickTAB");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -91,7 +81,6 @@ public class RegistrationPage {
      *                       {@link WebElementsActions#clear(String)} and
      *                       {@link WebElementsActions#input(String, String)} and
      *                       {@link WebElementsActions#pressTAB(String)}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void clickAndInputPassMainAndClickTAB(String password) {
 
@@ -102,9 +91,7 @@ public class RegistrationPage {
             web.input("registrationPassMain", password);
             web.pressTAB("registrationPassMain");
 
-            screenShot("clickAndInputPassMainAndClickTAB");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -120,7 +107,6 @@ public class RegistrationPage {
      * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)} and
      *                       {@link WebElementsActions#clear(String)} and
      *                       {@link WebElementsActions#input(String, String)}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void clickAndInputPassRepeat(String password) {
 
@@ -130,9 +116,7 @@ public class RegistrationPage {
             web.clear("registrationPassRepeat");
             web.input("registrationPassRepeat", password);
 
-            screenShot("clickAndInputPassRepeat");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -149,7 +133,6 @@ public class RegistrationPage {
      * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)} and
      *                       {@link WebElementsActions#clear(String)} and
      *                       {@link WebElementsActions#clearAndInputAndClickEnter(String, String)}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     @Deprecated
     public void clickAndInputPassRepeatTest(String password) {
@@ -160,9 +143,7 @@ public class RegistrationPage {
             web.clear("registrationPassRepeat");
             web.clearAndInputAndClickEnter("registrationPassRepeat", password);
 
-            screenShot("clickAndInputPassRepeatTest");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -204,7 +185,6 @@ public class RegistrationPage {
      * This method click on the registration button
      *
      * @throws ElementNoSuch {@link WebElementsActions#clickElement(String)}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void clickButtonRegistration() {
 
@@ -212,9 +192,7 @@ public class RegistrationPage {
 
             web.clickElement("buttonRegistration");
 
-            screenShot("clickButtonRegistration");
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -383,7 +361,6 @@ public class RegistrationPage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#isElementPresent(String)}
      *                       {@link WebElementsActions#moveToElementAndClick(String, String)}
-     * @throws IOException   {@link ScreenShot#screenShot(WebDriver, String, String, String)}
      */
     public void switchToRegisterCustomer() {
 
@@ -393,8 +370,6 @@ public class RegistrationPage {
 
                 web.moveToElementAndClick("buttonCheckOutRegistration", "buttonCheckOutRegistration");
 
-                screenShot("switchToRegisterCustomer");
-
                 log.info(String.format("switch to full registration page"));
 
             } else {
@@ -403,7 +378,7 @@ public class RegistrationPage {
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -417,20 +392,6 @@ public class RegistrationPage {
      */
     public void refreshHomePage() {
         web.refreshPage();
-    }
-
-    /**
-     * Private method for made screenshot page
-     *
-     * @param fileName input name screenshot file
-     * @throws IOException {@link FileUtils#copyFile(File, OutputStream)}
-     */
-    private void screenShot(String fileName) throws IOException {
-
-        ScreenShot.screenShot(driver,
-                "/media/alexander/HDD/Workspace/Projects/QA/screens/registration/",
-                fileName, ".png");
-
     }
 
 }

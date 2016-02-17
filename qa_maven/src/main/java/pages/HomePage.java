@@ -1,29 +1,22 @@
 package pages;
 
 import exception.ElementNoSuch;
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import utils.ScreenShot;
+import utils.ClassNameUtil;
+import utils.WebDriverWrapper;
 import utils.WebElementsActions;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.OutputStream;
 
 /**
  * This class works with home page {@see http://www.ellos.se/}
  */
-public class HomePage {
+public class HomePage extends Page {
 
-    private static final Logger log = Logger.getLogger(HomePage.class);
+    private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
 
-    private WebDriver driver;
-    private WebElementsActions web;
+    public HomePage(WebDriverWrapper driverWrapper) {
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
-        web = new WebElementsActions(driver);
+        super(driverWrapper);
+
     }
 
     /**
@@ -37,10 +30,7 @@ public class HomePage {
 
             web.clickLink("logoCenterLink");
 
-            screenShot("clicklogo");
-
-
-        } catch (IOException e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -54,7 +44,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)} and
      *                       {@link WebElementsActions#isElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToRegistrationPage() {
 
@@ -66,15 +55,13 @@ public class HomePage {
 
                 log.info("Switch to LOGIN_PAGE successful.");
 
-                screenShot("switchToRegPage");
-
             } else {
 
                 log.info("Switch to LOGIN_PAGE failed.");
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -88,7 +75,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)} and
      *                       {@link WebElementsActions#isElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToOrderDirect() {
 
@@ -100,15 +86,13 @@ public class HomePage {
 
                 log.info(String.format("switch to order direct page successful"));
 
-                screenShot("switchToOrderDirect");
-
             } else {
 
                 log.info(String.format("switch to order page failed"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -122,7 +106,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToWomanPage() {
 
@@ -134,16 +117,13 @@ public class HomePage {
 
                 log.info(String.format("switch to woman page was correct"));
 
-                screenShot("switchToWoman");
-
-
             } else {
 
                 log.info(String.format("switch to woman page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -157,7 +137,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToManPage() {
 
@@ -169,8 +148,6 @@ public class HomePage {
 
                 log.info(String.format("switch to man page was correct"));
 
-                screenShot("switchToMan");
-
             } else {
 
                 log.info(String.format("switch to man page was incorrect"));
@@ -178,7 +155,7 @@ public class HomePage {
             }
 
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -192,7 +169,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToChildPage() {
 
@@ -207,15 +183,13 @@ public class HomePage {
 
                 log.info(String.format("switch to barn page was correct"));
 
-                screenShot("switchToChild");
-
             } else {
 
                 log.info(String.format("switch to barn page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -230,7 +204,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToSportPage() {
 
@@ -245,15 +218,13 @@ public class HomePage {
 
                 log.info(String.format("switch to sport page was correct"));
 
-                screenShot("switchToSportPage");
-
             } else {
 
                 log.info(String.format("switch to sport page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -268,7 +239,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToLinenAndBathPage() {
 
@@ -283,15 +253,13 @@ public class HomePage {
 
                 log.info(String.format("switch to linen and bath page was correct"));
 
-                screenShot("switchToLinenAndBathPage");
-
             } else {
 
                 log.info(String.format("switch to linen and bath page page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -306,7 +274,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToFootwearPage() {
 
@@ -318,14 +285,12 @@ public class HomePage {
 
                 log.info(String.format("switch to footwear page was correct"));
 
-                screenShot("switchToFootwearPage");
-
             } else {
 
                 log.info(String.format("switch to footwear page was incorrect"));
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -340,7 +305,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToHemPage() {
 
@@ -352,15 +316,13 @@ public class HomePage {
 
                 log.info(String.format("switch to hem page was correct"));
 
-                screenShot("switchToHemPage");
-
             } else {
 
                 log.info(String.format("switch to hem page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -374,7 +336,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToElectronicPage() {
 
@@ -386,15 +347,13 @@ public class HomePage {
 
                 log.info(String.format("switch to electronic page was correct"));
 
-                screenShot("switchToElectronicPage");
-
             } else {
 
                 log.info(String.format("switch to electronic page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -409,7 +368,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToBeautyAndHealthPage() {
 
@@ -421,15 +379,13 @@ public class HomePage {
 
                 log.info(String.format("switch to beauty and health page was correct"));
 
-                screenShot("switchToBeautyAndHealthPage");
-
             } else {
 
                 log.info(String.format("switch to beauty and health page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -444,7 +400,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToPlusPage() {
 
@@ -456,15 +411,13 @@ public class HomePage {
 
                 log.info(String.format("switch to plus page was correct"));
 
-                screenShot("switchToPlusPage");
-
             } else {
 
                 log.info(String.format("switch to plus page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -478,7 +431,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToREAPage() {
 
@@ -490,14 +442,12 @@ public class HomePage {
 
                 log.info(String.format("switch to rea page was correct"));
 
-                screenShot("switchToREAPage");
-
             } else {
 
                 log.info(String.format("switch to rea page was incorrect"));
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -511,7 +461,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToInspirationPage() {
 
@@ -523,15 +472,13 @@ public class HomePage {
 
                 log.info(String.format("switch to inspiration page was correct"));
 
-                screenShot("switchToInspirationPage");
-
             } else {
 
                 log.info(String.format("switch to inspiration page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -546,7 +493,6 @@ public class HomePage {
      *
      * @throws ElementNoSuch {@link WebElementsActions#moveToElementAndClick(String, String)} and
      *                       {@link WebElementsActions#waitForElementPresent(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void switchToResorPage() {
 
@@ -558,15 +504,13 @@ public class HomePage {
 
                 log.info(String.format("switch to resor page was correct"));
 
-                screenShot("switchToResorPage");
-
             } else {
 
                 log.info(String.format("switch to resor page was incorrect"));
 
             }
 
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -602,7 +546,6 @@ public class HomePage {
      * Click on logout link
      *
      * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void clickLogoutLink() {
 
@@ -610,9 +553,7 @@ public class HomePage {
 
             web.clickLink("logoutLink");
 
-            screenShot("clickLogoutLink");
-
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -625,7 +566,6 @@ public class HomePage {
      * Click on login link
      *
      * @throws ElementNoSuch {@link WebElementsActions#clickLink(String)}
-     * @throws IOException   {@link FileUtils#copyFile(File, OutputStream)}
      */
     public void clickLoginLink() {
 
@@ -633,9 +573,7 @@ public class HomePage {
 
             web.clickLink("loginLink");
 
-            screenShot("clickLoginLink");
-
-        } catch (IOException | ElementNoSuch e) {
+        } catch (ElementNoSuch e) {
 
             e.printStackTrace();
             log.error(String.format("Exception < %s >", e.getStackTrace()));
@@ -713,20 +651,6 @@ public class HomePage {
      */
     public void refreshHomePage() {
         web.refreshPage();
-    }
-
-    /**
-     * Private method for made screenshot page
-     *
-     * @param fileName input name screenshot file
-     * @throws IOException {@link FileUtils#copyFile(File, OutputStream)}
-     */
-    private void screenShot(String fileName) throws IOException {
-
-        ScreenShot.screenShot(driver,
-                "/media/alexander/HDD/Workspace/Projects/QA/screens/homepage/",
-                fileName, ".png");
-
     }
 
 }

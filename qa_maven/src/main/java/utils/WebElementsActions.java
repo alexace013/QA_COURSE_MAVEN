@@ -18,14 +18,29 @@ public class WebElementsActions implements WebInterface {
 
     private final static Logger log = Logger.getLogger(WebElementsActions.class);
     private static WebDriverWait driverWait;
-    private final ConfigurationData CONFIGURATION;
-    private WebDriver driver;
+    private ConfigurationData config;
+    private WebDriverWrapper driverWrapper;
 
-    public WebElementsActions(WebDriver driver) {
+    public WebElementsActions(WebDriverWrapper driverWrapper) {
 
-        this.driver = driver;
-        driverWait = new WebDriverWait(driver, 10);
-        CONFIGURATION = ConfigurationData.getConfigurationData();
+        this.driverWrapper = driverWrapper;
+        driverWait = new WebDriverWait(driverWrapper, 10);
+        config = ConfigurationData.getConfigurationData();
+
+    }
+
+    /**
+     * This method return the desired element with locator
+     *
+     * @param elementLocator search element locator
+     * @return element {@link WebElement} driver from
+     * configuration {@link WebElementsActions#config}
+     * @throws ElementNoSuch If the locator cannot found
+     */
+    public WebElement getElement(String elementLocator) throws ElementNoSuch {
+
+        log.info(String.format("get element < %s >", elementLocator));
+        return driverWrapper.findElement(config.getLocator(elementLocator));
 
     }
 
@@ -37,7 +52,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void openPage(String url) {
 
-        driver.get(url);
+        driverWrapper.get(url);
         log.info(String.format("browser open page < %s >" + url));
 
     }
@@ -52,7 +67,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void input(String inputLocator, String data) throws ElementNoSuch {
 
-        driver.findElement(CONFIGURATION.getLocator(inputLocator)).sendKeys(data);
+        driverWrapper.findElement(config.getLocator(inputLocator)).sendKeys(data);
         log.info(String.format("input < %s > and send < %s >", inputLocator, data));
 
     }
@@ -66,7 +81,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void clear(String clearLocator) throws ElementNoSuch {
 
-        driver.findElement(CONFIGURATION.getLocator(clearLocator)).clear();
+        driverWrapper.findElement(config.getLocator(clearLocator)).clear();
         log.info(String.format("clear element < %s >", clearLocator));
 
     }
@@ -81,8 +96,8 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void clearAndInput(String inputLocator, String inputData) throws ElementNoSuch {
 
-        driver.findElement(CONFIGURATION.getLocator(inputLocator)).clear();
-        driver.findElement(CONFIGURATION.getLocator(inputLocator)).sendKeys(inputData);
+        driverWrapper.findElement(config.getLocator(inputLocator)).clear();
+        driverWrapper.findElement(config.getLocator(inputLocator)).sendKeys(inputData);
         log.info(String.format("clear < %s > and input < %s >", inputLocator, inputData));
 
     }
@@ -98,9 +113,9 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void clearAndInputAndClickEnter(String inputLocator, String inputData) throws ElementNoSuch {
 
-        driver.findElement(CONFIGURATION.getLocator(inputLocator)).clear();
-        driver.findElement(CONFIGURATION.getLocator(inputLocator)).sendKeys(inputData);
-        driver.findElement(CONFIGURATION.getLocator(inputLocator)).sendKeys(Keys.ENTER);
+        driverWrapper.findElement(config.getLocator(inputLocator)).clear();
+        driverWrapper.findElement(config.getLocator(inputLocator)).sendKeys(inputData);
+        driverWrapper.findElement(config.getLocator(inputLocator)).sendKeys(Keys.ENTER);
         log.info(String.format("clear < %s > and send < %s > and click ENTER.", inputLocator, inputData));
 
     }
@@ -114,7 +129,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void clickElement(String elementLocator) throws ElementNoSuch {
 
-        driver.findElement(CONFIGURATION.getLocator(elementLocator)).click();
+        driverWrapper.findElement(config.getLocator(elementLocator)).click();
         log.info(String.format("click element < %s >", elementLocator));
 
     }
@@ -128,7 +143,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void clickButton(String buttonLocator) throws ElementNoSuch {
 
-        driver.findElement(CONFIGURATION.getLocator(buttonLocator)).click();
+        driverWrapper.findElement(config.getLocator(buttonLocator)).click();
         log.info(String.format("click on button < %s >", buttonLocator));
 
     }
@@ -142,7 +157,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void clickLink(String linkLocator) throws ElementNoSuch {
 
-        driver.findElement(CONFIGURATION.getLocator(linkLocator)).click();
+        driverWrapper.findElement(config.getLocator(linkLocator)).click();
         log.info(String.format("click on link < %s >", linkLocator));
 
     }
@@ -156,8 +171,8 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void moveToElement(String moveToLocator) throws ElementNoSuch {
 
-        WebElement webElement = driver.findElement(CONFIGURATION.getLocator(moveToLocator));
-        Actions actions = new Actions(driver);
+        WebElement webElement = driverWrapper.findElement(config.getLocator(moveToLocator));
+        Actions actions = new Actions(driverWrapper);
 
         actions.moveToElement(webElement);
         log.info(String.format("move to element < %s >", moveToLocator));
@@ -175,8 +190,8 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void moveToElementAndClick(String moveToLocator, String clickToElement) throws ElementNoSuch {
 
-        WebElement webElement = driver.findElement(CONFIGURATION.getLocator(moveToLocator));
-        Actions actions = new Actions(driver);
+        WebElement webElement = driverWrapper.findElement(config.getLocator(moveToLocator));
+        Actions actions = new Actions(driverWrapper);
 
         actions.moveToElement(webElement);
         log.info(String.format("move to element < %s >", moveToLocator));
@@ -194,8 +209,8 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void selectCheckBox(String checkBoxLocator) throws ElementNoSuch {
 
-        if (driver.findElement(CONFIGURATION.getLocator(checkBoxLocator)).isSelected()) {
-            driver.findElement(CONFIGURATION.getLocator(checkBoxLocator)).click();
+        if (driverWrapper.findElement(config.getLocator(checkBoxLocator)).isSelected()) {
+            driverWrapper.findElement(config.getLocator(checkBoxLocator)).click();
             log.info(String.format("select < %s >", checkBoxLocator));
         }
 
@@ -211,15 +226,15 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void selectCheckBox(String checkBoxLocator, boolean isCheckBoxSelect) throws ElementNoSuch {
 
-        if (driver.findElement(CONFIGURATION.getLocator(checkBoxLocator)).isSelected() &
+        if (driverWrapper.findElement(config.getLocator(checkBoxLocator)).isSelected() &
                 isCheckBoxSelect == false) {
-            driver.findElement(CONFIGURATION.getLocator(checkBoxLocator)).click();
+            driverWrapper.findElement(config.getLocator(checkBoxLocator)).click();
             log.info(String.format("check box < %s > selected < %b >", checkBoxLocator, isCheckBoxSelect));
         }
 
-        if (!driver.findElement(CONFIGURATION.getLocator(checkBoxLocator)).isSelected() &
+        if (!driverWrapper.findElement(config.getLocator(checkBoxLocator)).isSelected() &
                 isCheckBoxSelect == true) {
-            driver.findElement(CONFIGURATION.getLocator(checkBoxLocator)).click();
+            driverWrapper.findElement(config.getLocator(checkBoxLocator)).click();
             log.info(String.format("check box < %s > selected < %b >", checkBoxLocator, isCheckBoxSelect));
         }
 
@@ -235,7 +250,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public boolean isElementPresent(String elementLocator) throws ElementNoSuch {
 
-        if (!driver.findElement(CONFIGURATION.getLocator(elementLocator)).isDisplayed()) {
+        if (!driverWrapper.findElement(config.getLocator(elementLocator)).isDisplayed()) {
 
             log.info(String.format("< %s > not present on page.", elementLocator));
             return false;
@@ -260,7 +275,7 @@ public class WebElementsActions implements WebInterface {
 
         try {
 
-            Alert alert = driver.switchTo().alert();
+            Alert alert = driverWrapper.switchTo().alert();
             alert.accept();
             isAlertPresent = true;
             log.info(String.format("alert is present on page"));
@@ -290,7 +305,7 @@ public class WebElementsActions implements WebInterface {
 
         try {
 
-            Alert alert = driver.switchTo().alert();
+            Alert alert = driverWrapper.switchTo().alert();
             alertText = alert.getText();
             alert.accept();
             log.info(String.format("alert text < %s >", alertText));
@@ -313,8 +328,8 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void refreshPage() {
 
-        driver.navigate().refresh();
-        log.info(String.format("page < %s > refresh", driver.getCurrentUrl()));
+        driverWrapper.navigate().refresh();
+        log.info(String.format("page < %s > refresh", driverWrapper.getCurrentUrl()));
 
     }
 
@@ -328,8 +343,8 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void waitElementNotVisible(String elementLocator, int timeoutSeconds) throws ElementNoSuch {
 
-        WebDriverWait webDriverWait = new WebDriverWait(driver, timeoutSeconds);
-        webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(CONFIGURATION.getLocator(elementLocator)));
+        WebDriverWait webDriverWait = new WebDriverWait(driverWrapper, timeoutSeconds);
+        webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(config.getLocator(elementLocator)));
 
     }
 
@@ -350,7 +365,7 @@ public class WebElementsActions implements WebInterface {
         if (elementLocator != null) {
 
             driverWait.until(ExpectedConditions.
-                    visibilityOfElementLocated(CONFIGURATION.getLocator(elementLocator)));
+                    visibilityOfElementLocated(config.getLocator(elementLocator)));
 
             log.info(String.format("wait for element < %s > present", elementLocator));
 
@@ -379,9 +394,9 @@ public class WebElementsActions implements WebInterface {
     public boolean waitElementToBeClickable(String elementLocator) throws ElementNoSuch {
 
         if (driverWait.until(ExpectedConditions.
-                elementToBeSelected(CONFIGURATION.getLocator(elementLocator)))) {
+                elementToBeSelected(config.getLocator(elementLocator)))) {
 
-            driverWait.until(ExpectedConditions.elementToBeClickable(CONFIGURATION.getLocator(elementLocator)));
+            driverWait.until(ExpectedConditions.elementToBeClickable(config.getLocator(elementLocator)));
             log.info(String.format("wait element < %s > to be clickable", elementLocator));
 
             return true;
@@ -403,9 +418,9 @@ public class WebElementsActions implements WebInterface {
     @Override
     public boolean waitForAjaxResponse(int timeoutSeconds) {
 
-        if (driver instanceof JavascriptExecutor) {
+        if (driverWrapper instanceof JavascriptExecutor) {
 
-            JavascriptExecutor jsDriver = (JavascriptExecutor) driver;
+            JavascriptExecutor jsDriver = (JavascriptExecutor) driverWrapper;
 
             for (int i = 0; i < timeoutSeconds; i++) {
 
@@ -427,26 +442,10 @@ public class WebElementsActions implements WebInterface {
 
         } else {
 
-            log.info(String.format("web elements actions driver: < %s > can't execute JavaScript", driver));
+            log.info(String.format("web elements actions driver: < %s > can't execute JavaScript", driverWrapper));
             return false;
 
         }
-
-    }
-
-    /**
-     * This method return the desired element with locator
-     *
-     * @param elementLocator search element locator
-     * @return element {@link WebElement} driver from
-     * configuration {@link WebElementsActions#CONFIGURATION}
-     * @throws ElementNoSuch If the locator cannot found
-     */
-    @Override
-    public WebElement getElement(String elementLocator) throws ElementNoSuch {
-
-        log.info(String.format("get element < %s >", elementLocator));
-        return driver.findElement(CONFIGURATION.getLocator(elementLocator));
 
     }
 
@@ -462,7 +461,7 @@ public class WebElementsActions implements WebInterface {
     public List<WebElement> getElements(String elementLocator) throws ElementNoSuch {
 
         log.info(String.format("get elements < %s >", elementLocator));
-        return driver.findElements(CONFIGURATION.getLocator(elementLocator));
+        return driverWrapper.findElements(config.getLocator(elementLocator));
 
     }
 
@@ -476,7 +475,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void pressTAB(String locator) throws ElementNoSuch {
 
-        WebElement webElement = driver.findElement(CONFIGURATION.getLocator(String.valueOf(locator)));
+        WebElement webElement = driverWrapper.findElement(config.getLocator(String.valueOf(locator)));
         webElement.sendKeys(Keys.TAB);
         log.info(String.format("press TAB"));
 
@@ -491,7 +490,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void pressSpace(String locator) throws ElementNoSuch {
 
-        WebElement webElement = driver.findElement(CONFIGURATION.getLocator(locator));
+        WebElement webElement = driverWrapper.findElement(config.getLocator(locator));
         webElement.sendKeys(Keys.SPACE);
         log.info(String.format("press space"));
 
@@ -505,7 +504,7 @@ public class WebElementsActions implements WebInterface {
     @Override
     public void windowScroll() {
 
-        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driverWrapper;
         // Vertical scroll - down by 100  pixels
         javascriptExecutor.executeScript("window.scrollBy(0,100)", "");
 

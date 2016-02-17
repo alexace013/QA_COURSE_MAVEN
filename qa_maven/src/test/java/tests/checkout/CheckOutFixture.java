@@ -3,7 +3,7 @@ package tests.checkout;
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import pages.CheckOutPage;
+import pages.CheckoutPage;
 import pages.HomePage;
 import pages.ProductPage;
 import pages.RegistrationPage;
@@ -14,7 +14,7 @@ public class CheckOutFixture extends BrowserFixture {
     private static final Logger log = Logger.getLogger(CheckOutFixture.class);
     private final static String URL = "http://www.ellos.se/";
     private HomePage homePage;
-    private CheckOutPage checkOutPage;
+    private CheckoutPage checkOutPage;
     private ProductPage productPage;
     private RegistrationPage registrationPage;
 
@@ -24,7 +24,7 @@ public class CheckOutFixture extends BrowserFixture {
         getDriver().get(URL);
         log.info(String.format("browser open page: < %s >", URL));
         homePage = new HomePage(getDriver());
-        checkOutPage = new CheckOutPage(getDriver());
+        checkOutPage = new CheckoutPage(getDriver());
         productPage = new ProductPage(getDriver());
         registrationPage = new RegistrationPage(getDriver());
         log.info(String.format("start login tests"));
@@ -42,7 +42,7 @@ public class CheckOutFixture extends BrowserFixture {
 
     }
 
-    public CheckOutPage getCheckOutPage() {
+    public CheckoutPage getCheckOutPage() {
 
         return checkOutPage;
 
