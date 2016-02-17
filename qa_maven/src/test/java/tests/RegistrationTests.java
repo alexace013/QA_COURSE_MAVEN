@@ -3,15 +3,17 @@ package tests;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import random.RandomUser;
 import utils.ClassNameUtil;
 import utils.PropertyLoader;
+
+import java.util.Random;
 
 public class RegistrationTests extends Fixture {
 
     private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
     private static final String PASS = PropertyLoader.loadProperty("user.new.PASS");
-    private static final String EMAIL = RandomUser.randomEmail();
+    private static final String EMAIL = PropertyLoader.loadProperty("user.new.EMAIL"+ new Random().nextInt());
+//    private static final String EMAIL = RandomUser.randomEmail();
 
     // all fields are filled in correctly
     @Test(priority = 1)
