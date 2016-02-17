@@ -4,6 +4,8 @@ public class RandomUser {
 
     public RandomUser() {
 
+        randomEmail();
+
     }
 
     public static String randomEmail() {

@@ -2,7 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="517defa8-e7e2-4b81-88b8-f5f0d3c50f88" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/UIMapping.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/application.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/exception/AlertException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/exception/ElementNoSuch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/exception/FileException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/exception/PropertiesNoLoad.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/pages/CheckOutPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/pages/HomePage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/pages/LoginPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/pages/ProductPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/pages/RegistrationPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/random/DataProviders.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/random/ParametrizedUsers.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/random/RandomUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/random/RandomUserDataProviders.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/utils/ConfigurationData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/utils/FileProperties.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/utils/PrintScreen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/utils/PropertyLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/utils/ScreenShot.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/utils/WebElementsActions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/classes/utils/WebInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/FunctionalSuite/Functional.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/FunctionalSuite/Functional.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/FunctionalSuite/testng-failed.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/TEST-TestSuite.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/TestSuite.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/bullet_point.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/collapseall.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/emailable-report.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/failed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/junitreports/TEST-tests.login.LoginTests.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/junitreports/TEST-tests.product_page.ProductPageTests.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/junitreports/TEST-tests.registration.RegistrationTests.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/navigator-bullet.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/Functional.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/groups.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/methods-alphabetical.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/methods-not-run.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/methods.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/reporter-output.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/testng.xml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/FunctionalSuite/toc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/old/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/passed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/skipped.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/testng-failed.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/testng-reports.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/testng-reports.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/testng-results.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/surefire-reports/testng.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/functional.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/junit_tests/JunitBrowserFixture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/junit_tests/JunitLoginFixture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/junit_tests/JunitTestsSelenium.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/test_package/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/testng.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/basket/BasketFixture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/basket/ProductAddToBasketTests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/browser/BrowserFixture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/checkout/CheckOutFixture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/checkout/CheckOutTests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/login/LoginFixture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/login/LoginTests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/product_page/ProductPageFixture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/product_page/ProductPageTests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/registration/RegistrationFixture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/tests/registration/RegistrationTests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qa_maven/target/test-classes/user.data" afterPath="" />
     </list>
     <ignored path="QA_COURSE_MAVEN.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +116,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,7 +128,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,7 +138,7 @@
       <file leaf-file-name="AlertException.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/qa_maven/src/main/java/exception/AlertException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5569307">
+            <state vertical-scroll-proportion="0.6081081">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
@@ -88,8 +166,8 @@
               <caret line="482" column="31" selection-start-line="482" selection-start-column="31" selection-end-line="482" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#18954#18955#0" expanded="false" />
-                <element signature="e#18987#18988#0" expanded="false" />
+                <element signature="e#16351#16352#0" expanded="false" />
+                <element signature="e#16384#16385#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -192,13 +270,33 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="QA_Maven" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="53" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1313" />
-    <option name="height" value="744" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -984,6 +1082,28 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -1145,32 +1265,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="24" width="1313" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="53" y="-4" width="1313" height="772" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991317" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991317" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991317" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38176197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3599053" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29992107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39876354" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3153014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38176197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39876354" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991317" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1247,8 +1367,8 @@
           <caret line="482" column="31" selection-start-line="482" selection-start-column="31" selection-end-line="482" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#18954#18955#0" expanded="false" />
-            <element signature="e#18987#18988#0" expanded="false" />
+            <element signature="e#16351#16352#0" expanded="false" />
+            <element signature="e#16384#16385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1267,7 +1387,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1275,7 +1397,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1305,8 +1429,8 @@
           <caret line="482" column="31" selection-start-line="482" selection-start-column="31" selection-end-line="482" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#18954#18955#0" expanded="false" />
-            <element signature="e#18987#18988#0" expanded="false" />
+            <element signature="e#16351#16352#0" expanded="false" />
+            <element signature="e#16384#16385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1336,13 +1460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7772277">
           <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#956#957#0" expanded="false" />
-            <element signature="e#1021#1022#0" expanded="false" />
-            <element signature="e#1203#1204#0" expanded="false" />
-            <element signature="e#1237#1238#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1505,7 +1622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="10.081967">
           <caret line="361" column="17" selection-start-line="361" selection-start-column="17" selection-end-line="361" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1513,9 +1629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6147541">
           <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1558,7 +1671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.024311183">
           <caret line="90" column="44" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,7 +1678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.024311183">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1595,8 +1706,8 @@
           <caret line="482" column="31" selection-start-line="482" selection-start-column="31" selection-end-line="482" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#18954#18955#0" expanded="false" />
-            <element signature="e#18987#18988#0" expanded="false" />
+            <element signature="e#16351#16352#0" expanded="false" />
+            <element signature="e#16384#16385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1622,7 +1733,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1630,13 +1743,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/qa_maven/src/main/java/exception/AlertException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5569307">
+        <state vertical-scroll-proportion="0.6081081">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>

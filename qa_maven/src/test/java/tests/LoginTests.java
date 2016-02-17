@@ -1,14 +1,15 @@
-package tests.login;
+package tests;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.PropertyLoader;
 
-public class LoginTests extends LoginFixture {
+public class LoginTests extends Fixture {
 
     private static final Logger log = Logger.getLogger(LoginTests.class);
-    private final static String EMAIL = "alex_ace@ukr.net";
-    private final static String PASS = "a1989";
+    private final static String EMAIL = PropertyLoader.loadProperty("user.EMAIL");
+    private final static String PASS = PropertyLoader.loadProperty("user.PASS");
 
     // all input correct
     @Test
@@ -18,28 +19,28 @@ public class LoginTests extends LoginFixture {
 
         {
 
-            getHomePage().closeBlurb();
+            ellos.homePage.closeBlurb();
             log.info(String.format("close blurb"));
 
-            getHomePage().switchToRegistrationPage();
+            ellos.homePage.switchToRegistrationPage();
             log.info(String.format("switch to registration page"));
 
         }
 
         {
 
-            getLoginPage().clickAndInputLoginField(EMAIL);
+            ellos.loginPage.clickAndInputLoginField(EMAIL);
             log.info(String.format("click and input %s in login filed", EMAIL));
 
-            getLoginPage().clickAndInputPassFieldWithTwoLocators(PASS);
+            ellos.loginPage.clickAndInputPassFieldWithTwoLocators(PASS);
             log.info(String.format("click and input %s in password field", PASS));
 
-            getLoginPage().clickLoginButton();
+            ellos.loginPage.clickLoginButton();
             log.info(String.format("click on login button"));
 
         }
 
-        getHomePage().clickLogoutLink();
+        ellos.homePage.clickLogoutLink();
         log.info(String.format("click on logout link"));
 
     }
@@ -52,7 +53,7 @@ public class LoginTests extends LoginFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
@@ -61,18 +62,18 @@ public class LoginTests extends LoginFixture {
 
             String failedEMAIL = "qwerty" + EMAIL;
 
-            getLoginPage().clickAndInputLoginFieldAndClickTAB(failedEMAIL);
+            ellos.loginPage.clickAndInputLoginFieldAndClickTAB(failedEMAIL);
             log.info(String.format("click and input %s in login field and click TAB", failedEMAIL));
 
-            getLoginPage().clickAndInputPassFieldWithOneLocator(PASS);
+            ellos.loginPage.clickAndInputPassFieldWithOneLocator(PASS);
             log.info(String.format("click and input %s in password filed", PASS));
 
-            getLoginPage().clickLoginButton();
+            ellos.loginPage.clickLoginButton();
             log.info(String.format("click on login button"));
 
         }
 
-        Assert.assertTrue(getLoginPage().isErrorMessagePresentOnPage(),
+        Assert.assertTrue(ellos.loginPage.isErrorMessagePresentOnPage(),
                 "error message is present on page");
 
     }
@@ -85,21 +86,21 @@ public class LoginTests extends LoginFixture {
 
         {
 
-            getLoginPage().clickAndInputLoginFieldAndClickTAB(EMAIL);
+            ellos.loginPage.clickAndInputLoginFieldAndClickTAB(EMAIL);
             log.info(String.format("click and input %s in login field and click TAB",
                     EMAIL));
 
             String failedPass = PASS.substring(0, 3);
 
-            getLoginPage().clickAndInputPassFieldWithOneLocator(failedPass);
+            ellos.loginPage.clickAndInputPassFieldWithOneLocator(failedPass);
             log.info(String.format("click and input %s in password field", failedPass));
 
-            getLoginPage().clickLoginButton();
+            ellos.loginPage.clickLoginButton();
             log.info(String.format("click on login button"));
 
         }
 
-        Assert.assertTrue(getLoginPage().isErrorMessagePresentOnPage(),
+        Assert.assertTrue(ellos.loginPage.isErrorMessagePresentOnPage(),
                 "error message is present on page");
 
     }
@@ -112,18 +113,18 @@ public class LoginTests extends LoginFixture {
 
         {
 
-            getLoginPage().clickAndInputLoginFieldAndClickTAB("");
+            ellos.loginPage.clickAndInputLoginFieldAndClickTAB("");
             log.info(String.format("click and input empty in login field and click TAB"));
 
-            getLoginPage().clickAndInputPassFieldWithOneLocator("");
+            ellos.loginPage.clickAndInputPassFieldWithOneLocator("");
             log.info(String.format("click and input empty in password field"));
 
-            getLoginPage().clickLoginButton();
+            ellos.loginPage.clickLoginButton();
             log.info(String.format("click on login button"));
 
         }
 
-        Assert.assertTrue(getLoginPage().isErrorMessageFieldsEmpty(),
+        Assert.assertTrue(ellos.loginPage.isErrorMessageFieldsEmpty(),
                 "error message is present on page");
 
     }
@@ -136,18 +137,18 @@ public class LoginTests extends LoginFixture {
 
         {
 
-            getLoginPage().clickAndInputLoginFieldAndClickTAB("");
+            ellos.loginPage.clickAndInputLoginFieldAndClickTAB("");
             log.info(String.format("click and input empty in login field and click TAB"));
 
-            getLoginPage().clickAndInputPassFieldWithOneLocator(PASS);
+            ellos.loginPage.clickAndInputPassFieldWithOneLocator(PASS);
             log.info(String.format("click and input %s in password field", PASS));
 
-            getLoginPage().clickLoginButton();
+            ellos.loginPage.clickLoginButton();
             log.info(String.format("click on login button"));
 
         }
 
-        Assert.assertTrue(getLoginPage().isErrorMessageOneFieldEmpty(),
+        Assert.assertTrue(ellos.loginPage.isErrorMessageOneFieldEmpty(),
                 "error message is present on page");
 
     }
@@ -160,18 +161,18 @@ public class LoginTests extends LoginFixture {
 
         {
 
-            getLoginPage().clickAndInputLoginFieldAndClickTAB(EMAIL);
+            ellos.loginPage.clickAndInputLoginFieldAndClickTAB(EMAIL);
             log.info(String.format("click and input %s in login field and click TAB", EMAIL));
 
-            getLoginPage().clickAndInputPassFieldWithOneLocator("");
+            ellos.loginPage.clickAndInputPassFieldWithOneLocator("");
             log.info(String.format("click and input empty in password field and click TAB"));
 
-            getLoginPage().clickLoginButton();
+            ellos.loginPage.clickLoginButton();
             log.info(String.format("click on login button"));
 
         }
 
-        Assert.assertTrue(getLoginPage().isErrorMessageOneFieldEmpty(),
+        Assert.assertTrue(ellos.loginPage.isErrorMessageOneFieldEmpty(),
                 "error message is present on page");
 
     }

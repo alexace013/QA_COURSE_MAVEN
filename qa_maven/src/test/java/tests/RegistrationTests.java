@@ -1,14 +1,16 @@
-package tests.registration;
+package tests;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import random.RandomUser;
+import utils.ClassNameUtil;
+import utils.PropertyLoader;
 
-public class RegistrationTests extends RegistrationFixture {
+public class RegistrationTests extends Fixture {
 
-    private static final Logger log = Logger.getLogger(RegistrationTests.class);
-    private static final String PASS = "qwerty12345";
+    private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
+    private static final String PASS = PropertyLoader.loadProperty("user.new.PASS");
     private static final String EMAIL = RandomUser.randomEmail();
 
     // all fields are filled in correctly
@@ -19,32 +21,32 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().closeBlurb();
-            getHomePage().clickLoginLink();
+            ellos.homePage.closeBlurb();
+            ellos.homePage.clickLoginLink();
 
         }
 
         {
 
-            getRegistrationPage().clickAndInputEmailMain(EMAIL);
+            ellos.registrationPage.clickAndInputEmailMain(EMAIL);
             log.info(String.format("click and input %s in email field", EMAIL));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(EMAIL);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(EMAIL);
             log.info(String.format("click and input %s in email field repeat and click TAB", EMAIL));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(PASS);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
             log.info(String.format("click and input %s in password field and click TAB", PASS));
 
             //getRegistrationPage().clickAndInputPassRepeat(PASS);
-            getRegistrationPage().clickAndInputPassRepeatTest(PASS);
+            ellos.registrationPage.clickAndInputPassRepeatTest(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isRegistrationSuccessful(),
+        Assert.assertTrue(ellos.registrationPage.isRegistrationSuccessful(),
                 "registration is successful");
 //        getHomePage().clickLogoutLink();
 //        log.info(String.format("click logout link"));
@@ -60,36 +62,36 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
 
         {
 
-            getRegistrationPage().clickAndInputEmailMain(EMAIL);
+            ellos.registrationPage.clickAndInputEmailMain(EMAIL);
             log.info(String.format("click and input %s in email field", EMAIL));
 
             String emptyStr = "";
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in email field repeat and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in password field and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassRepeat(emptyStr);
+            ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorJustOneField(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorJustOneField(), "registration is failed");
 
     }
 
@@ -101,7 +103,7 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
@@ -109,27 +111,27 @@ public class RegistrationTests extends RegistrationFixture {
         {
             String emptyStr = "";
 
-            getRegistrationPage().clickAndInputEmailMain(emptyStr);
+            ellos.registrationPage.clickAndInputEmailMain(emptyStr);
             log.info(String.format("click and input %s in email field", emptyStr));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(EMAIL);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(EMAIL);
             log.info(String.format("click and input %s in email field repeat and click TAB", EMAIL));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in password field and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassRepeat(emptyStr);
+            ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorJustOneField(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorJustOneField(), "registration is failed");
 
     }
 
@@ -141,7 +143,7 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
@@ -150,27 +152,27 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getRegistrationPage().clickAndInputEmailMain(emptyStr);
+            ellos.registrationPage.clickAndInputEmailMain(emptyStr);
             log.info(String.format("click and input %s in email field", emptyStr));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in email field repeat and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(PASS);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
             log.info(String.format("click and input %s in password field and click TAB", PASS));
 
-            getRegistrationPage().clickAndInputPassRepeat(emptyStr);
+            ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorJustOneField(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorJustOneField(), "registration is failed");
 
     }
 
@@ -182,7 +184,7 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
@@ -191,27 +193,27 @@ public class RegistrationTests extends RegistrationFixture {
 
             String emptyStr = "";
 
-            getRegistrationPage().clickAndInputEmailMain(emptyStr);
+            ellos.registrationPage.clickAndInputEmailMain(emptyStr);
             log.info(String.format("click and input %s in email field", emptyStr));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in email field repeat and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in password field and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassRepeat(PASS);
+            ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorJustOneField(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorJustOneField(), "registration is failed");
 
     }
 
@@ -223,36 +225,36 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
 
         {
 
-            getRegistrationPage().clickAndInputEmailMain(EMAIL);
+            ellos.registrationPage.clickAndInputEmailMain(EMAIL);
             log.info(String.format("click and input %s in email field", EMAIL));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(EMAIL);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(EMAIL);
             log.info(String.format("click and input %s in email field repeat and click TAB", EMAIL));
 
             String emptyStr = "";
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in password field and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassRepeat(emptyStr);
+            ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorMessagePresent(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorMessagePresent(), "registration is failed");
 
     }
 
@@ -264,7 +266,7 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
@@ -273,27 +275,27 @@ public class RegistrationTests extends RegistrationFixture {
 
             String emptyStr = "";
 
-            getRegistrationPage().clickAndInputEmailMain(emptyStr);
+            ellos.registrationPage.clickAndInputEmailMain(emptyStr);
             log.info(String.format("click and input %s in email field", emptyStr));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in email field repeat and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(PASS);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
             log.info(String.format("click and input %s in password field and click TAB", PASS));
 
-            getRegistrationPage().clickAndInputPassRepeat(PASS);
+            ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorMessagePresent(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorMessagePresent(), "registration is failed");
 
     }
 
@@ -305,36 +307,36 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
 
         {
 
-            getRegistrationPage().clickAndInputEmailMain(EMAIL);
+            ellos.registrationPage.clickAndInputEmailMain(EMAIL);
             log.info(String.format("click and input %s in email field", EMAIL));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(EMAIL);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(EMAIL);
             log.info(String.format("click and input %s in email field repeat and click TAB", EMAIL));
 
             String emptyStr = "";
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in password field and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassRepeat(PASS);
+            ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorMessagePresent(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorMessagePresent(), "registration is failed");
 
     }
 
@@ -346,36 +348,36 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
 
         {
 
-            getRegistrationPage().clickAndInputEmailMain(EMAIL);
+            ellos.registrationPage.clickAndInputEmailMain(EMAIL);
             log.info(String.format("click and input %s in email field", EMAIL));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(EMAIL);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(EMAIL);
             log.info(String.format("click and input %s in email field repeat and click TAB", EMAIL));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(PASS);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
             log.info(String.format("click and input %s in password field and click TAB", PASS));
 
             String emptyStr = "";
 
-            getRegistrationPage().clickAndInputPassRepeat(emptyStr);
+            ellos.registrationPage.clickAndInputPassRepeat(emptyStr);
             log.info(String.format("click and input %s password field repeat", emptyStr));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorMessagePresent(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorMessagePresent(), "registration is failed");
 
     }
 
@@ -387,7 +389,7 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
@@ -396,27 +398,27 @@ public class RegistrationTests extends RegistrationFixture {
 
             String emptyStr = "";
 
-            getRegistrationPage().clickAndInputEmailMain(emptyStr);
+            ellos.registrationPage.clickAndInputEmailMain(emptyStr);
             log.info(String.format("click and input %s in email field", emptyStr));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(EMAIL);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(EMAIL);
             log.info(String.format("click and input %s in email field repeat and click TAB", EMAIL));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(PASS);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
             log.info(String.format("click and input %s in password field and click TAB", PASS));
 
-            getRegistrationPage().clickAndInputPassRepeat(PASS);
+            ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorMessagePresent(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorMessagePresent(), "registration is failed");
 
     }
 
@@ -428,36 +430,36 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
 
         {
 
-            getRegistrationPage().clickAndInputEmailMain(EMAIL);
+            ellos.registrationPage.clickAndInputEmailMain(EMAIL);
             log.info(String.format("click and input %s in email field", EMAIL));
 
             String emptyStr = "";
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(emptyStr);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(emptyStr);
             log.info(String.format("click and input %s in email field repeat and click TAB", emptyStr));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(PASS);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
             log.info(String.format("click and input %s in password field and click TAB", PASS));
 
-            getRegistrationPage().clickAndInputPassRepeat(PASS);
+            ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorMessagePresent(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorMessagePresent(), "registration is failed");
 
     }
 
@@ -469,34 +471,34 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
 
         {
 
-            getRegistrationPage().clickAndInputEmailMain(EMAIL);
+            ellos.registrationPage.clickAndInputEmailMain(EMAIL);
             log.info(String.format("click and input %s in email field", EMAIL));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(1 + EMAIL);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(1 + EMAIL);
             log.info(String.format("click and input %s in email field repeat and click TAB", 1 + EMAIL));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(PASS);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
             log.info(String.format("click and input %s in password field and click TAB", PASS));
 
-            getRegistrationPage().clickAndInputPassRepeat(PASS);
+            ellos.registrationPage.clickAndInputPassRepeat(PASS);
             log.info(String.format("click and input %s password field repeat", PASS));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorMessagePresent(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorMessagePresent(), "registration is failed");
 
     }
 
@@ -508,34 +510,34 @@ public class RegistrationTests extends RegistrationFixture {
 
         {
 
-            getHomePage().clickLoginLink();
+            ellos.homePage.clickLoginLink();
             log.info(String.format("click login link"));
 
         }
 
         {
 
-            getRegistrationPage().clickAndInputEmailMain(EMAIL);
+            ellos.registrationPage.clickAndInputEmailMain(EMAIL);
             log.info(String.format("click and input %s in email field", EMAIL));
 
-            getRegistrationPage().clickAndInputEmailRepeatAndClickTAB(EMAIL);
+            ellos.registrationPage.clickAndInputEmailRepeatAndClickTAB(EMAIL);
             log.info(String.format("click and input %s in email field repeat and click TAB", EMAIL));
 
-            getRegistrationPage().clickAndInputPassMainAndClickTAB(PASS);
+            ellos.registrationPage.clickAndInputPassMainAndClickTAB(PASS);
             log.info(String.format("click and input %s in password field and click TAB", PASS));
 
-            getRegistrationPage().clickAndInputPassRepeat(PASS + 1);
+            ellos.registrationPage.clickAndInputPassRepeat(PASS + 1);
             log.info(String.format("click and input %s password field repeat", PASS + 1));
 
-            getRegistrationPage().windowScroll();
+            ellos.registrationPage.windowScroll();
             log.info(String.format("window scroll"));
 
-            getRegistrationPage().clickButtonRegistration();
+            ellos.registrationPage.clickButtonRegistration();
             log.info(String.format("click on registration button"));
 
         }
 
-        Assert.assertTrue(getRegistrationPage().isErrorMessagePresent(), "registration is failed");
+        Assert.assertTrue(ellos.registrationPage.isErrorMessagePresent(), "registration is failed");
 
     }
 
