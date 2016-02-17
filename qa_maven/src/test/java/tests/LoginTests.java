@@ -3,11 +3,12 @@ package tests;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.ClassNameUtil;
 import utils.PropertyLoader;
 
 public class LoginTests extends Fixture {
 
-    private static final Logger log = Logger.getLogger(LoginTests.class);
+    private static final Logger log = Logger.getLogger(ClassNameUtil.getCurrentClassName());
     private final static String EMAIL = PropertyLoader.loadProperty("user.EMAIL");
     private final static String PASS = PropertyLoader.loadProperty("user.PASS");
 
